@@ -17,5 +17,3 @@
  
  - [Timer](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Timer/Timer.py)
  
-
-
