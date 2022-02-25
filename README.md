@@ -1,6 +1,8 @@
 # PYTHON-SHORTS
  Short Python Codes
  
+ - [Browser](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Browser/Browser.py) | [Sample Output](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Browser/Output.png)
+ 
  - [Calculator](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Calculator/Calculator.py)
  
  - [Calendar](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Calendar/Calendar.py)
