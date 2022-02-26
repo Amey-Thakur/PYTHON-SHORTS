@@ -1,6 +1,10 @@
 # PYTHON-SHORTS
  Short Python Codes
  
+ ![image](https://user-images.githubusercontent.com/54937357/155837339-22fc2077-3523-4963-a455-596195be5a61.png)
+ 
+ ---
+ 
  - [Anagram](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Anagram/Anagram.py)
  
  - [Array](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Array/Array.py)
