@@ -1,6 +1,5 @@
 from PyDictionary import PyDictionary
 
-
 dict = PyDictionary()
 
 word = input("Enter word: ")
