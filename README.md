@@ -7,13 +7,17 @@
  
  - [Anagram](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Anagram/Anagram.py)
  
+ - [Armstrong Number](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Armstrong%20Number/ArmstrongNumber.py)
+ 
  - [Array](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Array/Array.py)
  
  - [Binary Search Tree](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Binary%20Search%20Tree/BinarySearchTree.py)
  
  - [Binary Search](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Binary%20Search/BinarySearch.py)
  
- - [Binary TO Decimal](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Binary%20To%20Decimal/BinaryToDecimal.py)
+ - [Binary TO Decimal 1](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Binary%20To%20Decimal/BinaryToDecimal.py)
+ 
+ - [Binary To Decimal 2](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Binary%20To%20Decimal/BinaryToDecimal-2.py)
  
  - [Binary Tree](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Binary%20Tree/BinaryTree.py)
  
@@ -39,15 +43,25 @@
  
  - [Count Vowels](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Count%20Vowels/CountVowels.py)
  
+ - [Countdown Timer](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Countdown%20Timer/Countdowntimer.py)
+ 
  - [Decimal To Binary](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Decimal%20To%20Binary/DecimalToBinary.py)
  
  - [Depth First Traversal](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Depth%20First%20Traversal/DepthFirstTraversal.py)
  
+ - [Dictionary](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Dictionary/Dictionary.py)
+ 
  - [Doubly Linked List](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Doubly%20Linked%20List/DoublyLinkedList.py)
+ 
+ - [Even Number Generator](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Even%20Number%20Generator/EvenNumberGenerator.py)
  
  - [Even Odd](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Even%20Odd/EvenOdd.py)
  
+ - [Factorial Sequence](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Factorial%20Sequence/FactorialSequence.py)
+ 
  - [Factorial](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Factorial/Factorial.py)
+ 
+ - [Fibonacci Sequence](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Fibonacci%20Sequence/FibbonacciSequence.py)
  
  - [Fibonacci](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Fibonacci/Fibonacci.py)
  
@@ -69,9 +83,15 @@
  
  - [LCM](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/LCM/LCM.py)
  
+ - [Log Calculator](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Log%20Calculator/LogCalculator.py)
+ 
  - [Merge Sort](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Merge%20Sort/MergeSort.py)
  
+ - [Multiplication Table](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Multiplication%20Table/MultiplicationTable.py)
+ 
  - [Nary Search](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Nary%20Search/NarySearch.py)
+ 
+ - [Odd Number Generator](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Odd%20Number%20Generator/OddNumberGenerator.py)
  
  - [Palindrome](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Palindrome/Palindrome.py)
  
@@ -85,13 +105,19 @@
  
  - [Perfect Number](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Perfect%20Number/PerfectNumber.py)
  
+ - [Power2 Sequence](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Power2%20Sequence/Power2Sequence.py)
+ 
  - [Prime Number](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Prime%20Number/PrimeNumber.py)
  
  - [QRCode](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/QRCode/QRCode.py) | [Sample Output](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/QRCode/sample.jpg)
  
+ - [Quadratic Equation Solver](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Quadratic%20Equation%20Solver/QuadraticEquationSolver.py)
+ 
  - [Queue](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Queue/Queue.py)
  
  - [Quick Sort](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Quick%20Sort/QuickSort.py)
+ 
+ - [Read File](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Read%20File/ReadFile.py)
  
  - [Reverse Words](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Reverse%20Words/ReverseWords.py)
  
@@ -113,9 +139,17 @@
  
  - [Singly Linked List](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Singly%20Linked%20List/SinglyLinkedList.py)
  
+ - [Square of Sequence](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Square%20of%20Sequence/SquareofSequence.py)
+ 
+ - [Square-Root](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Square-Root/Square-Root.py)
+ 
  - [Stack](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Stack/Stack.py)
  
  - [To Do App](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/TO%20DO%20App/TODOApp.py)
+ 
+ - [Text Summarizer](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Text%20Summarizer/TextSummarizer.py)
+
+ - [Text Translator](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Text%20Translator/TextTranslator.py)
  
  - [Text to Handwriting](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Text%20to%20Handwriting/Text_to_Handwriting.py) | [Sample Output](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Text%20to%20Handwriting/sample.png)
  
