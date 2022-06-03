@@ -1,5 +1,5 @@
 # PYTHON-SHORTS
- Short Python Codes
+ 👉🏻 Short Python Codes
  
  ![image](https://user-images.githubusercontent.com/54937357/155837339-22fc2077-3523-4963-a455-596195be5a61.png)
  
@@ -160,3 +160,9 @@
  - [Topological Sort](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Topological%20Sort/TopologicalSort.py)
  
  - [Variable Scope](https://github.com/Amey-Thakur/PYTHON-SHORTS/blob/main/Variable%20Scope/Variable_Scope.py)
+
+---
+
+<p align="center"> <b> 👉🏻 Created to Learn Python 👈🏻 <b> </p>
+ 
+<p align="center"><a href='https://github.com/Amey-Thakur/PYTHON-SHORTS', style='color: greenyellow;'> ✌🏻 Back To Repository ✌🏻</p>
