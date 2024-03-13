@@ -1,5 +1,8 @@
 # PYTHON-SHORTS
+
  👉🏻 Short Python Codes
+
+ >**[Python Crash Course](https://github.com/Amey-Thakur/PYTHON-CRASH-COURSE)**
  
  ![image](https://user-images.githubusercontent.com/54937357/155837339-22fc2077-3523-4963-a455-596195be5a61.png)
  
@@ -165,4 +168,4 @@
 
 <p align="center"> <b> 👉🏻 Created to Learn Python 👈🏻 <b> </p>
  
-<p align="center"><a href='https://github.com/Amey-Thakur/PYTHON-SHORTS', style='color: greenyellow;'> ✌🏻 Back To Repository ✌🏻</p>
+<p align="center"><a href='https://github.com/Amey-Thakur/ENGINEERING', style='color: greenyellow;'> ✌🏻 Back To Engineering ✌🏻</p>
