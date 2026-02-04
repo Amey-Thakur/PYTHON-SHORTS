@@ -6,8 +6,10 @@
 
 # Explicitly mark source files as text
 *.py text
-*.md text
+*.json text
 *.txt text
+*.md text
+*.cff text
 
 # Mark binary files
 *.jpg binary
