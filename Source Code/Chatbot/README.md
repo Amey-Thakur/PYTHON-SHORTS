@@ -48,11 +48,13 @@ where:
 
 ## 5. Visual Representation
 
+### Conversational Flow
+![Interaction Flow](Output/Chatbot_Interaction_Jokes.png)
+
 ### Desktop GUI
 ![Chatbot Demo](Demo.png)
 
-### Identity & Authentication
-![Identity Auth](Output/Chatbot_Identity_Auth.png)
-
-### Conversational Flow & Jokes
-![Interaction Flow](Output/Chatbot_Interaction_Jokes.png)
+### Interaction States
+| Default Initial State | Identity Authentication |
+| :---: | :---: |
+| ![Default UI](Output/Chatbot_Default_UI.png) | ![Identity Auth](Output/Chatbot_Identity_Auth.png) |
