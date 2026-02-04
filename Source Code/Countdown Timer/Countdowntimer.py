@@ -20,7 +20,7 @@ from PyQt5.QtWidgets import (
     QPushButton, QHBoxLayout, QGraphicsDropShadowEffect, QFrame
 )
 from PyQt5.QtCore import QTimer, Qt, QRectF, QPropertyAnimation, pyqtProperty
-from PyQt5.QtGui import QPainter, QColor, QPen, QFont, QAntialiasing
+from PyQt5.QtGui import QPainter, QColor, QPen, QFont
 
 class CircularProgressBar(QWidget):
     """Custom circular progress indicator with high-precision rendering."""

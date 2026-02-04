@@ -48,5 +48,7 @@ Where:
 
 ## 5. Visual Representation
 
-### High-fidelity Chronometer Interface
-![Countdown Timer Demo](Demo.png)
+### 5.1 Sophisticated Chronometer Interface
+| Initial State (Idle) | Ticking State (Active) |
+| :---: | :---: |
+| ![Initial State](Output/UI_Initial_State.png) | ![Ticking State](Output/UI_Ticking_State.png) |
