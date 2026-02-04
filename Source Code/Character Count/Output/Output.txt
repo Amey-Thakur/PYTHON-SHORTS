@@ -1,0 +1,20 @@
+﻿--- Python Shorts: Character Count Implementation Demo ---
+Case: Standard String (Case-Insensitive)
+Input:  'Amey and Mega'
+Output: {'a': 3, 'm': 2, 'e': 2, 'y': 1, ' ': 2, 'n': 1, 'd': 1, 'g': 1}
+------------------------------
+Case: Alphanumeric String
+Input:  'Python-Shorts 2022'
+Output: {'p': 1, 'y': 1, 't': 2, 'h': 2, 'o': 2, 'n': 1, '-': 1, 's': 2, 'r': 1, ' ': 1, '2': 3, '0': 1}
+------------------------------
+Case: Special Characters
+Input:  '!@#$$#@!'
+Output: {'!': 2, '@': 2, '#': 2, '$': 2}
+------------------------------
+Case: Empty String
+Input:  ''
+Output: {}
+------------------------------
+Benchmarking Character Count on 1,000,000 characters...
+Total processing time: 0.3917 seconds
+Characters per second: 2,552,688

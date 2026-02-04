@@ -1,0 +1,3 @@
+# Requirements for Character Count
+# Standard Library Only - No External Dependencies
+# Python 3.x Required
