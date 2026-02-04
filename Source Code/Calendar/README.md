@@ -42,4 +42,11 @@ where:
 - **Input Handling**: Accepts year and month as integers to allow for historical or future date inspection.
 
 ## 5. Visual Representation
-![Implementation Demo](Demo.png)
+
+### Calendar UI
+![Calendar Interface](Output/Calendar_UI.png)
+
+### Birthday Views
+| Amey's Birthday | Mega's Birthday |
+|:---:|:---:|
+| ![Amey Birthday](Output/Calendar_Amey_Birthday.png) | ![Mega Birthday](Output/Calendar_Mega_Birthday.png) |
