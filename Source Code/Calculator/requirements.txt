@@ -1,2 +1,1 @@
-# Standard Library Only
-# No external dependencies required for basic Calculator implementation.
+PyQt5==5.15.10
