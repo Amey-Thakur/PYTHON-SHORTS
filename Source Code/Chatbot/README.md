@@ -51,5 +51,8 @@ where:
 ### Desktop GUI
 ![Chatbot Demo](Demo.png)
 
-### Conversational Flow
-![Chat Flow](Output.png)
+### Identity & Authentication
+![Identity Auth](Output/Chatbot_Identity_Auth.png)
+
+### Conversational Flow & Jokes
+![Interaction Flow](Output/Chatbot_Interaction_Jokes.png)
