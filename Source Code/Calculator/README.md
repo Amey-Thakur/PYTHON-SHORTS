@@ -40,4 +40,15 @@ The implementation also respects the order of operations, ensuring that binary e
 - **Validation**: Includes pre-computation checks to ensure operands are within valid domains for the requested operations.
 
 ## 5. Visual Representation
-![Implementation Demo](Demo.png)
+
+````carousel
+![User Interface](Output/Calculator_UI.png)
+<!-- slide -->
+![Operation Input](Output/Calculator_Input.png)
+<!-- slide -->
+![Result Output](Output/Calculator_Output.png)
+````
+
+### Detailed Implementation Proof
+![Main Demo](Demo.png)
+
