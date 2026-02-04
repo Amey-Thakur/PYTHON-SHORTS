@@ -1,58 +1,71 @@
-# This program illustrates a simple example for encrypting/ decrypting your text
+"""
+File: CipherText.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-LETTERS = LETTERS.lower()
+Description:
+    A scholarly implementation of the Caesar Cipher, a classic substitution 
+    cryptosystem. It utilizes modular arithmetic over the additive group 
+    Z_26 for character transformations while maintaining case and formatting.
 
-def encrypt(message, key):
-    ''' This function lets you to encrypt your message based on a key '''
-    encrypted = ''
-    for chars in message:
-        if chars in LETTERS:
-            num = LETTERS.find(chars)
-            num += key
-            if num>25:
-                num=num%25
-                num=num-1
-            encrypted =encrypted + LETTERS[num]
+Mathematical Foundation:
+    E_k(x) = (x + k) mod 26
+    D_k(y) = (y - k) mod 26
+    Where k is the secret key (shift).
+"""
 
-    return encrypted
+def caesar_cipher(text: str, shift: int, decrypt: bool = False) -> str:
+    """
+    Transforms text using Caesar's additive cipher logic.
+    
+    Args:
+        text (str): The plaintext or ciphertext to transform.
+        shift (int): The cryptographic key representing the alphabet shift.
+        decrypt (bool): Boolean flag to toggle inverse transformation.
 
-def decrypt(message, key):
-    ''' This function lets you to decrypt your message based on a key '''
-    decrypted = ''
-    for chars in message:
-        if chars in LETTERS:
-            num = LETTERS.find(chars)
-            if num>25:
-                num=num%25
-                num=num-1
-            num = num -key
-            decrypted =decrypted+LETTERS[num]
+    Returns:
+        str: The resultant transformed string.
+    """
+    # Inverse shift for decryption: k' = -k mod 26
+    if decrypt:
+        shift = -shift
+        
+    result = []
+    for char in text:
+        if char.isalpha():
+            # Standardize to 0-25 range by subtracting ASCII base
+            # 'A' = 65, 'a' = 97
+            base = ord('A') if char.isupper() else ord('a')
+            # Modular addition: f(x) = (x + k) mod 26
+            transformed_char = chr(base + (ord(char) - base + shift) % 26)
+            result.append(transformed_char)
+        else:
+            # Preserve non-alphabetical characters (identity mapping)
+            result.append(char)
+            
+    return "".join(result)
 
-    return decrypted
+def run_demo():
+    """Demonstrates encryption and decryption cycles."""
+    print("--- Python Shorts: Cryptography - Caesar Cipher ---")
+    
+    scenarios = [
+        {"msg": "Hello World!", "key": 3},
+        {"msg": "Cryptography in Z_26", "key": 13}, # ROT13 equivalent
+        {"msg": "Amey & Mega 2022", "key": 5}
+    ]
+    
+    for s in scenarios:
+        encrypted = caesar_cipher(s["msg"], s["key"])
+        decrypted = caesar_cipher(encrypted, s["key"], decrypt=True)
+        print(f"\n[Key: {s['key']}]")
+        print(f"Original : {s['msg']}")
+        print(f"Cipher   : {encrypted}")
+        print(f"Verified : {decrypted}")
 
-def main():
-    message = str(input('Enter your message: '))
-    key = int(input('Enter you key [1 - 26]: '))
-    choice = input('Encrypt or Decrypt? [E/D]: ')
-
-    if choice.lower().startswith('e'):
-        print(encrypt(message, key))
-    else:
-        print(decrypt(message, key))
-
-if __name__ == '__main__':
-    main()
-
-    # OUTPUT:
-    # omkarpathak@omkarpathak-Inspiron-3542:~/Documents/GITs/Python-Programs/Programs$ python P40_CipherText.py
-    # Enter your message: omkar
-    # Enter you key [1 - 26]: 2
-    # Encrypt or Decrypt? [E/D]: e
-    # qomct
-    #
-    # omkarpathak@omkarpathak-Inspiron-3542:~/Documents/GITs/Python-Programs/Programs$ python P40_CipherText.py
-    # Enter your message: qomct
-    # Enter you key [1 - 26]: 2
-    # Encrypt or Decrypt? [E/D]: d
-    # omkar
+if __name__ == "__main__":
+    run_demo()
