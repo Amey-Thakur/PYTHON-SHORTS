@@ -1,8 +1,8 @@
 # Anagram Detection Utility
 
 **Authors:**
-- [Amey Thakur](https://github.com/Amey-Thakur) ([ORCID: 0000-0003-4686-3829](https://orcid.org/0000-0003-4686-3829))
-- [Mega Satish](https://github.com/msatmod) ([GitHub](https://github.com/msatmod))
+- [Amey Thakur](https://github.com/Amey-Thakur) ([ORCID: 0000-0001-5644-1575](https://orcid.org/0000-0001-5644-1575))
+- [Mega Satish](https://github.com/msatmod) ([ORCID: 0000-0002-1844-9557](https://orcid.org/0000-0002-1844-9557))
 
 **Release Date:** January 9, 2022  
 **License:** MIT License
