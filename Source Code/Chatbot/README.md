@@ -43,7 +43,7 @@ where:
 ## 4. Python Implementation Logic
 - **PyQt5 Framework**: Utilizes a robust signal-slot architecture to handle user input events asynchronously.
 - **Layout Management**: Uses `QVBoxLayout` and `QHBoxLayout` to create a responsive, centered chat interface.
-- **Rich Text Rendering**: Employs HTML/CSS within `QTextEdit` for premium message formatting, including emojis and color-coded persona headers.
+- **Rich Text Rendering**: Employs HTML/CSS within `QTextEdit` for high-fidelity message formatting, including emojis and color-coded persona headers.
 - **Efficiency**: Uses a Python dictionary for $O(1)$ average case response lookups after keyword detection.
 
 ## 5. Visual Representation
