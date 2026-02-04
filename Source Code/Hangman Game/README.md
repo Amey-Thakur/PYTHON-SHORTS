@@ -28,16 +28,19 @@ The state of the game can be rigorously defined using **Set Theory**.
 
 ### State Transitions
 The revealed portion of the word is defined by the intersection:
+
 $$
 \text{Revealed} = G \cap W
 $$
 
 The set of undetected characters is the relative complement:
+
 $$
 \text{Hidden} = W \setminus G
 $$
 
 The game concludes in a "Win" state when:
+
 $$
 W \setminus G = \emptyset \quad \iff \quad W \subseteq G
 $$
