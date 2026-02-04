@@ -55,6 +55,6 @@ where:
 ![Chatbot Demo](Demo.png)
 
 ### Interaction States
-| Default Initial State | Identity Authentication |
+| Identity Authentication | Conversational Flow & Jokes |
 | :---: | :---: |
-| ![Default UI](Output/Chatbot_Default_UI.png) | ![Identity Auth](Output/Chatbot_Identity_Auth.png) |
+| ![Identity Auth](Output/Chatbot_Identity_Auth.png) | ![Interaction Flow](Output/Chatbot_Interaction_Jokes.png) |
