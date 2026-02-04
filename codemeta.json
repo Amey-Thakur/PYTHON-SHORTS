@@ -1,0 +1,39 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "name": "PYTHON-SHORTS",
+    "version": "1.0.0",
+    "description": "A comprehensive collection of short, efficient, and practical Python scripts covering algorithms, data structures, automation, and daily coding tasks.",
+    "identifier": "PYTHON-SHORTS",
+    "license": "https://spdx.org/licenses/MIT.html",
+    "programmingLanguage": [
+        "Python"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "givenName": "Amey",
+            "familyName": "Thakur",
+            "id": "https://orcid.org/0000-0001-5644-1575"
+        },
+        {
+            "@type": "Person",
+            "givenName": "Mega",
+            "familyName": "Satish",
+            "id": "https://orcid.org/0000-0002-1844-9557"
+        }
+    ],
+    "dateReleased": "2022-01-09",
+    "codeRepository": "https://github.com/Amey-Thakur/PYTHON-SHORTS",
+    "developmentStatus": "complete",
+    "applicationCategory": "Education / Tools",
+    "keywords": [
+        "Python",
+        "Shorts",
+        "Algorithms",
+        "Data Structures",
+        "Automation",
+        "Programming",
+        "Scripts"
+    ]
+}
