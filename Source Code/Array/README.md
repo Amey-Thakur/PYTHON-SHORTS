@@ -21,13 +21,16 @@ An Array is a fundamental data structure consisting of a collection of elements 
 
 ## 2. Mathematical Explanation
 The location of an element in a one-dimensional array is defined by the following linear mapping:
+
 $$ \text{Address}(A[i]) = B + (i \times S) $$
+
 where:
 - $B$ is the base address of the array.
 - $i$ is the index of the element.
 - $S$ is the size of each element in memory units.
 
 For an array starting at index $0$ with $n$ elements, the indexing set $I$ is defined as:
+
 $$ I = \{i \in \mathbb{Z} \mid 0 \le i < n \} $$
 
 ## 3. Computer Science Theory
