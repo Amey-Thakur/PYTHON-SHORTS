@@ -25,6 +25,7 @@ The conversion follows the principle of positional notation. A binary number wit
 $$ V = \sum_{i=0}^{n-1} d_i \times 2^i $$
 
 For example, to convert the binary number $1101$:
+
 $$ (1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) = 8 + 4 + 0 + 1 = 13 $$
 
 ## 3. Computer Science Theory
