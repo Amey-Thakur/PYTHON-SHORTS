@@ -49,7 +49,3 @@ While increasing $n$ reduces the depth of the recursion tree ($\log_n N$), it in
 - **Fallback Mechanism**: For intervals smaller than the partition count, the algorithm falls back to a linear scan to avoid unnecessary pivot calculations.
 
 ## 5. Visual Representation
-
-### Search Interval Convergence
-> [!NOTE]
-> **Branded Visual Pending**: The high-fidelity infographic for Search Space Partitioning will be added upon the next infrastructure synchronization.
