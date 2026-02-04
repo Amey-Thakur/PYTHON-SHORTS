@@ -21,7 +21,9 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 
 ## 2. Mathematical Explanation
 Let $S_1$ and $S_2$ be two strings of length $n$. They are anagrams if and only if:
+
 $$ \forall c \in \Sigma, \text{count}(c, S_1) = \text{count}(c, S_2) $$
+
 where $\Sigma$ is the alphabet set and $\text{count}(c, S)$ is the frequency of character $c$ in string $S$. Alternatively, if we treat strings as multi-sets of characters $M_1$ and $M_2$, the condition for an anagram is $M_1 = M_2$.
 
 ## 3. Computer Science Theory
