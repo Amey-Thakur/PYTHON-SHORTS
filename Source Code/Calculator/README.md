@@ -42,14 +42,11 @@ The implementation also respects the order of operations, ensuring that binary e
 
 ## 5. Visual Representation
 
-````carousel
-![User Interface](Output/Calculator_UI.png)
-<!-- slide -->
-![Operation Input](Output/Calculator_Input.png)
-<!-- slide -->
-![Result Output](Output/Calculator_Output.png)
-````
+![Implementation Demo](Demo.png)
 
-### Detailed Implementation Proof
-![Main Demo](Demo.png)
+### Operation Gallery
+| User Interface | Operation Input | Result Output |
+|:---:|:---:|:---:|
+| ![User Interface](Output/Calculator_UI.png) | ![Operation Input](Output/Calculator_Input.png) | ![Result Output](Output/Calculator_Output.png) |
+
 
