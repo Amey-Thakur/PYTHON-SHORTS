@@ -1,30 +1,85 @@
-# PASCAL TRAINGLE: To build the triangle, start with "1" at the top, then continue placing numbers
-# below it in a triangular pattern. Each number is the numbers directly above it added together.
+"""
+File: PascalTriangle.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-# generates the nth row of Pascal's Triangle
-def pascalRow(n):
-    if n == 0:
-        return [1]
-    else:
-        N = pascalRow(n-1)
-        return [1] + [N[i] + N[i+1] for i in range(n-1)] + [1]
+Description:
+    A high-fidelity computational utility for generating Pascal's Triangle. 
+    This module implements an iterative Dynamic Programming approach to 
+    efficiently compute binomial coefficients for triangular matrices.
 
-# create a triangle of n rows
-def pascalTriangle(n):
-    triangle = []
-    for i in range(n):
-        triangle.append(pascalRow(i))
-    return triangle
+Mathematical Logic:
+    Pascal's Triangle is a triangular array of binomial coefficients. The 
+    value at the n-th row and k-th column is given by the formula:
+    C(n, k) = n! / (k! * (n-k)!)
+    The iterative construction follows Pascal's Identity:
+    P(n, k) = P(n-1, k-1) + P(n-1, k)
+"""
 
-if __name__ == '__main__':
-    for i in pascalTriangle(7):
-        print(i)
+from typing import List
 
-    # OUTPUT:
-    # [1]
-    # [1, 1]
-    # [1, 2, 1]
-    # [1, 3, 3, 1]
-    # [1, 4, 6, 4, 1]
-    # [1, 5, 10, 10, 5, 1]
-    # [1, 6, 15, 20, 15, 6, 1]
+class PascalTriangleGenerator:
+    """Scholarly implementation of Pascal's Triangle generation services."""
+
+    @staticmethod
+    def generate(rows: int) -> List[List[int]]:
+        """
+        Generates a Pascal's Triangle with the specified number of rows.
+
+        Args:
+            rows (int): The number of rows to generate.
+
+        Returns:
+            List[List[int]]: A list of lists representing the triangle.
+        """
+        if rows <= 0:
+            return []
+
+        triangle = [[1]]
+        for i in range(1, rows):
+            prev_row = triangle[-1]
+            # Pascal's Identity: Sum of two adjacent elements in the previous row
+            row = [1]
+            for j in range(1, len(prev_row)):
+                row.append(prev_row[j-1] + prev_row[j])
+            row.append(1)
+            triangle.append(row)
+            
+        return triangle
+
+    @staticmethod
+    def display(rows: int):
+        """
+        Displays the Pascal's Triangle in a formatted matrix.
+
+        Args:
+            rows (int): The number of rows to display.
+        """
+        triangle = PascalTriangleGenerator.generate(rows)
+        # Calculate padding for alignment based on the largest value (center of the last row)
+        max_val = triangle[-1][len(triangle[-1]) // 2]
+        width = len(str(max_val)) + 1
+        
+        print(f"--- Pascal's Triangle Generator ({rows} Rows) ---")
+        for i, row in enumerate(triangle):
+            # Center the row for triangular aesthetic
+            row_str = " ".join(f"{val:{width}}" for val in row)
+            print(f"Row {i:2}: {row_str.center(width * rows)}")
+        print("-" * 40)
+
+def run_demo():
+    """Execution demo showcasing combinatorial matrices."""
+    generator = PascalTriangleGenerator()
+    
+    # Standard 7-row triangle
+    generator.display(7)
+    
+    # Extended 10-row triangle
+    generator.display(10)
+
+if __name__ == "__main__":
+    run_demo()
