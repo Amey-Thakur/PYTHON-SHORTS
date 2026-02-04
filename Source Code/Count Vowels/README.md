@@ -21,10 +21,15 @@ The **Count Vowels** utility is a lexicographical tool used to determine the fre
 ## 2. Mathematical Explanation
 From the perspective of **Set Theory**, given an input string $S$ (treated as a multiset of characters), and a fixed set of vowels $V = \{a, e, i, o, u\}$, the total vowel count $C$ is the cardinality of the intersection between $S$ and $V$, where $S$ is normalized to its lowercase equivalent $S_{low}$:
 
-$$ C = | \{ x \in S_{low} : x \in V \} | $$
+$$
+C = | \{ x \in S_{low} : x \in V \} |
+$$
 
 The frequency mapping $f: V \to \mathbb{N}$ is defined for each $v \in V$ as:
-$$ f(v) = | \{ x \in S_{low} : x = v \} | $$
+
+$$
+f(v) = | \{ x \in S_{low} : x = v \} |
+$$
 
 ## 3. Computer Science Theory
 - **String Traversal**: The algorithm employs a linear scan, ensuring high efficiency for large text processing.

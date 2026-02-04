@@ -21,7 +21,9 @@ The **Check Greater Than Collection** utility is a predicate logic validator tha
 ## 2. Mathematical Explanation
 The algorithm implements the **Universal Quantification** ($\forall$) operation over a set. Given a set (or collection) $C$ and a threshold $\tau$, we test the following predicate:
 
-$$ P(C, \tau) \iff \forall x \in C, x > \tau $$
+$$
+P(C, \tau) \iff \forall x \in C, x > \tau
+$$
 
 ### Vacuous Truth
 In the case where $C = \emptyset$ (an empty collection), the predicate $P(C, \tau)$ is considered **vacuously true**. This is because the requirement for a counter-example ($x \le \tau$) cannot be satisfied by any member of the set, as no such member exists.

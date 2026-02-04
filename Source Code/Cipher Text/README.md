@@ -23,8 +23,12 @@ The Caesar Cipher is defined mathematically as an operation over the **additive 
 
 Given a character $x$ representing its numerical position in the alphabet ($A=0, B=1, \dots, Z=25$) and a key (shift) $k$, the functions for encryption ($E$) and decryption ($D$) are:
 
-$$ E_k(x) = (x + k) \pmod{26} $$
-$$ D_k(x) = (x - k) \pmod{26} $$
+$$
+E_k(x) = (x + k) \pmod{26}
+$$
+$$
+D_k(x) = (x - k) \pmod{26}
+$$
 
 ### Properties
 - **Symmetry**: The same algorithm is used for both encryption and decryption, with the key negated for decryption.
