@@ -55,6 +55,6 @@ where:
 ![Chatbot Demo](Demo.png)
 
 ### Interaction States
-| Identity Authentication | Conversational Flow & Jokes |
+| Identity and Author Authentication | Conversational Flow & Jokes |
 | :---: | :---: |
 | ![Identity Auth](Output/Chatbot_Identity_Auth.png) | ![Interaction Flow](Output/Chatbot_Interaction_Jokes.png) |
