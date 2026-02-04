@@ -25,6 +25,7 @@ Basic arithmetic is governed by the field properties of real numbers. Given two 
 $$ y = a \circ b $$
 
 For division, the operation $y = a \div b$ is defined only if the divisor satisfies:
+
 $$ b \neq 0 $$
 
 The implementation also respects the order of operations, ensuring that binary expressions are evaluated according to standard algebraic precedence.
