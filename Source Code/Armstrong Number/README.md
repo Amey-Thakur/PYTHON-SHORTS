@@ -21,11 +21,15 @@ An Armstrong number (also known as a narcissistic number, pluperfect digital inv
 
 ## 2. Mathematical Explanation
 A natural number $N$ in a given number base $b$ is an Armstrong number if it satisfies the following condition:
+
 $$ N = \sum_{i=1}^{k} d_i^k $$
+
 where $k$ is the number of digits of $N$ in base $b$, and $d_i$ are the individual digits. 
 
 For example, $153$ is a 3-digit number. The calculation is:
+
 $$ 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153 $$
+
 Thus, $153$ is an Armstrong number.
 
 ## 3. Computer Science Theory
