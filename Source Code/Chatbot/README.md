@@ -49,7 +49,7 @@ where:
 ## 5. Visual Representation
 
 ### Conversational Flow
-![Interaction Flow](Output/Chatbot_Interaction_Jokes.png)
+![Interaction Flow](Output.png)
 
 ### Desktop GUI
 ![Chatbot Demo](Demo.png)
