@@ -1,23 +1,64 @@
-#This program shows an example of bubble sort using Python
+"""
+File: BubbleSort.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-#   Bubblesort is an elementary sorting algorithm. The idea is to
-#   imagine bubbling the smallest elements of a (vertical) array to the
-#   top; then bubble the next smallest; then so on until the entire
-#   array is sorted. Bubble sort is worse than both insertion sort and
-#   selection sort. It moves elements as many times as insertion sort
-#   (bad) and it takes as long as selection sort (bad). On the positive
-#   side, bubble sort is easy to understand. Also there are highly
-#   improved variants of bubble sort.
+Description:
+    Bubble Sort is a simple comparison-based sorting algorithm. It 
+    repeatedly steps through the list, compares adjacent elements, and 
+    swaps them if they are in the wrong order. This implementation 
+    includes an optimization to terminate early if the list is already sorted.
 
-#   Best O(n^2); Average O(n^2); Worst O(n^2)
+Complexity Analysis:
+    - Time Complexity: O(N^2) worst/average case; O(N) best case (with optimization).
+    - Space Complexity: O(1) in-place sorting.
 
-def bubbleSort(List):
-    for i in range(len(List)):
-        for j in range(len(List) - 1, i, -1):
-            if List[j] < List[j - 1]:
-                List[j], List[j - 1] = List[j - 1], List[j]
-    return List
+Logic:
+    1. Iterate through the list N times.
+    2. In each pass, compare adjacent elements.
+    3. If the left element > right element, swap them.
+    4. Track if any swap occurred during the pass.
+    5. If no swaps occurred, the list is sorted; exit early.
+"""
+
+from typing import List, Any
+
+def bubble_sort(arr: List[Any]) -> List[Any]:
+    """
+    Sorts a list using the optimized Bubble Sort algorithm.
+
+    Args:
+        arr (List[Any]): The list to be sorted.
+
+    Returns:
+        List[Any]: The sorted list (modified in-place, but returned for convenience).
+    """
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        # Last i elements are already in place
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        
+        # If no two elements were swapped by inner loop, then break
+        if not swapped:
+            break
+            
+    return arr
+
+def run_bubble_sort_demo() -> None:
+    """Demonstrates Bubble Sort."""
+    print("--- Python Shorts: Bubble Sort Optimization Demo ---")
+    data = [64, 34, 25, 12, 22, 11, 90]
+    print(f"Original: {data}")
+    sorted_data = bubble_sort(data.copy())
+    print(f"Sorted  : {sorted_data}")
 
 if __name__ == '__main__':
-    List = [3, 4, 2, 6, 5, 7, 1, 9]
-    print('Sorted List:',bubbleSort(List))
+    run_bubble_sort_demo()
