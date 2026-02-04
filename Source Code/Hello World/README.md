@@ -33,7 +33,7 @@ $$
 
 ## 3. Computer Science Theory
 - **Buffer Serialization**: Character data is encoded (typically via UTF-8) and written to a buffer before being flushed to the hardware display interface.
-- **Atomicity**: The program performs a singular, atomic task—displaying a message—making it the fundamental unit of verification in systems engineering.
+- **Atomicity**: The program performs a singular, atomic task, displaying a message, making it the fundamental unit of verification in systems engineering.
 - **Complexity**:
     - **Time Complexity**: $O(n)$ where $n$ is the number of characters to be printed.
     - **Space Complexity**: $O(1)$ (auxiliary space).

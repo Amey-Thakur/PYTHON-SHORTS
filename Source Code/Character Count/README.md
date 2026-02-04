@@ -37,8 +37,8 @@ $$
 where $\Sigma(S)$ is the alphabet (set of unique characters) in string $S$.
 
 ## 3. Computer Science Theory
-- **Time Complexity**: $O(N)$ — A single pass through the string.
-- **Space Complexity**: $O(U)$ — Where $U$ is the number of unique characters (bounded by the alphabet size).
+- **Time Complexity**: $O(N)$: A single pass through the string.
+- **Space Complexity**: $O(U)$: Where $U$ is the number of unique characters (bounded by the alphabet size).
 - **Data Structure**: Uses a hash map (dictionary) for constant-time insertions and lookups.
 - **Applications**: Frequency analysis in cryptography, Huffman encoding, text analytics.
 
