@@ -1,0 +1,3 @@
+# Requirements for Chatbot
+# Requires PyQt5 for the high-fidelity graphical interface.
+PyQt5==5.15.10
