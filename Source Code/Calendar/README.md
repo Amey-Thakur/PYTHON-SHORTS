@@ -47,6 +47,6 @@ where:
 ![Calendar Interface](Output/Calendar_UI.png)
 
 ### Date Selection Examples
-| Historical Date | Recent Date |
+| Amey's Birthday | Mega's Birthday |
 |:---:|:---:|
-| ![Historical Date](Output/Calendar_Amey_Birthday.png) | ![Recent Date](Output/Calendar_Mega_Birthday.png) |
+| ![Amey's Birthday](Output/Calendar_Amey_Birthday.png) | ![Mega's Birthday](Output/Calendar_Mega_Birthday.png) |
