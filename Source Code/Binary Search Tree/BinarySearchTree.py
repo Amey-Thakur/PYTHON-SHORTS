@@ -1,144 +1,135 @@
-# This program illustrates an example of Binary Search Tree using Python
+"""
+File: BinarySearchTree.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-class Node(object):
-    def __init__(self, data):
-        self.data = data
-        self.leftChild = None
-        self.rightChild = None
+Description:
+    A Binary Search Tree (BST) is a node-based binary tree data structure 
+    where the left subtree of a node contains only nodes with keys lesser 
+    than the node’s key, and the right subtree contains only nodes with 
+    keys greater. This implementation provides standard insertion, search, 
+    and deletion operations.
 
-    def insert(self, data):
-        ''' For inserting the data in the Tree '''
-        if self.data == data:
-            return False        # As BST cannot contain duplicate data
+Complexity Analysis:
+    - Search/Insert/Delete: Average O(log N), Worst O(N) if the tree is skewed.
+    - Space Complexity: O(N) for storing N nodes.
 
-        elif data < self.data:
-            ''' Data less than the root data is placed to the left of the root '''
-            if self.leftChild:
-                return self.leftChild.insert(data)
-            else:
-                self.leftChild = Node(data)
-                return True
+Logic:
+    1. Define a `Node` class to represent each element in the tree.
+    2. Use recursion for clean tree traversal and modification.
+    3. Ensure BST property is maintained during all mutation operations.
+    4. Implement in-order traversal for verification of sorted order.
+"""
 
+from typing import Optional, List, Any
+
+class BSTNode:
+    """Represents a single node in the Binary Search Tree."""
+    def __init__(self, key: Any):
+        self.key = key
+        self.left: Optional[BSTNode] = None
+        self.right: Optional[BSTNode] = None
+
+class BinarySearchTree:
+    """A standard Binary Search Tree implementation."""
+    def __init__(self):
+        self.root: Optional[BSTNode] = None
+
+    def insert(self, key: Any) -> None:
+        """Inserts a new key into the BST."""
+        if self.root is None:
+            self.root = BSTNode(key)
         else:
-            ''' Data greater than the root data is placed to the right of the root '''
-            if self.rightChild:
-                return self.rightChild.insert(data)
+            self._insert_recursive(self.root, key)
+
+    def _insert_recursive(self, node: BSTNode, key: Any) -> None:
+        if key < node.key:
+            if node.left is None:
+                node.left = BSTNode(key)
             else:
-                self.rightChild = Node(data)
-                return True
-
-
-    def find(self, data):
-        ''' This function checks whether the specified data is in tree or not '''
-        if(data == self.data):
-            return True
-        elif(data < self.data):
-            if self.leftChild:
-                return self.leftChild.find(data)
+                self._insert_recursive(node.left, key)
+        else:
+            if node.right is None:
+                node.right = BSTNode(key)
             else:
-                return False
-        else:
-            if self.rightChild:
-                return self.rightChild.find(data)
-            else:
-                return False
+                self._insert_recursive(node.right, key)
 
-    def preorder(self):
-        '''For preorder traversal of the BST '''
-        if self:
-            print(str(self.data), end = ' ')
-            if self.leftChild:
-                self.leftChild.preorder()
-            if self.rightChild:
-                self.rightChild.preorder()
+    def search(self, key: Any) -> bool:
+        """Searches for a key in the BST."""
+        return self._search_recursive(self.root, key)
 
-    def inorder(self):
-        ''' For Inorder traversal of the BST '''
-        if self:
-            if self.leftChild:
-                self.leftChild.inorder()
-            print(str(self.data), end = ' ')
-            if self.rightChild:
-                self.rightChild.inorder()
-
-    def postorder(self):
-        ''' For postorder traversal of the BST '''
-        if self:
-            if self.leftChild:
-                self.leftChild.postorder()
-            if self.rightChild:
-                self.rightChild.postorder()
-            print(str(self.data), end = ' ')
-
-class Tree(object):
-    def __init__(self, initial_data = []):
-        self.root = None
-
-        # If provided, add initial data
-        for data in initial_data:
-            self.insert(data)
-
-    def insert(self, data):
-        if self.root:
-            return self.root.insert(data)
-        else:
-            self.root = Node(data)
-            return True
-
-    def find(self, data):
-        if self.root:
-            return self.root.find(data)
-        else:
+    def _search_recursive(self, node: Optional[BSTNode], key: Any) -> bool:
+        if node is None:
             return False
+        if node.key == key:
+            return True
+        if key < node.key:
+            return self._search_recursive(node.left, key)
+        return self._search_recursive(node.right, key)
 
-    def preorder(self):
-        if self.root is not None:
-            print()
-            print('Preorder: ')
-            self.root.preorder()
+    def delete(self, key: Any) -> None:
+        """Deletes a key from the BST."""
+        self.root = self._delete_recursive(self.root, key)
 
-    def inorder(self):
-        print()
-        if self.root is not None:
-            print('Inorder: ')
-            self.root.inorder()
+    def _delete_recursive(self, node: Optional[BSTNode], key: Any) -> Optional[BSTNode]:
+        if node is None:
+            return None
 
-    def postorder(self):
-        print()
-        if self.root is not None:
-            print('Postorder: ')
-            self.root.postorder()
+        if key < node.key:
+            node.left = self._delete_recursive(node.left, key)
+        elif key > node.key:
+            node.right = self._delete_recursive(node.right, key)
+        else:
+            # Node with only one child or no child
+            if node.left is None:
+                return node.right
+            elif node.right is None:
+                return node.left
 
+            # Node with two children: Get the inorder successor
+            temp = self._min_value_node(node.right)
+            node.key = temp.key
+            node.right = self._delete_recursive(node.right, temp.key)
 
-    def pprint(self, head_node=0, _pre="", _last=True, term=False):
+        return node
 
-        head_node = self.root if head_node == 0 else head_node
+    def _min_value_node(self, node: BSTNode) -> BSTNode:
+        current = node
+        while current.left is not None:
+            current = current.left
+        return current
 
-        data = "*" if head_node is None else head_node.data
+    def inorder_traversal(self) -> List[Any]:
+        """Returns the in-order traversal of the tree (sorted)."""
+        results: List[Any] = []
+        self._inorder_recursive(self.root, results)
+        return results
 
-        print(_pre, "`- " if _last else "|- ", data, sep="")
-        _pre += "   " if _last else "|  "
+    def _inorder_recursive(self, node: Optional[BSTNode], results: List[Any]) -> None:
+        if node:
+            self._inorder_recursive(node.left, results)
+            results.append(node.key)
+            self._inorder_recursive(node.right, results)
 
-        if term: return
-
-        for i, child in enumerate([head_node.leftChild, head_node.rightChild]):
-            self.pprint(child,  _pre, bool(i) ,term=not(bool(child)))
-
+def run_bst_demo() -> None:
+    """Demonstrates basic BST operations."""
+    print("--- Python Shorts: Binary Search Tree Demo ---")
+    bst = BinarySearchTree()
+    keys = [50, 30, 20, 40, 70, 60, 80]
+    
+    for k in keys:
+        bst.insert(k)
+        
+    print(f"In-order Traversal (Sorted): {bst.inorder_traversal()}")
+    print(f"Search for 40: {'Found' if bst.search(40) else 'Not Found'}")
+    
+    print("Deleting 20...")
+    bst.delete(20)
+    print(f"In-order Traversal: {bst.inorder_traversal()}")
 
 if __name__ == '__main__':
-    tree = Tree()
-    tree.insert(10)
-    tree.insert(12)
-    tree.insert(5)
-    tree.insert(4)
-    tree.insert(20)
-    tree.insert(8)
-    tree.insert(7)
-    tree.insert(15)
-    tree.insert(13)
-    tree.pprint()
-    print(tree.find(1))
-    print(tree.find(12))
-    tree.preorder()
-    tree.inorder()
-    tree.postorder()
+    run_bst_demo()
