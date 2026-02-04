@@ -1,54 +1,74 @@
-# This program will illustrate how to implement bucket sort algorithm
+"""
+File: BucketSort.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-# Wikipedia says: Bucket sort, or bin sort, is a sorting algorithm that works by distributing the
-# elements of an array into a number of buckets. Each bucket is then sorted individually, either using 
-# a different sorting algorithm, or by recursively applying the bucket sorting algorithm. It is a
-# distribution sort, and is a cousin of radix sort in the most to least significant digit flavour.
-# Bucket sort is a generalization of pigeonhole sort. Bucket sort can be implemented with comparisons
-# and therefore can also be considered a comparison sort algorithm. The computational complexity estimates
-# involve the number of buckets.
+Description:
+    Bucket Sort is a distribution sort that works by partitioning an 
+    array into several buckets. Each bucket is then sorted individually, 
+    either using a different sorting algorithm or by recursively 
+    applying the bucket sort. This implementation handles floating-point 
+    numbers in the range [0, 1).
 
-#  Time Complexity of Solution:
-#  Best Case O(n); Average Case O(n); Worst Case O(n)
+Complexity Analysis:
+    - Time Complexity: O(N) average case (if inputs are uniformly distributed); 
+      Worst case O(N^2) if all elements go into one bucket.
+    - Space Complexity: O(N + K), where N is elements and K is buckets.
 
-from P26_InsertionSort import insertionSort
-import math
+Logic:
+    1. Create K empty buckets (where K is typically equal to N).
+    2. Insert each element into a bucket calculated based on its value.
+    3. Sort each individual bucket (using built-in Timsort in this case).
+    4. Concatenate all sorted buckets into the final result.
+"""
 
-DEFAULT_BUCKET_SIZE = 5
+from typing import List
 
-def bucketSort(myList, bucketSize=DEFAULT_BUCKET_SIZE):
-    if(len(myList) == 0):
-        print('You don\'t have any elements in array!')
+def bucket_sort(arr: List[float]) -> List[float]:
+    """
+    Sorts an array of floating point numbers in range [0, 1).
 
-    minValue = myList[0]
-    maxValue = myList[0]
+    Args:
+        arr (List[float]): The list of floats to be sorted.
 
-    # For finding minimum and maximum values
-    for i in range(0, len(myList)):
-        if myList[i] < minValue:
-            minValue = myList[i]
-        elif myList[i] > maxValue:
-            maxValue = myList[i]
+    Returns:
+        List[float]: The sorted list.
+    """
+    if not arr:
+        return []
 
-    # Initialize buckets
-    bucketCount = math.floor((maxValue - minValue) / bucketSize) + 1
-    buckets = []
-    for i in range(0, bucketCount):
-        buckets.append([])
+    n = len(arr)
+    # 1. Create n empty buckets
+    buckets: List[List[float]] = [[] for _ in range(n)]
 
-    # For putting values in buckets
-    for i in range(0, len(myList)):
-        buckets[math.floor((myList[i] - minValue) / bucketSize)].append(myList[i])
+    # 2. Put elements in different buckets
+    for val in arr:
+        index = int(n * val)
+        # Ensure index is within range [0, n-1]
+        if index < 0:
+            index = 0
+        elif index >= n:
+            index = n - 1
+        buckets[index].append(val)
 
-    # Sort buckets and place back into input array
-    sortedArray = []
-    for i in range(0, len(buckets)):
-        insertionSort(buckets[i])
-        for j in range(0, len(buckets[i])):
-            sortedArray.append(buckets[i][j])
+    # 3. Sort individual buckets and concatenate
+    sorted_arr = []
+    for bucket in buckets:
+        sorted_arr.extend(sorted(bucket))
 
-    return sortedArray
+    return sorted_arr
+
+def run_bucket_sort_demo() -> None:
+    """Demonstrates Bucket Sort."""
+    print("--- Python Shorts: Bucket Sort Distribution Demo ---")
+    data = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
+    print(f"Original: {data}")
+    sorted_data = bucket_sort(data)
+    print(f"Sorted  : {sorted_data}")
 
 if __name__ == '__main__':
-    sortedArray = bucketSort([12, 23, 4, 5, 3, 2, 12, 81, 56, 95])
-    print(sortedArray)
+    run_bucket_sort_demo()
