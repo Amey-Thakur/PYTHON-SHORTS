@@ -1,0 +1,2 @@
+# No external dependencies required for this implementation.
+# Uses standard Python random, string, and time modules.
