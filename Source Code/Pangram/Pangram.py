@@ -1,34 +1,68 @@
-# PANGRAM: A sentence containing every letter of the alphabet.
+"""
+File: Pangram.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-from collections import Counter
+Description:
+    A high-fidelity computational utility for verifying pangrams. A pangram is 
+    a sentence containing every letter of the alphabet at least once. This 
+    module utilizes set cardinality to achieve O(n) verification efficiency.
 
-def pangram(sentence):
-	sentence = sentence.lower()
-	check = 'abcdefghijklmnopqrstuvwxyz'
-	alphabets = []
-	for letter in sentence:
-		if letter.isalpha():
-			if letter in alphabets:
-				pass
-			else:
-				alphabets.append(letter)
+Mathematical Logic:
+    Let A be the set of all unique alphabetic characters in a given string S. 
+    Let L be the set of all letters in the English alphabet (a-z). 
+    S is a pangram if and only if L is a subset of A, which implies |A \cap L| = 26.
+"""
 
-	alphabets = ''.join(alphabets)
-	if Counter(check) == Counter(alphabets):
-		return True
-	else:
-		return False
+import string
 
-# A short version of above function:
-def pangram2(sentence):
-    alphabet = list(map(chr, range(97, 123)))
-    formattedString = ''.join(c for c in sentence if c.isalpha()).lower()
-    return set(alphabet) == set(formattedString)
+class PangramVerifier:
+    """Scholarly implementation of alphabetic coverage verification."""
+    
+    ALPHABET_SET = set(string.ascii_lowercase)
+    ALPHABET_COUNT = 26
 
-if __name__ == '__main__':
-    print(pangram('the quick brown fox jumps over the lazy dog'))       # True
-    print(pangram('the_quick_brown_fox_jumps_over_the_lazy_dog'))       # True
-    print(pangram('the 1 quick brown fish jumps over the 2 lazy dogs')) # False
-    print(pangram('Five quacking Zephyrs jolt my wax bed.'))            # True
-    print(pangram('the quick brown fox jumped over the lazy FOX'))      # False
-    print(pangram(' '))                                                 # False
+    @staticmethod
+    def is_pangram(sentence: str) -> bool:
+        """
+        Determines if the provided sentence is a pangram.
+
+        Args:
+            sentence (str): The input string to verify.
+
+        Returns:
+            bool: True if every letter of the alphabet is present, False otherwise.
+        """
+        # Normalize: Filter non-alphabetic characters and convert to lowercase
+        # Then convert to a set to find unique characters
+        found_chars = {char.lower() for char in sentence if char.isalpha()}
+        
+        # Check if the cardinality of the intersection with the alphabet is 26
+        return len(found_chars) == PangramVerifier.ALPHABET_COUNT
+
+def run_pangram_demo():
+    """Execution demo showcasing alphabetic coverage across diverse vectors."""
+    print("--- Python Shorts: Pangram Verification Service ---")
+    
+    test_vectors = [
+        "The quick brown fox jumps over the lazy dog",
+        "Pack my box with five dozen liquor jugs",
+        "The quick brown fox jumped over the lazy dog",  # Missing 's'
+        "Five quacking Zephyrs jolt my wax bed",
+        "Hello World",
+        "123!@#",
+        ""
+    ]
+
+    for vector in test_vectors:
+        result = PangramVerifier.is_pangram(vector)
+        status = "is a Pangram" if result else "is NOT a Pangram"
+        print(f"[Input]:  \"{vector}\"")
+        print(f" -> Status: {status}\n")
+
+if __name__ == "__main__":
+    run_pangram_demo()
