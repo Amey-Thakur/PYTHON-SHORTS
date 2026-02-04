@@ -48,4 +48,4 @@ Where $a_0$ is the initial even seed derived from the starting input value.
 ## 5. Visual Representation
 
 ### Sequence Generation & Logic Verification
-![Sequence Demo](Branded_Demo.png)
+![Sequence Demo](Demo.png)
