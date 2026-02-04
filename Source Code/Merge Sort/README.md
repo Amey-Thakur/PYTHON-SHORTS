@@ -50,7 +50,3 @@ The stability is guaranteed in the merging step. When two equal elements are com
 - **Pointer-Based Merging**: Avoids $O(n)$ list removals by maintaining index pointers, ensuring the merge step remains strictly linear.
 
 ## 5. Visual Representation
-
-### Recursive Splitting & Merging
-> [!NOTE]
-> **Branded Visual Pending**: The high-fidelity infographic for Divide and Conquer recurrence will be added upon the next infrastructure synchronization.
