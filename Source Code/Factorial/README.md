@@ -32,6 +32,7 @@ The operation is uniquely suited for recursive modeling:
 
 ### Extension: The Gamma Function
 For non-integers, the factorial is generalized by the **Gamma Function** $\Gamma(z)$:
+
 $$
 \Gamma(n) = (n-1)! \quad \text{for } n \in \mathbb{Z}^+
 $$
