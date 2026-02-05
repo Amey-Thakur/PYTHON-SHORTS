@@ -43,3 +43,26 @@ This hierarchical ordering ensures that an in-order traversal of the tree yields
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+graph TD
+    A[50] --> B[30]
+    A --> C[70]
+    B --> D[20]
+    B --> E[40]
+    C --> F[60]
+    C --> G[80]
+```
+
+```mermaid
+flowchart TD
+    A[BST Operations] --> B[Insert]
+    A --> C[Search]
+    A --> D[Delete]
+    B --> E[Compare with Root]
+    E --> F{Value < Root?}
+    F -->|Yes| G[Go Left]
+    F -->|No| H[Go Right]
+    G --> I[Recursively Insert]
+    H --> I
+```
