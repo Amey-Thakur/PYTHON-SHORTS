@@ -1,64 +1,142 @@
-# Time Complexity: O(|V| + |E|)
-# One important point to remember is that topological sort can be applied only to acyclic graph.
+"""
+File: TopologicalSort.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-class Graph():
-    def __init__(self, count):
-        self.vertex = {}
-        self.count = count          # vertex count
+Description:
+    This module implements Topological Sort using Depth-First Search (DFS) 
+    on a Directed Acyclic Graph (DAG). Topological ordering is essential for 
+    task scheduling, dependency resolution, and compilation order determination.
 
-    # for printing the Graph vertexes
-    def printGraph(self):
-        for i in self.vertex.keys():
-            print(i,' -> ', ' -> '.join([str(j) for j in self.vertex[i]]))
+Complexity Analysis:
+    - Time Complexity: O(V + E) where V = vertices, E = edges.
+    - Space Complexity: O(V) for the visited array and recursion stack.
 
-    # for adding the edge beween two vertexes
-    def addEdge(self, fromVertex, toVertex):
-        # check if vertex is already present,
-        if fromVertex in self.vertex.keys():
-            self.vertex[fromVertex].append(toVertex)
-        else:
-            # else make a new vertex
-            self.vertex[fromVertex] = [toVertex]
-            self.vertex[toVertex] = []
+Logic:
+    1. Build adjacency list representation of the directed graph.
+    2. Perform DFS from each unvisited vertex.
+    3. After visiting all neighbors, push current vertex to front of result.
+    4. The resulting order satisfies all edge constraints (u before v for edge u→v).
+    5. Only valid for DAGs; cycles make topological sort impossible.
+"""
 
-    def topologicalSort(self):
-        visited = [False] * self.count           # Marking all vertices as not visited
-        stack = []                               # Stack for storing the vertex
-        for vertex in range(self.count):
-            # Call the recursive function only if not visited
-            if visited[vertex] == False:
-                self.topologicalSortRec(vertex, visited, stack)
+from typing import List, Dict, Set, Optional
 
-        print(' '.join([str(i) for i in stack]))
-        # print(stack)
 
-    # Recursive function for topological Sort
-    def topologicalSortRec(self, vertex, visited, stack):
+class TopologicalSortService:
+    """
+    A service class for performing topological sort on directed graphs.
+    """
 
-        # Mark the current node in visited
-        visited[vertex] = True
+    def __init__(self):
+        """Initializes an empty graph."""
+        self.adjacency_list: Dict[int, List[int]] = {}
+        self.vertex_count: int = 0
 
-        # mark all adjacent nodes of the current node
-        try:
-            for adjacentNode in self.vertex[vertex]:
-                if visited[adjacentNode] == False:
-                    self.topologicalSortRec(adjacentNode, visited, stack)
-        except KeyError:
-            return
+    def add_vertex(self, vertex: int) -> None:
+        """
+        Adds a vertex to the graph.
+        
+        Args:
+            vertex: The vertex identifier.
+        """
+        if vertex not in self.adjacency_list:
+            self.adjacency_list[vertex] = []
+            self.vertex_count += 1
 
-        # Push current vertex to stack which stores the result
-        stack.insert(0,vertex)
+    def add_edge(self, from_vertex: int, to_vertex: int) -> None:
+        """
+        Adds a directed edge from one vertex to another.
+        
+        Args:
+            from_vertex: Source vertex.
+            to_vertex: Destination vertex.
+        """
+        self.add_vertex(from_vertex)
+        self.add_vertex(to_vertex)
+        self.adjacency_list[from_vertex].append(to_vertex)
 
-if __name__ == '__main__':
-    g= Graph(6)
-    g.addEdge(5, 2)
-    g.addEdge(5, 0)
-    g.addEdge(4, 0)
-    g.addEdge(4, 1)
-    g.addEdge(2, 3)
-    g.addEdge(3, 1)
-    # g.printGraph()
-    g.topologicalSort()
+    def sort(self) -> Optional[List[int]]:
+        """
+        Performs topological sort using DFS.
+        
+        Returns:
+            List of vertices in topological order, or None if cycle detected.
+        """
+        visited: Set[int] = set()
+        rec_stack: Set[int] = set()  # For cycle detection
+        result: List[int] = []
 
-    # OUTPUT:
-    # 5 4 2 3 1 0
+        def dfs(vertex: int) -> bool:
+            """Recursive DFS helper. Returns False if cycle detected."""
+            visited.add(vertex)
+            rec_stack.add(vertex)
+
+            for neighbor in self.adjacency_list.get(vertex, []):
+                if neighbor in rec_stack:
+                    return False  # Cycle detected
+                if neighbor not in visited:
+                    if not dfs(neighbor):
+                        return False
+
+            rec_stack.remove(vertex)
+            result.insert(0, vertex)
+            return True
+
+        for vertex in self.adjacency_list:
+            if vertex not in visited:
+                if not dfs(vertex):
+                    return None  # Graph has a cycle
+
+        return result
+
+    def print_graph(self) -> None:
+        """Prints the adjacency list representation of the graph."""
+        print("Graph Adjacency List:")
+        for vertex, neighbors in self.adjacency_list.items():
+            neighbor_str = ' -> '.join(map(str, neighbors)) if neighbors else '(no outgoing edges)'
+            print(f"  {vertex} -> {neighbor_str}")
+
+
+def main():
+    """
+    Demonstrates the scholarly Topological Sort implementation.
+    """
+    print("--- Topological Sort Service Demo ---\n")
+
+    service = TopologicalSortService()
+
+    # Build sample DAG (task dependencies)
+    edges = [
+        (5, 2), (5, 0),
+        (4, 0), (4, 1),
+        (2, 3), (3, 1)
+    ]
+
+    print("Adding edges:")
+    for u, v in edges:
+        print(f"  {u} -> {v}")
+        service.add_edge(u, v)
+
+    print()
+    service.print_graph()
+
+    print("\nTopological Sort Result:")
+    result = service.sort()
+
+    if result:
+        print(f"  Order: {' -> '.join(map(str, result))}")
+        print("\nInterpretation: Tasks should be executed in this order")
+        print("to satisfy all dependencies.")
+    else:
+        print("  Error: Graph contains a cycle (not a DAG)")
+
+    print("\n--- Demo Complete ---")
+
+
+if __name__ == "__main__":
+    main()
