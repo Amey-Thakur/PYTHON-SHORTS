@@ -398,7 +398,7 @@ python Chatbot.py
 
 | Domain | Technical Overview | Workspace | Source | Demo |
 |:---|:---|:---:|:---:|:---:|
-| Systems Utility | The **Countdown Timer** is a time-tracking utility designed to decrement a specified temporal value towards zero. In computer architecture and operating systems, such timers are crucial for task scheduling, interrupt handling, and synchronization in distributed systems. | [Open](Source%20Code/Countdown%20Timer/) | [View](Source%20Code/Countdown%20Timer/Countdowntimer.py) | n/a |
+| Systems Utility | The **Countdown Timer** is a time-tracking utility designed to decrement a specified temporal value towards zero. In computer architecture and operating systems, such timers are crucial for task scheduling, interrupt handling, and synchronization in distributed systems. | [Open](Source%20Code/Countdown%20Timer/) | [View](Source%20Code/Countdown%20Timer/Countdowntimer.py) | [View](Source%20Code/Countdown%20Timer/Demo.png) |
 
 </details>
 
@@ -1095,6 +1095,7 @@ python Chatbot.py
 
 </details>
 
+---
 ---
 ---
 ---
