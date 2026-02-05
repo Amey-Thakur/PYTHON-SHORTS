@@ -51,16 +51,28 @@ $$
 
 ## 5. Visual Representation
 
+### Buffer Management & Linear Interpolation
+![Progress Bar Demo](Demo.png)
+
 ```mermaid
-graph TD
+flowchart TD
     A["Start: Task Initialization"] --> B["Initialize i = 0"]
     B --> C{"i <= Total Steps?"}
-    C -- Yes --> D["Calculate Ratio: i / Total"]
+    C -- "Yes" --> D["Calculate Ratio: i / Total"]
     D --> E["Format String: [Bar] % ...Suffix"]
     E --> F["Write to Stdout with \r"]
-    F --> G["Flush Buffer"]
+    F --> G["Flush Buffer: sys.stdout.flush()"]
     G --> H["Perform Task Work / Sleep"]
     H --> I["Increment i"]
     I --> C
-    C -- No --> J["Stop: Task Completed"]
+    C -- "No" --> J["Stop: Task Completed"]
+```
+
+```mermaid
+graph LR
+    subgraph UpdateCycle ["In-Place Termination Update"]
+        direction LR
+        S1["State i"] -- "\r" --> S2["State i+1 (Overwrite)"]
+        S2 -- "\r" --> S3["State i+2 (Overwrite)"]
+    end
 ```
