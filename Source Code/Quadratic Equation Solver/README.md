@@ -47,17 +47,28 @@ The term $D = b^2 - 4ac$ is called the **Discriminant**. It determines the natur
 
 ## 5. Visual Representation
 
+### Root Classification & Discriminant Logic
+![Quadratic Solver Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A[Start: Coefficients a, b, c] --> B{a == 0?}
-    B -- Yes --> C[Return Error: Not Quadratic]
-    B -- No --> D[Calculate Discriminant D = b^2 - 4ac]
-    D --> E{D > 0?}
-    E -- Yes --> F[Two Distinct Real Roots]
-    E -- No --> G{D == 0?}
-    G -- Yes --> H[One Repeated Real Root]
-    G -- No --> I[Two Complex Conjugate Roots]
-    F --> J[Stop]
+flowchart TD
+    A["Start: Coefficients a, b, c"] --> B{"a == 0?"}
+    B -- "Yes" --> C["Return Error: Not Quadratic"]
+    B -- "No" --> D["Calculate Discriminant D = b^2 - 4ac"]
+    D --> E{"D > 0?"}
+    E -- "Yes" --> F["Roots: Two Distinct Real"]
+    E -- "No" --> G{"D == 0?"}
+    G -- "Yes" --> H["Roots: One Repeated Real"]
+    G -- "No" --> I["Roots: Two Complex Conjugate"]
+    F --> J["Stop: Output Roots"]
     H --> J
     I --> J
+```
+
+```mermaid
+graph LR
+    subgraph Range ["Domain Specification"]
+        direction LR
+        real["Real Plane R"] --- complex["Complex Plane C"]
+    end
 ```
