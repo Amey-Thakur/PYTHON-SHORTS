@@ -52,26 +52,30 @@ $$
 
 ## 5. Visual Representation
 
+### Epoch-High Resolution Timing
+![Stop Watch Demo](Demo.png)
+
 ```mermaid
 stateDiagram-v2
+    direction LR
     [*] --> Stopped
-    Stopped --> Running : start()
-    Running --> Running : lap()
-    Running --> Stopped : stop()
-    Stopped --> Stopped : reset()
+    Stopped --> Running : "start()"
+    Running --> Running : "lap()"
+    Running --> Stopped : "stop()"
+    Stopped --> Stopped : "reset()"
 ```
 
 ```mermaid
-graph TD
-    A["Start: Initialize Service"] --> B["State = Stopped"]
-    B --> C["User: start()"]
-    C --> D["Record t_start"]
-    D --> E["State = Running"]
-    E --> F{User Action?}
-    F -- lap() --> G["Record Lap Time"]
+flowchart TD
+    A["Start: Timer Service Initialized"] --> B["State = 'STOPPED'"]
+    B --> C["Command: start()"]
+    C --> D["Capture t_start (Epoch)"]
+    D --> E["State = 'RUNNING'"]
+    E --> F{"Wait for Event"}
+    F -- "lap()" --> G["Log Δt_lap = t_now - t_start"]
     G --> F
-    F -- stop() --> H["Record t_end"]
-    H --> I["Calculate Delta t"]
-    I --> J["Display Elapsed Time"]
-    J --> K["State = Stopped"]
+    F -- "stop()" --> H["Capture t_end (Epoch)"]
+    H --> I["Calculate Total Δt = t_end - t_start"]
+    I --> J["Display Delta (seconds)"]
+    J --> K["State = 'STOPPED'"]
 ```
