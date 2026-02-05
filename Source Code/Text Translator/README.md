@@ -47,28 +47,30 @@ The model learns to map source language embeddings to target language embeddings
 
 ## 5. Visual Representation
 
+### Encoder-Decoder Attention Flow
+![Text Translator Demo](Demo.png)
+
 ```mermaid
-graph LR
-    A[Source Text] --> B[Encoder]
-    B --> C[Context Vector]
-    C --> D[Decoder]
-    D --> E[Target Text]
-    
-    subgraph Translation Pipeline
-        B
-        C
-        D
+flowchart LR
+    subgraph Architecture ["NMT Pipeline"]
+        direction LR
+        A["Source Text (X)"] --> B["Encoder (RNN/Transformer)"]
+        B --> C["Attention Mechanism"]
+        C --> D["Decoder (State Transition)"]
+        D --> E["Target Text (Y)"]
     end
 ```
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant Service
-    participant API
+    autonumber
+    participant U as "Researcher (User)"
+    participant S as "TextTranslatorService"
+    participant A as "Translation API Backend"
     
-    User->>Service: translate(text)
-    Service->>API: Send source text
-    API-->>Service: Return translation
-    Service-->>User: Translated text
+    U->>S: translate("Source Text")
+    S->>A: POST: Translation Request (X)
+    Note right of A: Neural Probabilistic Mapping
+    A-->>S: JSON: Translated Result (Y)
+    S-->>U: "Target Text"
 ```
