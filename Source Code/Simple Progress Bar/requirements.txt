@@ -1,0 +1,5 @@
+# No external dependencies required for the core implementation.
+# Uses standard Python 3.x modules:
+# - sys
+# - time
+# - typing
