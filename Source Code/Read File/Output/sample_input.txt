@@ -1,0 +1,5 @@
+Repository: PYTHON-SHORTS
+Authors: Amey Thakur & Mega Satish
+Theoretical Foundation: Buffer Management
+Status: Deterministic Sequential Access Verified
+Message: This implementation ensures efficient memory utilization for large datasets.
