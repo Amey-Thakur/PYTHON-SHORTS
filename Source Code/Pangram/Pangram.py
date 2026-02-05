@@ -1,4 +1,4 @@
-"""
+r"""
 File: Pangram.py
 Authors: 
     - Amey Thakur (https://github.com/Amey-Thakur)

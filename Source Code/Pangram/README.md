@@ -45,3 +45,27 @@ $|A| = 26$
 - **String Constants**: Utilizes `string.ascii_lowercase` for a robust reference to the target character set.
 
 ## 5. Visual Representation
+
+### Alphabetic Coverage & Set Cardinality
+![Pangram Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: is_pangram(sentence)"] --> B["Normalize: Filter non-alpha & Lowercase"]
+    B --> C["Construct Hash-Set (found_chars)"]
+    C --> D["Calculate cardinality of set (|A|)"]
+    D --> E{"Is |A| == 26?"}
+    E -- "Yes" --> F["Return True (Pangram)"]
+    E -- "No" --> G["Return False (Not a Pangram)"]
+```
+
+```mermaid
+graph LR
+    subgraph Verification ["Alphabetic Coverage Test"]
+        direction LR
+        S["Input Sentence"] --> F["f(S): Filter & Unique"]
+        F --> A["Set A: {a, b, c, ..., z}"]
+        A --> C{"|A| == 26?"}
+        C -->|True| R["PANGRAM"]
+    end
+```
