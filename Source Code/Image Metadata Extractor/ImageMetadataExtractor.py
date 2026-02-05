@@ -87,46 +87,57 @@ class ImageMetadataService:
 
 def main():
     """
-    Demonstrates the Image Metadata Extraction service.
+    Demonstrates the Forensic Image Metadata Extraction service.
     """
-    print("--- Image Metadata Extractor Service Demo ---")
+    print("--- Optical Forensics & EXIF Metadata Extraction ---")
+    print(f"Service: ImageMetadataExtractor.py | Authors: Amey Thakur & Mega Satish\n")
     
-    sample_img = "sample_photo.jpg"
+    # Forensic Evidence Stream: High-fidelity portrait collection
+    evidence_stream = [
+        r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Filly.jpg",
+        r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Mega.png",
+        r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Mega_Chair.png"
+    ]
     
-    # Auto-generate a sample image if it doesn't exist
-    if not os.path.exists(sample_img):
-        print(f"\n[!] Notice: '{sample_img}' not found. Generating a sample image for demo...")
-        try:
-            from PIL import Image, ImageDraw
-            img = Image.new('RGB', (100, 100), color=(73, 109, 137))
-            d = ImageDraw.Draw(img)
-            d.text((10, 10), "Forensic EXIF Data", fill=(255, 255, 0))
-            
-            # Save with some basic metadata info
-            img.save(sample_img, "JPEG", quality=90)
-            print(f"    Successfully generated '{sample_img}'.")
-        except Exception as e:
-            print(f"    Failed to generate sample image: {e}")
-            return
+    target_found = False
+    for img_path in evidence_stream:
+        if os.path.exists(img_path):
+            target_found = True
+            print(f"[+] Analyzing Forensic Stream: {os.path.basename(img_path)}")
+            try:
+                service = ImageMetadataService(img_path)
+                
+                print("    [1] Abstract Level: Base Image Attributes")
+                basic = service.get_basic_info()
+                for k, v in basic.items():
+                    print(f"        {k.capitalize()}: {v}")
 
-    try:
-        service = ImageMetadataService(sample_img)
-        
-        print("\n[Base Information]")
-        basic = service.get_basic_info()
-        for k, v in basic.items():
-            print(f"  {k.capitalize()}: {v}")
+                print("\n    [2] Structural Level: EXIF Tag Cataloging")
+                exif = service.get_exif_data()
+                if "status" in exif:
+                    print(f"        Status: {exif['status']}")
+                elif "error" in exif:
+                    print(f"        Error: {exif['error']}")
+                else:
+                    count = 0
+                    for k, v in exif.items():
+                        if count < 3: # Keep logs concise for demo
+                            print(f"        Tag {k}: {v}")
+                            count += 1
+                print("-" * 50)
 
-        print("\nForensic Logic:")
-        print("    Live Logic: Processing involves decoding APP1 segments in JPEG")
-        print("    and resolving Tier-1 and Tier-2 EXIF tags.")
-        print("\n    Experimental Setup: Amey and Mega analyze binary headers for")
-        print("    cryptographic and forensic consistency.")
+            except Exception as e:
+                print(f"    Error during forensic extraction of {os.path.basename(img_path)}: {e}")
 
-    except Exception as e:
-        print(f"Error during extraction: {e}")
+    if not target_found:
+        print("[!] Warning: Forensic portrait collection not found at specified paths.")
+        print("    Ensure D:\\GitHub\\PYTHON-CRASH-COURSE\\Mega\\ contents are accessible.")
 
-    print("\n--- Demo Complete ---")
+    print("\nForensic Notice:")
+    print("    Scholarly Logic: Processing involves decoding APP1 segments in JPEG")
+    print("    and resolving Tier-1 and Tier-2 EXIF tags for cryptographic consistency.")
+
+    print("\n--- Extraction Complete ---")
 
 
 if __name__ == "__main__":
