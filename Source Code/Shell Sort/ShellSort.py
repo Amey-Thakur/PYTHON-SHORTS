@@ -1,27 +1,94 @@
-# This program illustrates the shell sort implementation in Python
+"""
+File: ShellSort.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-# According to Wikipedia "Shell sort or Shell's method, is an in-place comparison sort.
-# It can be seen as either a generalization of sorting by exchange (bubble sort) or sorting by
-# insertion (insertion sort). The method starts by sorting pairs of elements far apart from each other,
-# then progressively reducing the gap between elements to be compared. Starting with far apart elements
-# can move some out-of-place elements into position faster than a simple nearest neighbor exchange."
+Description:
+    This module implements the Shell Sort algorithm, an in-place comparison 
+    sort that generalizes insertion sort by allowing the exchange of items 
+    that are far apart. It utilizes a diminishing increment gap sequence 
+    to progressively improve the partial ordering of the collection.
 
-#  Best Case O(n logn); Average Case O(depends on gap sequence); Worst Case O(n)
+Complexity Analysis:
+    - Time Complexity: O(n log^2 n) to O(n^{3/2}) depending on the gap sequence.
+      - Best Case: O(n log n).
+      - Worst Case: O(n^2) with the standard Shell's sequence (N/2^k).
+    - Space Complexity: O(1) auxiliary space.
 
-def shellSort(myList):
-    gap = len(myList) // 2
-    while gap > 0:
-        for i in range(gap, len(myList)):
-            currentItem = myList[i]
-            j = i
-            while j >= gap and myList[j - gap] > currentItem:
-                myList[j] = myList[j - gap]
-                j -= gap
-            myList[j] = currentItem
-        gap //= 2
+Logic:
+    1. Define an initial gap size (typically n/2).
+    2. Divide the list into sub-lists based on the gap increment.
+    3. Perform a gapped insertion sort on each sub-list.
+    4. Reduce the gap (diminishing increment) and repeat the process.
+    5. Terminate when the gap reaches 1, concluding with a final insertion sort.
+    6. This approach minimizes the total number of swaps by moving elements 
+       toward their final positions more rapidly than nearest-neighbor sorts.
+"""
 
-    return myList
+from typing import List
 
-if __name__ == '__main__':
-    myList = [12, 23, 4, 5, 3, 2, 12, 81, 56, 95]
-    print(shellSort(myList))
+
+class ShellSortService:
+    """
+    A service class for executing Shell Sort algorithmic logic.
+    """
+
+    @staticmethod
+    def sort(data: List[int]) -> List[int]:
+        """
+        Sorts a list of integers using the Shell Sort algorithm.
+        
+        Args:
+            data: A mutable list of integers to be sorted.
+            
+        Returns:
+            The same list, sorted in ascending order.
+        """
+        n = len(data)
+        gap = n // 2
+        
+        # Iteratively reduce the gap size
+        while gap > 0:
+            # Perform gapped insertion sort for each sub-sequence
+            for i in range(gap, n):
+                current_value = data[i]
+                j = i
+                
+                # Shift elements of the gapped sub-sequence until the target 
+                # position is identified
+                while j >= gap and data[j - gap] > current_value:
+                    data[j] = data[j - gap]
+                    j -= gap
+                
+                # Insert the value into its relatively sorted position
+                data[j] = current_value
+            
+            # Reduce gap using the standard N/2 progression
+            gap //= 2
+            
+        return data
+
+
+def main():
+    """
+    Demonstrates the scholarly Shell Sort implementation.
+    """
+    print("--- Shell Sort Service Demo ---")
+    
+    # Demonstration dataset
+    target_list = [12, 23, 4, 5, 3, 2, 12, 81, 56, 95]
+    
+    print(f"Original Sequence: {target_list}")
+    
+    sorter = ShellSortService()
+    sorted_result = sorter.sort(target_list)
+    
+    print(f"Sorted Sequence:   {sorted_result}")
+
+
+if __name__ == "__main__":
+    main()
