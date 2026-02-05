@@ -50,3 +50,17 @@ where:
 | Amey's Birthday | Mega's Birthday |
 |:---:|:---:|
 | ![Amey's Birthday](Output/Calendar_Amey_Birthday.png) | ![Mega's Birthday](Output/Calendar_Mega_Birthday.png) |
+
+```mermaid
+flowchart TD
+    A[Input Year & Month] --> B[Validate Input]
+    B --> C[Calculate First Day]
+    C --> D[Determine Days in Month]
+    D --> E{Leap Year?}
+    E -->|Yes & Feb| F[28 → 29 Days]
+    E -->|No| G[Standard Days]
+    F --> H[Generate Grid]
+    G --> H
+    H --> I[Format Output]
+    I --> J[Display Calendar]
+```
