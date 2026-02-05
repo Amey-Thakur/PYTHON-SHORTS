@@ -50,3 +50,38 @@ The stability is guaranteed in the merging step. When two equal elements are com
 - **Pointer-Based Merging**: Avoids $O(n)$ list removals by maintaining index pointers, ensuring the merge step remains strictly linear.
 
 ## 5. Visual Representation
+
+### Divide and Conquer Flow
+```mermaid
+flowchart TD
+    A["Start: sort(dataset)"] --> B{"len(dataset) <= 1?"}
+    B -- "Yes" --> C["Return dataset"]
+    B -- "No" --> D["middle = n // 2"]
+    D --> E["left_half = sort(dataset[:middle])"]
+    D --> F["right_half = sort(dataset[middle:])"]
+    E --> G["merge(left_half, right_half)"]
+    F --> G
+    G --> H["Return merged list"]
+```
+
+### Recursion Tree Representation
+```mermaid
+graph TD
+    subgraph Recursion ["Merge Sort Tree (n=4)"]
+        direction TB
+        L0["[3, 1, 4, 2]"] --> L1a["[3, 1]"]
+        L0 --> L1b["[4, 2]"]
+        L1a --> L2a["[3]"]
+        L1a --> L2b["[1]"]
+        L1b --> L2c["[4]"]
+        L1b --> L2d["[2]"]
+        
+        L2a --> M1a["[1, 3]"]
+        L2b --> M1a
+        L2c --> M1b["[2, 4]"]
+        L2d --> M1b
+        
+        M1a --> M0["[1, 2, 3, 4]"]
+        M1b --> M0
+    end
+```
