@@ -51,13 +51,24 @@ In this implementation, edges can be **Directed** (one-way) or **Undirected** (t
 ![Graph Demo](Demo.png)
 
 ```mermaid
+graph TD
+    subgraph AdjacencyMapping ["Adjacency List Data Structure"]
+        direction LR
+        V1["Vertex A"] --- L1["[B:5, C:3]"]
+        V2["Vertex B"] --- L2["[C:2]"]
+        V3["Vertex C"] --- L3["[D:4]"]
+        V4["Vertex D"] --- L4["[A:1]"]
+    end
+```
+
+```mermaid
 graph LR
-    subgraph AdjacencyList ["Adjacency List Representation"]
-        A["Vertex A"] --> B["B (w:5)"]
-        A --> C["C (w:3)"]
-        B --> C2["C (w:2)"]
-        C --> D["D (w:4)"]
-        D --> A2["A (w:1)"]
+    subgraph Topology ["Topological Graph View"]
+        A["A"] -- 5 --> B["B"]
+        A -- 3 --> C["C"]
+        B -- 2 --> C
+        C -- 4 --> D["D"]
+        D -- 1 --> A
     end
 ```
 
