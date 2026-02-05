@@ -55,15 +55,26 @@ $$
 
 ## 5. Visual Representation
 
+### Linear Scan & Early Exit Optimization
+![Sequential Search Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A["Start: Collection & Target"] --> B["Initialize Index i = 0"]
-    B --> C{"i < Length?"}
-    C -- No --> D["Return -1: Not Found"]
-    C -- Yes --> E{"Collection[i] == Target?"}
-    E -- Yes --> F["Return i: Found"]
-    E -- No --> G["Increment i"]
+flowchart TD
+    A["Start: Target (T) & Collection (C)"] --> B["Initialize Index i = 0"]
+    B --> C{"i < Length(C)?"}
+    C -- "No" --> D["Return -1: Target Not Found"]
+    C -- "Yes" --> E{"C[i] == T?"}
+    E -- "Yes" --> F["Return i: Target Identified"]
+    E -- "No" --> G["Increment Index i++"]
     G --> C
-    D --> H["Stop"]
+    D --> H["Stop: Resource Released"]
     F --> H
+```
+
+```mermaid
+graph LR
+    subgraph Iteration ["Sequential Access"]
+        direction LR
+        t1["(0)"] --> t2["(1)"] --> t3["..."] --> tn["(n)"]
+    end
 ```
