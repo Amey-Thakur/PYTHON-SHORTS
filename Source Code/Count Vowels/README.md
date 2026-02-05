@@ -46,3 +46,17 @@ $$
 
 ### Logic & Performance Output
 ![Count Vowels Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input String S] --> B[Normalize to Lowercase]
+    B --> C[Initialize Count = 0]
+    C --> D[For Each Character]
+    D --> E{Is Vowel?}
+    E -->|Yes| F[Increment Count]
+    E -->|No| G[Skip]
+    F --> H{More Characters?}
+    G --> H
+    H -->|Yes| D
+    H -->|No| I[Return Count]
+```
