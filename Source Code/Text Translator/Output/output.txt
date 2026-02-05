@@ -1,0 +1,25 @@
+--- Text Translator Service Demo ---
+
+Supported Languages:
+  English: en
+  Spanish: es
+  French: fr
+  German: de
+  Italian: it
+  Portuguese: pt
+  Russian: ru
+  Japanese: ja
+  Chinese: zh
+  Korean: ko
+  Arabic: ar
+  Hindi: hi
+
+--------------------------------------------------
+
+Original (English): Hello, how are you today?
+Translated (Spanish): Hola, ¿cómo estás hoy?
+Translated (French): Bonjour, comment allez-vous aujourd'hui?
+
+--------------------------------------------------
+
+Translation Complete.

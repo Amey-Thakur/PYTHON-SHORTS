@@ -1,0 +1,8 @@
+# Text Translator - Dependencies
+
+# External Packages (install via pip):
+translate>=3.6.1
+
+# Standard Library (included with Python 3.x):
+# - typing
+# - warnings
