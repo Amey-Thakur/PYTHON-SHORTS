@@ -1,0 +1,11 @@
+# To-Do App - Dependencies
+# This module uses Python standard library components.
+# External packages may be needed on some systems.
+
+# Standard Library (included with Python 3.x):
+# - tkinter (GUI)
+# - pickle (serialization)
+# - os (file operations)
+
+# Note: On Ubuntu/Linux, Tkinter may need separate installation:
+# sudo apt install python3-tk
