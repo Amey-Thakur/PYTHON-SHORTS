@@ -1,0 +1,8 @@
+# Game of Life - Dependencies
+
+# No external packages required.
+
+# Standard Library (included with Python 3.x):
+# - time
+# - os
+# - typing
