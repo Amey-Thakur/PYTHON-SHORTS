@@ -38,3 +38,20 @@ where $\Sigma$ is the alphabet set and $\text{count}(c, S)$ is the frequency of 
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input: Target Word + Candidates] --> B[Normalize Target to Lowercase]
+    B --> C[Build Frequency Map of Target]
+    C --> D[Iterate Through Candidates]
+    D --> E{Same Length?}
+    E -->|No| D
+    E -->|Yes| F{Not Same Word?}
+    F -->|No| D
+    F -->|Yes| G[Build Frequency Map of Candidate]
+    G --> H{Maps Equal?}
+    H -->|Yes| I[Add to Results]
+    H -->|No| D
+    I --> D
+    D --> J[Return Anagram List]
+```
