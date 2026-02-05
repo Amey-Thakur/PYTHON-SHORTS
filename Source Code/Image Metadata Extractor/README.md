@@ -46,9 +46,20 @@ $$
 - **Lazy Loading**: The script reads only the necessary header segments without fully decoding the massive pixel arrays, ensuring high performance.
 - **GPS Normalization**: Recursively decodes nested IFDs within the `GPSInfo` tag to provide a structured map of spatial data.
 
-## 5. Visual Representation
+## 5. Visual Representation & Forensic Data
 
-### EXIF Segment Anatomy & Hiearchy
+### Forensic Evidence Stream: Mega Pictures Collection
+The analytical engine decomposes high-fidelity portrait streams into verified metadata segments.
+
+<p align="center">
+  <img src="sample_images/Filly.jpg" width="32%" />
+  <img src="sample_images/Mega.png" width="32%" />
+  <img src="sample_images/Mega_Chair.png" width="32%" />
+</p>
+
+### Optical Forensics Dashboard
+The dashboard visualizes the deconstruction of image headers into hierarchical IFD tags.
+
 ![Image Metadata Demo](Demo.png)
 
 ```mermaid
