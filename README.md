@@ -187,9 +187,16 @@ python <ScriptName>.py
 
 **Example: Running Hangman**
 ```bash
-cd "Source Code/Hangman"
+cd "Source Code/Hangman Game"
 pip install -r requirements.txt
 python Hangman.py
+```
+
+**Example: Forensic Analyzer (Filly)**
+```bash
+cd "Source Code/Image Metadata Extractor"
+pip install -r requirements.txt
+python ImageMetadataExtractor.py
 ```
 
 ---
