@@ -46,3 +46,15 @@ $$
 
 ### STDOUT Pipeline & Canonical Entry Verified
 ![Hello World Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: python Hello_World.py"] --> B{"if __name__ == '__main__':"}
+    B -- "True" --> C["Initialize CanonicalPrinter"]
+    C --> D["Define Message Payload"]
+    D --> E["printer.display_message(payload)"]
+    E --> F["Write to STDOUT Buffer"]
+    F --> G["Terminal Rendering (UTF-8)"]
+    G --> H["End Session"]
+```
+
