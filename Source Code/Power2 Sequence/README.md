@@ -54,10 +54,22 @@ In base-2 (binary), every power of two $2^n$ is represented as a single bit set 
 
 ## 5. Visual Representation
 
+### Bitwise Geometric Progression & Acceleration
+![Power2 Sequence Demo](Demo.png)
+
 ```mermaid
-graph LR
-    A["Binary 1 (2^0)"] -- "Shift Left 1" --> B["Binary 10 (2^1)"]
-    B -- "Shift Left 1" --> C["Binary 100 (2^2)"]
-    C -- "Shift Left 1" --> D["Binary 1000 (2^3)"]
+flowchart LR
+    A["Binary 1 (2^0)"] -- "1 << 1" --> B["Binary 10 (2^1)"]
+    B -- "1 << 1" --> C["Binary 100 (2^2)"]
+    C -- "1 << 1" --> D["Binary 1000 (2^3)"]
     D -- "..." --> E["Binary 1...0 (2^n)"]
+```
+
+```mermaid
+graph TD
+    subgraph Calculation ["Implementation Efficiency"]
+        direction TB
+        math["2^n (Exponential)"] --- slow["Complexity: O(log n) multiplications"]
+        bit["1 << n (Bit-Shift)"] --- fast["Complexity: O(1) hardware instruction"]
+    end
 ```
