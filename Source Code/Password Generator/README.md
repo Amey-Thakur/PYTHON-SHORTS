@@ -49,3 +49,27 @@ The total number of possible combinations (the search space) is $L^k$. A secure 
 - **Typing & Classes**: Encapsulates logic within a `SecurePasswordGenerator` class for modularity and type safety.
 
 ## 5. Visual Representation
+
+### Cryptographic Randomness & Entropy Verification
+![Password Generator Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: generate(length, pool)"] --> B["Construct Character Set (L)"]
+    B --> C["Loop k times (k = length)"]
+    C --> D["secrets.choice(L)"]
+    D --> E["Append character to result"]
+    E --> F{"Done k iterations?"}
+    F -- "No" --> C
+    F -- "Yes" --> G["Return Secure Password"]
+```
+
+```mermaid
+graph LR
+    subgraph EntropyGeneration ["Password Strength factors"]
+        direction LR
+        L["Pool Size (L)"] --> H["Entropy (H = k*log2 L)"]
+        K["Length (k)"] --> H
+        H --> S["Brute Force Resistance"]
+    end
+```
