@@ -101,9 +101,7 @@ def main():
         "https://github.com/msatmod",
         "https://github.com/Amey-Thakur/PYTHON-SHORTS",
         "https://orcid.org/0000-0001-5644-1575",
-        "https://orcid.org/0000-0002-1844-9557",
-        "https://github.com/Amey-Thakur/", # Duplicate (test normalization)
-        "https://github.com/Amey-Thakur"   # Duplicate (test exact match)
+        "https://orcid.org/0000-0002-1844-9557"
     ]
     
     mapping_log = []
@@ -115,9 +113,7 @@ def main():
         mapping_log.append((short, url.rstrip('/')))
         
     print("\nExpanding (Resolving) URLs:")
-    # Remove duplicates from expansion test
-    unique_mappings = list(dict.fromkeys(mapping_log))
-    for short, original in unique_mappings[:5]:
+    for short, original in mapping_log:
         resolved = service.expand(short)
         print(f"  Short:    {short}")
         print(f"  Resolved: {resolved}")
