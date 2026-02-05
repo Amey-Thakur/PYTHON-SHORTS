@@ -53,9 +53,9 @@ The analytical engine decomposes high-fidelity portrait streams into verified me
 
 <table width="100%">
   <tr>
-    <td width="33.33%" align="center"><img src="sample_images/Filly.jpg" width="100%" /></td>
     <td width="33.33%" align="center"><img src="sample_images/Mega.png" width="100%" /></td>
     <td width="33.33%" align="center"><img src="sample_images/Mega_Chair.png" width="100%" /></td>
+    <td width="33.33%" align="center"><img src="sample_images/Filly.jpg" width="100%" /></td>
   </tr>
 </table>
 

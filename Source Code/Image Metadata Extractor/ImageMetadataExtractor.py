@@ -100,7 +100,7 @@ def main():
         print(f"[!] Error: Localized forensic directory not found: {sample_dir}")
         return
 
-    evidence_files = ["Filly.jpg", "Mega.png", "Mega_Chair.png"]
+    evidence_files = ["Mega.png", "Mega_Chair.png", "Filly.jpg"]
     
     target_found = False
     for filename in evidence_files:
