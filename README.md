@@ -247,4 +247,6 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   **Computer Engineering (B.E.) - University of Mumbai**
 
+  *Semester-wise curriculum, laboratories, projects, and academic notes.*
+
 </div>
