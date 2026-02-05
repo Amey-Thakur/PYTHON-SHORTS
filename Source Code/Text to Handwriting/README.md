@@ -55,28 +55,28 @@ $$
 
 ## 5. Visual Representation
 
-### Updated Sample
-![Updated Sample](Output/sample.png)
+### Handwriting Synthesis & Typography Rasterization
 
-### Original Sample
-![Original Sample](sample.png)
+| Synthesized Result | Original Sample |
+| :---: | :---: |
+| ![Synthesized Handwriting](Output/sample.png) | ![Original Sample](sample.png) |
 
-### Process Flow
 ```mermaid
-graph TD
-    A[Input Text] --> B[Character Parsing]
-    B --> C[Font Selection]
-    C --> D[Glyph Rendering]
-    D --> E[Position Calculation]
-    E --> F[Anti-aliasing]
-    F --> G[Save PNG Image]
+flowchart TD
+    A["Start: Plaintext Input"] --> B["Glyph Mapping: Character to Vector"]
+    B --> C["Canvas Initialization: Raster Buffer"]
+    C --> D["Typography Engine: Kerning & Spacing"]
+    D --> E["Anti-aliasing: Sub-pixel Smoothing"]
+    E --> F["Ink Transformation: RGB Convolution"]
+    F --> G["Stop: PNG Serialization"]
 ```
 
 ```mermaid
 graph LR
-    subgraph Color Configuration
-        RGB[RGB Tuple] --> R[Red: 0-255]
-        RGB --> G[Green: 0-255]
-        RGB --> B[Blue: 0-255]
+    subgraph ColorSpace ["Chromatic Configuration"]
+        direction LR
+        P["RGB Tuple"] --> R["Red Channel"]
+        P --> G["Green Channel"]
+        P --> B["Blue Channel"]
     end
 ```
