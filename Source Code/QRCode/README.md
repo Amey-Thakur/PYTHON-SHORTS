@@ -49,6 +49,7 @@ The encoder adds parity bits by dividing this polynomial by a generator polynomi
 
 ## 5. Visual Representation
 
+### Data Encoding Workflow
 ```mermaid
 sequenceDiagram
     participant U as User Input
@@ -64,3 +65,10 @@ sequenceDiagram
     M->>M: Apply Masking Patterns
     M->>U: Generate Final QR Image
 ```
+
+### Generated Scholarly Access Points
+| Entity | QR Representation |
+| :--- | :--- |
+| **Amey Thakur** | ![Amey GitHub QR](Output/Amey_GitHub_QR.png) |
+| **Mega Satish** | ![Mega GitHub QR](Output/Mega_GitHub_QR.png) |
+| **Repository** | ![Repository QR](Output/Repository_QR.png) |
