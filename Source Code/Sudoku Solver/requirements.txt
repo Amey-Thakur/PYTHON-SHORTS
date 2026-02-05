@@ -1,0 +1,7 @@
+# Sudoku Solver - Dependencies
+
+# No external packages required.
+
+# Standard Library (included with Python 3.x):
+# - tkinter
+# - typing
