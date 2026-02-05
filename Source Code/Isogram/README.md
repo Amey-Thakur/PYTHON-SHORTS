@@ -48,3 +48,26 @@ In an isogram, each character provides a unique contribution to the string's inf
 
 ### Character Uniqueness & Set Verification
 ![Isogram Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: verify(text)"] --> B["Filter: alphabetic chars only"]
+    B --> C["Normalize: lowercase"]
+    C --> D["Calculate length of clean_text (L)"]
+    D --> E["Construct Hash-Set (unique_chars)"]
+    E --> F["Calculate cardinality of set (S)"]
+    F --> G{"Is S == L?"}
+    G -- "Yes" --> H["Return True (Isogram)"]
+    G -- "No" --> I["Return False (Not Isogram)"]
+```
+
+```mermaid
+graph LR
+    subgraph DataStructures ["Execution State"]
+        direction LR
+        L1["List: [a, c, c, e, n, t, o, r]"]
+        S1["Set: {a, c, e, n, t, o, r}"]
+        L1 -- "Cardinality Check" --> S1
+    end
+```
+
