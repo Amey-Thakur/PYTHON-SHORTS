@@ -1,9 +1,32 @@
 """
-Read File implementation utilizing context managers and stream-based generators.
+File: ReadFile.py
+Authors: 
+    - Amey Thakur (https://github.com/Amey-Thakur)
+    - Mega Satish (https://github.com/msatmod)
+Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
+Release Date: January 9, 2022
+License: MIT License
 
-This module provides a scholarly interface for file input-output (I/O) operations,
-ensuring deterministic resource deallocation and efficient memory utilization 
-through generator patterns.
+Description:
+    This module provides a scholarly implementation of file reading operations 
+    utilizing Python's context management protocol. It ensures deterministic 
+    resource deallocation and memory efficiency through the use of stream-based 
+    generators.
+
+Complexity Analysis:
+    - Time Complexity: O(N), where N is the total number of bytes in the file.
+    - Space Complexity: O(k), where k is the length of the longest line, 
+      facilitated by lazy evaluation.
+
+Logic:
+    1. Validate the existence of the target file path.
+    2. Open a file stream using a context manager (`with` statement) to handle 
+       system file descriptors safely.
+    3. Iterate through the file handle as a stream to avoid loading the entire 
+       content into primary memory.
+    4. Yield each line stripped of trailing whitespace to the consumer.
+    5. Automatically close the stream upon completion or exception through the 
+       __exit__ method.
 """
 
 import os

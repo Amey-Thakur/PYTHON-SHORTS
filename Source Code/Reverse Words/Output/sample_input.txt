@@ -1,0 +1,4 @@
+Repository: PYTHON-SHORTS
+Authors: Amey Thakur & Mega Satish
+Theoretical Foundation: String Symmetry and Linear Permutations
+Message: This implementation preserves linguistic tokens while inverting structural sequence.
