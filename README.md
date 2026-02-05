@@ -196,70 +196,906 @@ python Chatbot.py
 > Click on each section below to expand and view the curated programs with direct links to source code.
 
 <details>
-<summary><strong>1. Fundamental Algorithms</strong></summary>
+<summary><strong>A-Star Pathfinding</strong></summary>
 
-| Project | Description | Source |
-|:---|:---|:---:|
-| **A-Star Pathfinding** | High-fidelity pathfinding and graph traversal logic. | [Source](Source%20Code/A-Star%20Pathfinding/) |
-| **Sorting Engines** | Bubble, Quick, Merge, Heap, Shell, and Bucket Sort implementations. | [Source](Source%20Code/Bubble%20Sort/) |
-| **Search Kernels** | Binary, Sequential, and N-ary search algorithms. | [Source](Source%20Code/Binary%20Search/) |
-| **Graph Theory** | Dijkstra, Bellman-Ford, and Topological Sort frameworks. | [Source](Source%20Code/Dijkstra%20Algorithm/) |
-| **Numeric Logic** | Prime Sieve, FFT, Knapsack, and Sudoku Solver. | [Source](Source%20Code/Prime%20Sieve/) |
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `AStarPathfinding.py` | Algorithm | **A* (A-Star)** is an informed search algorithm that finds the shortest path between a starting node and a goal node. It is widely used in pathfinding and graph traversal, the process of plotting an efficiently traversable path between multiple points, called nodes. | [Code](Source%20Code/A-Star%20Pathfinding/AStarPathfinding.py) &nbsp;·&nbsp; [Demo](Source%20Code/A-Star%20Pathfinding/Demo.png) |
 
 </details>
 
 <details>
-<summary><strong>2. Data Structure Architecture</strong></summary>
+<summary><strong>Anagram</strong></summary>
 
-| Project | Description | Source |
-|:---|:---|:---:|
-| **Linear Systems** | Optimized Singly/Doubly Linked Lists, Stacks, and Queues. | [Source](Source%20Code/Singly%20Linked%20List/) |
-| **Tree Networks** | Binary Tree, Binary Search Tree, and Red-Black Tree logic. | [Source](Source%20Code/Binary%20Search%20Tree/) |
-| **Graph Rep** | Complex Graph structures with weighted and directed vector sets. | [Source](Source%20Code/Graph/) |
-| **Hashing & Filters** | High-performance Bloom Filters and Trie data structures. | [Source](Source%20Code/Bloom%20Filter/) |
-| **Logic Patterns** | Pascal Triangle and Variable Scope explorations. | [Source](Source%20Code/Pascal%20Triangle/) |
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Anagram.py` | Python Module | An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once. From a computational perspective, two strings are anagrams if they are permutations of each other. | [Code](Source%20Code/Anagram/Anagram.py) &nbsp;·&nbsp; [Demo](Source%20Code/Anagram/Demo.png) |
 
 </details>
 
 <details>
-<summary><strong>3. Utility Synthesis & Automation</strong></summary>
+<summary><strong>Armstrong Number</strong></summary>
 
-| Project | Description | Source |
-|:---|:---|:---:|
-| **Web Engines** | High-fidelity Web Scrapers and URL Shortener services. | [Source](Source%20Code/Web%20Scraper/) |
-| **File Management** | PDF Parser, QRCode Generator, and File Encryptor engines. | [Source](Source%20Code/PDF%20Parser/) |
-| **Linguistic Logic** | Text Summarizer, Translator, and Sentiment Analysis pipelines. | [Source](Source%20Code/Text%20Summarizer/) |
-| **Productivity** | To-Do App, Countdown Timer, and Currency Converter utilities. | [Source](Source%20Code/To-Do%20App/) |
-| **Forensics** | Image Metadata Extractor and Hashing File verification. | [Source](Source%20Code/Image%20Metadata%20Extractor/) |
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `ArmstrongNumber.py` | Python Module | An Armstrong number (also known as a narcissistic number, pluperfect digital invariant, or plus-perfect number) is a number that is the sum of its own digits each raised to the power of the number of digits. | [Code](Source%20Code/Armstrong%20Number/ArmstrongNumber.py) &nbsp;·&nbsp; [Demo](Source%20Code/Armstrong%20Number/Demo.png) |
 
 </details>
 
 <details>
-<summary><strong>4. Interactive Game Logic</strong></summary>
+<summary><strong>Array</strong></summary>
 
-| Project | Description | Source |
-|:---|:---|:---:|
-| **Classic Games** | Tic Tac Toe, Hangman, and Rock Paper Scissors. | [Source](Source%20Code/Tic%20Tac%20Toe/) |
-| **Puzzle Solvers** | Sudoku Solver and Guess The Number logic. | [Source](Source%20Code/Sudoku%20Solver/) |
-| **Visual Math** | Game of Life and Mandelbrot Set visualizations. | [Source](Source%20Code/Game%20of%20Life/) |
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Array.py` | Data Structure | An Array is a fundamental data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key. In Computer Science, an array is stored such that the position of each element can be computed from its index tuple by a mathematical formula. | [Code](Source%20Code/Array/Array.py) &nbsp;·&nbsp; [Demo](Source%20Code/Array/Demo.png) |
 
 </details>
 
 <details>
-<summary><strong>5. Advanced Computational Research</strong></summary>
+<summary><strong>Bellman-Ford Algorithm</strong></summary>
 
-| Project | Description | Source |
-|:---|:---|:---:|
-| **Distributed Logic** | Fundamental Blockchain architecture and hashing. | [Source](Source%20Code/Blockchain%20Basic/) |
-| **Probabilistic** | Monte Carlo Simulation for statistical forecasting. | [Source](Source%20Code/Monte%20Carlo%20Simulation/) |
-| **Signal/Data** | Fast Fourier Transform (FFT) and Huffman Coding. | [Source](Source%20Code/Fast%20Fourier%20Transform/) |
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BellmanFord.py` | Algorithm | The **Bellman-Ford Algorithm** is a graph search algorithm that computes shortest paths from a single source vertex to all other vertices in a weighted directed graph. Unlike Dijkstra's algorithm, Bellman-Ford is capable of handling graphs in which some of the edge weights are negative numbers. | [Code](Source%20Code/Bellman-Ford%20Algorithm/BellmanFord.py) &nbsp;·&nbsp; [Demo](Source%20Code/Bellman-Ford%20Algorithm/Demo.png) |
 
 </details>
 
-> [!NOTE]
-> ### The 100+ Milestone
-> This repository features **over 100 functional programs**. For the full exhaustive list, please explore the [Source Code](Source%20Code/) directory. Each folder follows a standardized structure including its own `README.md` and requirements manifest.
+<details>
+<summary><strong>Binary Search</strong></summary>
 
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BinarySearch.py` | Algorithm | Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one. | [Code](Source%20Code/Binary%20Search/BinarySearch.py) &nbsp;·&nbsp; [Demo](Source%20Code/Binary%20Search/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Binary Search Tree</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BinarySearchTree.py` | Data Structure | A Binary Search Tree (BST) is a rooted binary tree data structure whose internal nodes each store a key greater than all the keys in the node's left subtree and less than those in its right subtree. | [Code](Source%20Code/Binary%20Search%20Tree/BinarySearchTree.py) &nbsp;·&nbsp; [Demo](Source%20Code/Binary%20Search%20Tree/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Binary To Decimal</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BinaryToDecimal.py` | Python Module | Binary-to-Decimal conversion is the process of transforming a number expressed in the base-2 (binary) numeral system into its equivalent representation in the base-10 (decimal) system. This is a fundamental operation in computational arithmetic. | [Code](Source%20Code/Binary%20To%20Decimal/BinaryToDecimal.py) &nbsp;·&nbsp; [Demo](Source%20Code/Binary%20To%20Decimal/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Binary Tree</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BinaryTree.py` | Data Structure | A Binary Tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child. Unlike linear data structures (Arrays, Linked Lists), trees represent a nonlinear, branching relationship. | [Code](Source%20Code/Binary%20Tree/BinaryTree.py) &nbsp;·&nbsp; [Demo](Source%20Code/Binary%20Tree/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Blockchain Basic</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BlockchainBasic.py` | Research | A **Blockchain** is a distributed, decentralized, public ledger that records transactions across many computers so that the record cannot be altered retroactively without the alteration of all subsequent blocks and the consensus of the network. It relies on cryptographic chaining to ensure immutability. | [Code](Source%20Code/Blockchain%20Basic/BlockchainBasic.py) &nbsp;·&nbsp; [Demo](Source%20Code/Blockchain%20Basic/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Bloom Filter</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BloomFilter.py` | Data Structure | A **Bloom Filter** is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970, that is used to test whether an element is a member of a set. It is famous for allowing **False Positives** but strictly guaranteeing **Zero False Negatives**. | [Code](Source%20Code/Bloom%20Filter/BloomFilter.py) &nbsp;·&nbsp; [Demo](Source%20Code/Bloom%20Filter/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Breadth First Traversal</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BreadthFirstTraversal.py` | Python Module | Breadth-First Traversal (or Breadth-First Search) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root (or some arbitrary node of a graph, sometimes referred to as a 'search key') and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. | [Code](Source%20Code/Breadth%20First%20Traversal/BreadthFirstTraversal.py) &nbsp;·&nbsp; [Demo](Source%20Code/Breadth%20First%20Traversal/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Browser</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Browser.py` | Utility | A Web Browser is a software application for accessing information on the World Wide Web. When a user requests a web page from a particular website, the web browser retrieves the necessary content from a web server and then displays the page on the user's device. | [Code](Source%20Code/Browser/Browser.py) &nbsp;·&nbsp; [Demo](Source%20Code/Browser/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Bubble Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BubbleSort.py` | Algorithm | Bubble Sort, sometimes referred to as sinking sort, is a simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted. | [Code](Source%20Code/Bubble%20Sort/BubbleSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Bubble%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Bucket Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `BucketSort.py` | Algorithm | Bucket Sort, or bin sort, is a distribution-based sorting algorithm that works by partitioning an array into a number of buckets. Each bucket is then sorted individually, either using a different sorting algorithm or by recursively applying the bucket sort algorithm. | [Code](Source%20Code/Bucket%20Sort/BucketSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Bucket%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Calculator</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Calculator.py` | Utility | A Calculator is a computational device or software application that performs mathematical operations on numbers. Basic software calculators implement the four fundamental arithmetic operations: addition, subtraction, multiplication, and division. | [Code](Source%20Code/Calculator/Calculator.py) &nbsp;·&nbsp; [Demo](Source%20Code/Calculator/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Calendar</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Calendar.py` | Utility | A Calendar is a system for organizing days for social, religious, commercial, or administrative purposes. This implementation provides a programmatic way to generate and display the monthly calendar for any given year and month in the Gregorian calendar system. | [Code](Source%20Code/Calendar/Calendar.py) &nbsp;·&nbsp; [Demo](Source%20Code/Calendar/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Character Count</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `CharacterCount.py` | Python Module | **Character Frequency Analysis** (or Lexical Counting) is the process of computing the occurrence frequency of each unique character within a given string. This technique is foundational in text processing, cryptanalysis, data compression, and natural language processing. | [Code](Source%20Code/Character%20Count/CharacterCount.py) &nbsp;·&nbsp; [Demo](Source%20Code/Character%20Count/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Chatbot</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Chatbot.py` | Python Module | A **Chatbot** is a software application designed to simulate human conversation through text or voice interactions. This implementation is a rule-based system that utilizes pattern matching and keyword recognition to provide relevant responses in a controlled conversational environment. | [Code](Source%20Code/Chatbot/Chatbot.py) &nbsp;·&nbsp; [Demo](Source%20Code/Chatbot/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Check Greater Than Collection</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `CheckGreater.py` | Python Module | The **Check Greater Than Collection** utility is a predicate logic validator that determines if a numeric dataset $C$ satisfies the condition of being bounded below by a strictly lower threshold $\tau$. It is a fundamental operation in data validation and range-checking algorithms. | [Code](Source%20Code/Check%20Greater%20Than%20Collection/CheckGreater.py) &nbsp;·&nbsp; [Demo](Source%20Code/Check%20Greater%20Than%20Collection/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Cipher Text</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `CipherText.py` | Python Module | The **Caesar Cipher** (or Shift Cipher) is one of the oldest and simplest methods of encryption. It is a type of **substitution cipher** where each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. In modern cryptography, it serves as a foundational example of symmetric-key monoalphabetic substitution. | [Code](Source%20Code/Cipher%20Text/CipherText.py) &nbsp;·&nbsp; [Demo](Source%20Code/Cipher%20Text/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Count Vowels</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `CountVowels.py` | Python Module | The **Count Vowels** utility is a lexicographical tool used to determine the frequency of vowels within a given string. In computer science, this is a basic form of **Frequency Analysis**, used as a precursor to more complex Natural Language Processing (NLP) tasks or data compression algorithms (like Huffman Coding). | [Code](Source%20Code/Count%20Vowels/CountVowels.py) &nbsp;·&nbsp; [Demo](Source%20Code/Count%20Vowels/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Countdown Timer</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Countdowntimer.py` | Utility | The **Countdown Timer** is a time-tracking utility designed to decrement a specified temporal value towards zero. In computer architecture and operating systems, such timers are crucial for task scheduling, interrupt handling, and synchronization in distributed systems. | [Code](Source%20Code/Countdown%20Timer/Countdowntimer.py) |
+
+</details>
+
+<details>
+<summary><strong>Currency Converter</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `CurrencyConverter.py` | Utility | A **Currency Converter** is a computational tool designed to determine the relative value of one fiat or digital currency against another based on current market exchange rates. In algorithmic finance, this requires low-latency retrieval of forex data and precise mathematical normalization. | [Code](Source%20Code/Currency%20Converter/CurrencyConverter.py) &nbsp;·&nbsp; [Demo](Source%20Code/Currency%20Converter/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Decimal To Binary</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `DecimalToBinary.py` | Python Module | The **Decimal to Binary** utility is a fundamental computational tool used to convert numbers from the **Decimal System** (Base-10) to the **Binary System** (Base-2). In computer science, binary is the fundamental representation of data at the hardware level, where each digit (bit) represents a power of 2. | [Code](Source%20Code/Decimal%20To%20Binary/DecimalToBinary.py) &nbsp;·&nbsp; [Demo](Source%20Code/Decimal%20To%20Binary/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Depth First Traversal</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `DepthFirstTraversal.py` | Python Module | **Depth-First Search (DFS)** is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. | [Code](Source%20Code/Depth%20First%20Traversal/DepthFirstTraversal.py) &nbsp;·&nbsp; [Demo](Source%20Code/Depth%20First%20Traversal/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Dictionary</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Dictionary.py` | Data Structure | The **Word Dictionary** is an encapsulated service designed for **Lexical Analysis**, facilitating the mapping of symbolic keys (words) to their semantic counterparts (definitions, synonyms, and parts of speech). This implementation simulates a high-fidelity environment where lookups may involve I/O latency typical of network APIs or disk-resident databases. | [Code](Source%20Code/Dictionary/Dictionary.py) &nbsp;·&nbsp; [Demo](Source%20Code/Dictionary/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Dijkstra Algorithm</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `DijkstraAlgorithm.py` | Algorithm | **Dijkstra's Algorithm** is a fundamental graph algorithm used to find the shortest path between a specific source node and all other nodes in a weighted graph with non-negative edge weights. It is the basis for modern GPS routing and network protocol optimizations (like OSPF). | [Code](Source%20Code/Dijkstra%20Algorithm/DijkstraAlgorithm.py) &nbsp;·&nbsp; [Demo](Source%20Code/Dijkstra%20Algorithm/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Doubly Linked List</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `DoublyLinkedList.py` | Data Structure | A **Doubly Linked List (DLL)** is a linear data structure where each element (node) contains a data field and two reference fields (pointers): one pointing to the previous node and another to the next node in the sequence. This bidirectional structure allows for efficient traversal in both directions. | [Code](Source%20Code/Doubly%20Linked%20List/DoublyLinkedList.py) &nbsp;·&nbsp; [Demo](Source%20Code/Doubly%20Linked%20List/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Even Number Generator</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `EvenNumberGenerator.py` | Python Module | The **Even Number Generator** is a specialized iterator designed to produce a sequence of even integers. By utilizing **Lazy Evaluation**, it avoids the overhead of pre-calculating and storing entire lists in memory, making it ideal for processing large-scale or infinite numerical series. | [Code](Source%20Code/Even%20Number%20Generator/EvenNumberGenerator.py) &nbsp;·&nbsp; [Demo](Source%20Code/Even%20Number%20Generator/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Even Odd</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `EvenOdd.py` | Python Module | **Even/Odd Partitioning** is the process of segregating a collection of integers into two disjoint subsets based on their parity. This fundamental discrete operation is a building block for more complex number theory algorithms and data analysis workflows. | [Code](Source%20Code/Even%20Odd/EvenOdd.py) &nbsp;·&nbsp; [Demo](Source%20Code/Even%20Odd/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Factorial</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Factorial.py` | Algorithm | The **Factorial** of a non-negative integer $n$ is the product of all positive integers less than or equal to $n$. It is a core operator in discrete mathematics, probability theory, and combinatorial analysis. | [Code](Source%20Code/Factorial/Factorial.py) &nbsp;·&nbsp; [Demo](Source%20Code/Factorial/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Factorial Sequence</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `FactorialSequence.py` | Python Module | The **Factorial Sequence** is a series of numbers where each term $a_n$ represents the factorial of the index $n$ ($n \geq 0$). Factorials are fundamental in combinatorics, representing the number of ways to arrange $n$ distinct objects. | [Code](Source%20Code/Factorial%20Sequence/FactorialSequence.py) &nbsp;·&nbsp; [Demo](Source%20Code/Factorial%20Sequence/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Fast Fourier Transform</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `FastFourierTransform.py` | Research | The **Fast Fourier Transform (FFT)** is an algorithm that computes the Discrete Fourier Transform (DFT) of a sequence, or its inverse. It converts a signal from its original domain (often time or space) to a representation in the frequency domain and vice versa. It is widely considered one of the most important algorithms of the 20th century. | [Code](Source%20Code/Fast%20Fourier%20Transform/FastFourierTransform.py) &nbsp;·&nbsp; [Demo](Source%20Code/Fast%20Fourier%20Transform/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Fibonacci</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Fibonacci.py` | Algorithm | The **Fibonacci** number $F_n$ is a term in the Fibonacci sequence where each number is the sum of the two preceding ones. This module focuses on the computational aspects of calculating individual terms efficiently. | [Code](Source%20Code/Fibonacci/Fibonacci.py) &nbsp;·&nbsp; [Demo](Source%20Code/Fibonacci/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Fibonacci Sequence</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `FibbonacciSequence.py` | Python Module | The **Fibonacci Sequence** is a sequence of integers where each term is the sum of the two preceding ones, starting from 0 and 1. This sequence appears frequently in nature, mathematics, and computer science algorithms. | [Code](Source%20Code/Fibonacci%20Sequence/FibbonacciSequence.py) &nbsp;·&nbsp; [Demo](Source%20Code/Fibonacci%20Sequence/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>File Encryptor</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `FileEncryptor.py` | Utility | **File Encryption** is the process of encoding digital information to make it unreadable to unauthorized parties. This implementation utilizes a **Symmetric XOR Cipher**, which is a type of additive cipher that relies on the bitwise eXclusive OR (XOR) operation to obfuscate data. | [Code](Source%20Code/File%20Encryptor/FileEncryptor.py) &nbsp;·&nbsp; [Demo](Source%20Code/File%20Encryptor/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Game of Life</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `GameOfLife.py` | Game | **Conway's Game of Life** is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. It is the best-known example of a **Cellular Automaton**. | [Code](Source%20Code/Game%20of%20Life/GameOfLife.py) &nbsp;·&nbsp; [Demo](Source%20Code/Game%20of%20Life/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Graph</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Graph.py` | Data Structure | A **Graph** is a non-linear data structure consisting of a set of vertices (or nodes) $V$ and a set of edges $E$ that connect pairs of vertices. This scholarly implementation utilizes **Adjacency Lists** to represent the topological relationships, providing efficiency for sparse graphs. | [Code](Source%20Code/Graph/Graph.py) &nbsp;·&nbsp; [Demo](Source%20Code/Graph/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Guess The Number</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `GuessTheNumber.py` | Game | **Guess The Number** is a discrete search-space problem where an agent must identify a hidden target value $x$ within a known range $[L, U]$ using minimal feedback-based iterations. It serves as a practical demonstration of **Binary Search** principles. | [Code](Source%20Code/Guess%20The%20Number/GuessTheNumber.py) &nbsp;·&nbsp; [Demo](Source%20Code/Guess%20The%20Number/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Hangman Game</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `HangmanGame.py` | Game | **Hangman** is a lexical deduction game where an agent must reconstruct a hidden word $W$ by identifying its component characters through discrete guesses. This implementation models the game as a series of **Set Operations** over the English alphabet. | [Code](Source%20Code/Hangman%20Game/HangmanGame.py) &nbsp;·&nbsp; [Demo](Source%20Code/Hangman%20Game/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Hashing File</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `HashingFile.py` | Python Module | **File Hashing** is the process of generating a fixed-size numerical representation (a digest) from an arbitrary-sized file. It is a fundamental technique for verifying **Data Integrity**, ensuring that a file has not been altered or corrupted during transmission or storage. | [Code](Source%20Code/Hashing%20File/HashingFile.py) &nbsp;·&nbsp; [Demo](Source%20Code/Hashing%20File/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Heap Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `HeapSort.py` | Algorithm | **Heap Sort** is a comparison-based sorting algorithm that organizes a dataset into a **Max-Heap** (a complete binary tree where each node is greater than or equal to its children) to efficiently extract elements in descending order. It is an in-place algorithm with no auxiliary memory requirements proportional to the dataset size. | [Code](Source%20Code/Heap%20Sort/HeapSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Heap%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Hello World</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Hello_World.py` | Python Module | **Hello World** is the canonical program used to verify the successful initialization of a programming environment and to demonstrate the basic syntax for outputting data to the console. It serves as an atomic proof-of-concept for the execution environment. | [Code](Source%20Code/Hello%20World/Hello_World.py) &nbsp;·&nbsp; [Demo](Source%20Code/Hello%20World/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Huffman Coding</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `HuffmanCoding.py` | Research | **Huffman Coding** is a statistically based compression algorithm that assigns binary codes to symbols. The length of each code is determined by the frequency of the corresponding symbol. It is a **prefix-free** code, meaning no code is a prefix of any other, which allows for unambiguous decoding without delimiters. | [Code](Source%20Code/Huffman%20Coding/HuffmanCoding.py) &nbsp;·&nbsp; [Demo](Source%20Code/Huffman%20Coding/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Image Metadata Extractor</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `ImageMetadataExtractor.py` | Utility | **Image Metadata Extraction** is the recovery of non-visual data embedded within an image file. The most common standard is **EXIF (Exchangeable Image File Format)**, which stores technical details about the capture conditions, hardware specifications, and geolocation. | [Code](Source%20Code/Image%20Metadata%20Extractor/ImageMetadataExtractor.py) &nbsp;·&nbsp; [Demo](Source%20Code/Image%20Metadata%20Extractor/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Insertion Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `InsertionSort.py` | Algorithm | **Insertion Sort** is a comparison-based algorithm that builds the final sorted array one element at a time. It functions by iteratively taking an element from the unsorted partition and "inserting" it into its correct relative position within the sorted partition. | [Code](Source%20Code/Insertion%20Sort/InsertionSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Insertion%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Isogram</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Isogram.py` | Python Module | An **Isogram** (also known as a "non-pattern word") is a logological term for a word or phrase without a repeating letter. This implementation provides a robust verification mechanism to detect character collisions within a given string across any Unicode-compliant dataset. | [Code](Source%20Code/Isogram/Isogram.py) &nbsp;·&nbsp; [Demo](Source%20Code/Isogram/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Knapsack Problem</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `KnapsackProblem.py` | Python Module | The **0/1 Knapsack Problem** is a classic combinatorial optimization problem. Given a set of items, each with a weight and a value, the goal is to determine the number of each item to include in a collection such that the total weight is less than or equal to a given limit and the total value is as large as possible. The "0/1" refers to the constraint that each item must be either completely included or excluded. | [Code](Source%20Code/Knapsack%20Problem/KnapsackProblem.py) &nbsp;·&nbsp; [Demo](Source%20Code/Knapsack%20Problem/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Least Common Multiple</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `LeastCommonMultiple.py` | Python Module | The **Least Common Multiple (LCM)** of two integers $a$ and $b$ is the smallest positive integer that is divisible by both $a$ and $b$. It fundamental to fraction arithmetic, periodic systems, and divisibility theory. | [Code](Source%20Code/Least%20Common%20Multiple/LeastCommonMultiple.py) &nbsp;·&nbsp; [Demo](Source%20Code/Least%20Common%20Multiple/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Logarithm Calculator</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `LogarithmCalculator.py` | Python Module | A **Logarithm** is the inverse function to exponentiation. The logarithm of a number $x$ to a base $b$ is the exponent to which $b$ must be raised to produce $x$. This implementation provides a robust service for calculating logarithms across any valid domain. | [Code](Source%20Code/Logarithm%20Calculator/LogarithmCalculator.py) &nbsp;·&nbsp; [Demo](Source%20Code/Logarithm%20Calculator/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Mandelbrot Set</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `MandelbrotSet.py` | Game | The **Mandelbrot Set** is the set of complex numbers $c$ for which the function $f_c(z) = z^2 + c$ does not diverge to infinity when iterated from $z = 0$, i.e., for which the sequence $z_0 = 0, z_{n+1} = z_n^2 + c$ remains bounded in absolute value. It is one of the most famous examples of fractal geometry, exhibiting infinite complexity at all scales. | [Code](Source%20Code/Mandelbrot%20Set/MandelbrotSet.py) &nbsp;·&nbsp; [Demo](Source%20Code/Mandelbrot%20Set/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Merge Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `MergeSort.py` | Algorithm | **Merge Sort** is an efficient, stable, comparison-based sorting algorithm. Most implementations produce a stable sort, meaning that the relative order of equal elements is preserved in the sorted output. It is a quintessential example of the **Divide and Conquer** algorithmic paradigm. | [Code](Source%20Code/Merge%20Sort/MergeSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Merge%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Monte Carlo Simulation</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `MonteCarloSimulation.py` | Research | **Monte Carlo Simulation** is a broad class of computational algorithms that rely on repeated random sampling to obtain numerical results. It is used to model the probability of different outcomes in a process that cannot easily be predicted due to the intervention of random variables. | [Code](Source%20Code/Monte%20Carlo%20Simulation/MonteCarloSimulation.py) &nbsp;·&nbsp; [Demo](Source%20Code/Monte%20Carlo%20Simulation/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Multiplication Table</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `MultiplicationTable.py` | Python Module | A **Multiplication Table** is a mathematical table used to define a multiplication operation for an algebraic system. In elementary arithmetic, it represents the product of two integers as the result of repeated addition or scalar scaling. | [Code](Source%20Code/Multiplication%20Table/MultiplicationTable.py) &nbsp;·&nbsp; [Demo](Source%20Code/Multiplication%20Table/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>N-ary Search</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `NarySearch.py` | Algorithm | **N-ary Search** is a search algorithm that finds the position of a target value within a sorted array. Unlike Binary Search, which divides the array into two halves ($n=2$), N-ary Search divides the search space into $n$ equivalent sub-intervals using $n-1$ pivots. | [Code](Source%20Code/N-ary%20Search/NarySearch.py) &nbsp;·&nbsp; [Demo](Source%20Code/N-ary%20Search/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Odd Number Generator</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `OddNumberGenerator.py` | Python Module | An **Odd Number** is an integer which is not a multiple of two. In binary representation, odd numbers always have their least significant bit (LSB) set to 1. This implementation provides a rigorous mechanism for generating these integers as a discrete arithmetic progression. | [Code](Source%20Code/Odd%20Number%20Generator/OddNumberGenerator.py) &nbsp;·&nbsp; [Demo](Source%20Code/Odd%20Number%20Generator/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>PDF Parser</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `PDFParser.py` | Utility | A **PDF Parser** is a tool designed to decode the **Portable Document Format (PDF)**, a file format developed by Adobe in 1992. PDF parsing is non-trivial because the format is a specialized object-oriented language based on PostScript, where text is often stored as compressed streams of glyph offsets rather than plain strings. | [Code](Source%20Code/PDF%20Parser/PDFParser.py) &nbsp;·&nbsp; [Demo](Source%20Code/PDF%20Parser/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Palindrome</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Palindrome.py` | Python Module | A **Palindrome** is a sequence of characters which reads the same backward as forward, such as *madam* or *racecar*. In the context of computer science and formal language theory, a palindrome is a string that is equal to its own reverse. | [Code](Source%20Code/Palindrome/Palindrome.py) &nbsp;·&nbsp; [Demo](Source%20Code/Palindrome/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Pangram</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Pangram.py` | Python Module | A **Pangram** (or holoalphabetic sentence) is a sentence using every letter of a given alphabet at least once. The most famous example in English is "The quick brown fox jumps over the lazy dog". From a linguistic and computational perspective, it represents a complete coverage of a character set. | [Code](Source%20Code/Pangram/Pangram.py) &nbsp;·&nbsp; [Demo](Source%20Code/Pangram/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Pascal Triangle</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `PascalTriangle.py` | Data Structure | **Pascal's Triangle** is a triangular array of **Binomial Coefficients**. To construct the triangle, start with "1" at the apex. Each subsequent number is determined by summing the two numbers directly above it. This structure is fundamental in probability theory, combinatorics, and algebra. | [Code](Source%20Code/Pascal%20Triangle/PascalTriangle.py) &nbsp;·&nbsp; [Demo](Source%20Code/Pascal%20Triangle/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Password Generator</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Password_Generator.py` | Utility | A **Password Generator** is a computational tool that creates randomized strings of characters to be used as authenticators. High-fidelity generators prioritize security by ensuring that the generated strings are unpredictable even if the generation algorithm is known (Kerckhoffs's Principle). | [Code](Source%20Code/Password%20Generator/Password_Generator.py) &nbsp;·&nbsp; [Demo](Source%20Code/Password%20Generator/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Password Guesser</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Password_Guesser.py` | Utility | A **Password Guesser** is a computational simulation of a **Brute-Force Attack**. In cryptography, brute-force consists of an attacker submitting many passwords or passphrases with the hope of eventually guessing correctly. It is the most basic form of cryptanalysis and serves as a benchmark for measuring the strength of authentication systems. | [Code](Source%20Code/Password%20Guesser/Password_Guesser.py) &nbsp;·&nbsp; [Demo](Source%20Code/Password%20Guesser/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Perfect Number</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `PerfectNumber.py` | Python Module | In number theory, a **Perfect Number** is a positive integer that is equal to the sum of its proper positive divisors (the sum of its positive divisors excluding the number itself). This sum is known as the **Aliquot Sum**. | [Code](Source%20Code/Perfect%20Number/PerfectNumber.py) &nbsp;·&nbsp; [Demo](Source%20Code/Perfect%20Number/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Power2 Sequence</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Power2Sequence.py` | Python Module | The **Power2 Sequence** is a geometric progression where the first term is 1 ( $2^0$ ) and the common ratio is 2. In computer science, powers of two are foundational due to the binary nature of modern digital architectures, representing word sizes, memory address spaces, and data capacities. | [Code](Source%20Code/Power2%20Sequence/Power2Sequence.py) &nbsp;·&nbsp; [Demo](Source%20Code/Power2%20Sequence/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Prime Number</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `PrimeNumber.py` | Python Module | A **Prime Number** is a natural number greater than 1 that is not a product of two smaller natural numbers. In other words, its only divisors are 1 and itself. Integers greater than 1 that are not prime are called **Composite Numbers**. | [Code](Source%20Code/Prime%20Number/PrimeNumber.py) &nbsp;·&nbsp; [Demo](Source%20Code/Prime%20Number/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Prime Sieve</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `PrimeSieve.py` | Algorithm | The **Sieve of Eratosthenes** is a fast and simple ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. | [Code](Source%20Code/Prime%20Sieve/PrimeSieve.py) &nbsp;·&nbsp; [Demo](Source%20Code/Prime%20Sieve/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Progress Bar</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `ProgressBar.py` | Utility | A **Progress Bar** is a graphical control element used to visualize the progression of an extended computer operation, such as a file download or complex calculation. This implementation focuses on a terminal-based variant that utilizes ASCII characters and escape sequences to provide real-time feedback within a text-based environment. | [Code](Source%20Code/Progress%20Bar/ProgressBar.py) &nbsp;·&nbsp; [Demo](Source%20Code/Progress%20Bar/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>QRCode</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `QRCode.py` | Utility | A **QR Code** (Quick Response Code) is a type of matrix barcode initially designed for the automotive industry. It is a machine-readable optical label that contains information about the item to which it is attached. Unlike standard barcodes, QR codes are two-dimensional, allowing for significantly higher data density. | [Code](Source%20Code/QRCode/QRCode.py) &nbsp;·&nbsp; [Demo](Source%20Code/QRCode/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Quadratic Equation Solver</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `QuadraticEquationSolver.py` | Python Module | A **Quadratic Equation** is a polynomial equation of the second degree. The general form is $ax^2 + bx + c = 0$, where $x$ represents an unknown, and $a$, $b$, and $c$ represent known numbers (coefficients), with $a \neq 0$. | [Code](Source%20Code/Quadratic%20Equation%20Solver/QuadraticEquationSolver.py) &nbsp;·&nbsp; [Demo](Source%20Code/Quadratic%20Equation%20Solver/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Queue</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Queue.py` | Data Structure | A **Queue** is a linear abstract data type (ADT) that facilitates a specific order for handling elements. It follows the **FIFO** (First-In, First-Out) principle, meaning that the first element added to the queue will be the first one to be removed. | [Code](Source%20Code/Queue/Queue.py) &nbsp;·&nbsp; [Demo](Source%20Code/Queue/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Quick Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `QuickSort.py` | Algorithm | **Quick Sort** is a highly efficient sorting algorithm that employs the **Divide and Conquer** strategy. It works by partitioning an array into two smaller sub-arrays: the low elements and the high elements. It then recursively sorts the sub-arrays. | [Code](Source%20Code/Quick%20Sort/QuickSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Quick%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Read File</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `ReadFile.py` | Python Module | **File Reading** is the process of transferring data from a persistent storage medium (secondary memory) to the computer's primary memory (RAM). High-fidelity file operations prioritize **Deterministic Resource Deallocation**, ensuring that system file descriptors are released immediately after the operation concludes. | [Code](Source%20Code/Read%20File/ReadFile.py) &nbsp;·&nbsp; [Demo](Source%20Code/Read%20File/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Reader Writer</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `ReaderWriter.py` | Python Module | The **Readers-Writers Problem** is a classical synchronization challenge in concurrent programming. It involves coordinating access to a shared resource (e.g., a database or file) between multiple "reader" threads, which only need to view the data, and "writer" threads, which need to modify it. The goal is to prevent data corruption from simultaneous writes while maximizing concurrency for reads. | [Code](Source%20Code/Reader%20Writer/ReaderWriter.py) &nbsp;·&nbsp; [Demo](Source%20Code/Reader%20Writer/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Red-Black Tree</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `RedBlackTree.py` | Data Structure | A **Red-Black Tree** is a type of self-balancing binary search tree (BST) where each node has an extra bit for denoting the color of the node, either **red** or **black**. It ensures that no path from the root to a leaf is more than twice as long as any other path, keeping the tree height logarithmic. | [Code](Source%20Code/Red-Black%20Tree/RedBlackTree.py) &nbsp;·&nbsp; [Demo](Source%20Code/Red-Black%20Tree/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Reverse Words</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `ReverseWords.py` | Python Module | **Word Reversal** is a linguistic string transformation process where the relative positions of words in a sentence are inverted while maintaining the internal character order of each token. This algorithm is foundational in natural language processing (NLP) tasks and text-based structural analysis. | [Code](Source%20Code/Reverse%20Words/ReverseWords.py) &nbsp;·&nbsp; [Demo](Source%20Code/Reverse%20Words/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Rock Paper Scissors</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `RockPaperScissors.py` | Game | **Rock Paper Scissors** is a simultaneous, zero-sum hand game played between two people (or a person and a computer). It is a fundamental model used in **Game Theory** to illustrate strategic decision-making and the absence of a dominant strategy in cyclic relationships. | [Code](Source%20Code/Rock%20Paper%20Scissors/RockPaperScissors.py) &nbsp;·&nbsp; [Demo](Source%20Code/Rock%20Paper%20Scissors/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Selection Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `SelectionSort.py` | Algorithm | **Selection Sort** is an in-place comparison-based sorting algorithm. It divides the input list into two parts: a sorted sub-list which is built up from left to right at the front of the list, and an unsorted sub-list that occupies the rest of the list. The algorithm repeatedly finds the smallest (or largest) element from the unsorted part and swaps it with the leftmost unsorted element. | [Code](Source%20Code/Selection%20Sort/SelectionSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Selection%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Sentiment Analysis</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `SentimentAnalysis.py` | Utility | **Sentiment Analysis** (or Opinion Mining) is a subfield of Natural Language Processing (NLP) that involves the computational identification and categorization of opinions expressed in text. It aims to determine the writer's attitude toward a particular topic or the overall contextual polarity of a document. | [Code](Source%20Code/Sentiment%20Analysis/SentimentAnalysis.py) &nbsp;·&nbsp; [Demo](Source%20Code/Sentiment%20Analysis/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Sequential Search</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `SequentialSearch.py` | Algorithm | **Sequential Search**, commonly known as Linear Search, is the most fundamental search algorithm. It works by checking every element in a sequence, one at a time, until the target is found or the end of the collection is reached. It is the only search method available for unordered data structures. | [Code](Source%20Code/Sequential%20Search/SequentialSearch.py) &nbsp;·&nbsp; [Demo](Source%20Code/Sequential%20Search/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Shape</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Shape.py` | Python Module | **Geometric Shape Visualization** in this implementation focuses on the generation of **Polygonal Spirals**. These are complex figures created by the iterative application of translation and rotation vectors. By slightly offsetting the rotation angle from a factor of 360, the algorithm produces a "precession" effect, resulting in a dense, multi-colored spiral structure. | [Code](Source%20Code/Shape/Shape.py) |
+
+</details>
+
+<details>
+<summary><strong>Shell Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `ShellSort.py` | Algorithm | **Shell Sort**, developed by Donald Shell in 1959, is an in-place comparison sorting algorithm that serves as an optimization of Insertion Sort. It achieves higher efficiency by comparing and exchanging elements that are separated by a "gap," allowing out-of-place elements to move toward their final destinations faster than simple nearest-neighbor exchanges. | [Code](Source%20Code/Shell%20Sort/ShellSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Shell%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Singly Linked List</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `SinglyLinkedList.py` | Data Structure | A **Singly Linked List (SLL)** is a fundamental linear data structure in computer science. Unlike arrays, elements in a linked list are not stored in contiguous memory locations. Instead, each element (node) contains a data payload and a pointer (reference) to the subsequent node in the sequence. This structure allows for efficient insertions and deletions compared to array-based structures. | [Code](Source%20Code/Singly%20Linked%20List/SinglyLinkedList.py) &nbsp;·&nbsp; [Demo](Source%20Code/Singly%20Linked%20List/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Square Root</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `SquareRoot.py` | Python Module | The **Square Root** of a number $n$ is a value $x$ such that $x^2 = n$. Computing square roots is a fundamental operation in numerical analysis, and this implementation uses the **Newton-Raphson Method**, an iterative root-finding algorithm with quadratic convergence. | [Code](Source%20Code/Square%20Root/SquareRoot.py) &nbsp;·&nbsp; [Demo](Source%20Code/Square%20Root/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Square of Sequence</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `SquareOfSequence.py` | Python Module | The **Square of Sequence** refers to a mathematical progression where each term $a_n$ is the square of its position $n$: | [Code](Source%20Code/Square%20of%20Sequence/SquareOfSequence.py) &nbsp;·&nbsp; [Demo](Source%20Code/Square%20of%20Sequence/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Stack</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Stack.py` | Data Structure | A **Stack** is a linear data structure that follows the **Last-In-First-Out (LIFO)** principle. Elements are added and removed from the same end, called the "top" of the stack. It is one of the most fundamental Abstract Data Types (ADTs) in computer science, used extensively in algorithm design, memory management, and expression evaluation. | [Code](Source%20Code/Stack/Stack.py) &nbsp;·&nbsp; [Demo](Source%20Code/Stack/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Stop Watch</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `StopWatch.py` | Utility | A **Stopwatch** is a timekeeping device designed to measure the amount of time elapsed from a particular starting point to a designated ending point. This implementation provides a programmatic stopwatch using system epoch time, supporting start, stop, lap, and reset functionality. | [Code](Source%20Code/Stop%20Watch/StopWatch.py) &nbsp;·&nbsp; [Demo](Source%20Code/Stop%20Watch/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Sudoku Solver</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `SudokuSolver.py` | Game | **Sudoku Solver** is an algorithm designed to solve 9x9 grids such that each row, column, and 3x3 subgrid contains all digits from 1 to 9. This implementation utilizes a **Backtracking Algorithm**, a depth-first search strategy for solving constraint satisfaction problems. | [Code](Source%20Code/Sudoku%20Solver/SudokuSolver.py) |
+
+</details>
+
+<details>
+<summary><strong>Text Summarizer</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `TextSummarizer.py` | Utility | **Text Summarization** is the task of producing a concise version of a document that preserves the most important information. This implementation uses **Extractive Summarization**, which selects and concatenates the most significant sentences from the original text without generating new text. | [Code](Source%20Code/Text%20Summarizer/TextSummarizer.py) &nbsp;·&nbsp; [Demo](Source%20Code/Text%20Summarizer/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Text Translator</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `TextTranslator.py` | Utility | **Machine Translation (MT)** is the automatic conversion of text from one natural language to another. This implementation uses API-based translation services to perform cross-lingual text conversion, supporting multiple language pairs. | [Code](Source%20Code/Text%20Translator/TextTranslator.py) &nbsp;·&nbsp; [Demo](Source%20Code/Text%20Translator/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Text to Handwriting</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `TextToHandwriting.py` | Utility | **Text to Handwriting** conversion transforms digital text into images that simulate handwritten content. This technique uses specialized fonts and rendering algorithms to create visually authentic handwritten representations of typed text. | [Code](Source%20Code/Text%20to%20Handwriting/TextToHandwriting.py) |
+
+</details>
+
+<details>
+<summary><strong>Tic Tac Toe</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `TicTacToe.py` | Game | **Tic Tac Toe** (also known as Noughts and Crosses) is a two-player, zero-sum game played on a 3×3 grid. Players take turns marking cells with their symbol (X or O). The first player to align three symbols horizontally, vertically, or diagonally wins. | [Code](Source%20Code/Tic%20Tac%20Toe/TicTacToe.py) &nbsp;·&nbsp; [Demo](Source%20Code/Tic%20Tac%20Toe/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Timer</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Timer.py` | Utility | A **Countdown Timer** is a utility that decrements a time value from a specified duration to zero. This implementation demonstrates time manipulation, terminal control sequences, and modular arithmetic for time format conversion. | [Code](Source%20Code/Timer/Timer.py) &nbsp;·&nbsp; [Demo](Source%20Code/Timer/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>To-Do App</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `ToDoApp.py` | Utility | A **To-Do Application** is a task management utility that allows users to create, read, update, and delete (CRUD) records. This implementation uses **Tkinter** for the graphical user interface and **Pickle** for binary serialization and data persistence. | [Code](Source%20Code/To-Do%20App/ToDoApp.py) |
+
+</details>
+
+<details>
+<summary><strong>Topological Sort</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `TopologicalSort.py` | Algorithm | **Topological Sort** is a linear ordering of vertices in a Directed Acyclic Graph (DAG) such that for every directed edge $(u, v)$, vertex $u$ comes before $v$ in the ordering. It is used for task scheduling, dependency resolution, and build systems. | [Code](Source%20Code/Topological%20Sort/TopologicalSort.py) &nbsp;·&nbsp; [Demo](Source%20Code/Topological%20Sort/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Trie</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `Trie.py` | Data Structure | A **Trie**, derived from the word "re**trie**val", is a specialized tree-based data structure used for storing associative arrays where the keys are usually strings. Unlike a standard binary search tree, no node in the Trie stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. | [Code](Source%20Code/Trie/Trie.py) &nbsp;·&nbsp; [Demo](Source%20Code/Trie/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>URL Shortener</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `URLShortener.py` | Utility | A **URL Shortener** is a service that translates long URLs into much shorter, more manageable strings. This is typically achieved by assigning a unique numeric ID to each URL and then representing that ID in a higher-base number system (Base62) to minimize string length. | [Code](Source%20Code/URL%20Shortener/URLShortener.py) &nbsp;·&nbsp; [Demo](Source%20Code/URL%20Shortener/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Variable Scope</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `VariableScope.py` | Python Module | **Variable Scope** defines the region of a program where a variable is accessible. Python uses the **LEGB Rule** to resolve variable names: Local → Enclosing → Global → Built-in. Understanding scope prevents naming conflicts and unintended side effects. | [Code](Source%20Code/Variable%20Scope/VariableScope.py) &nbsp;·&nbsp; [Demo](Source%20Code/Variable%20Scope/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Weather Forecaster</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `WeatherForecaster.py` | Utility | A **Weather Forecaster** is a meteorological application that integrates atmospheric data from remote sensors and satellite telemetry to predict future environmental states. In a computational context, this requires parsing complex environmental vectors (temperature, humidity, velocity) into actionable insights. | [Code](Source%20Code/Weather%20Forecaster/WeatherForecaster.py) &nbsp;·&nbsp; [Demo](Source%20Code/Weather%20Forecaster/Demo.png) |
+
+</details>
+
+<details>
+<summary><strong>Web Scraper</strong></summary>
+
+| Program | Topic | Description | Code |
+|:---|:---|:---|:---:|
+| `WebScraper.py` | Utility | A **Web Scraper** is a software agent tasked with the automated extraction of data from websites. Unlike web crawling, which focuses on indexing, scraping targets specific data points within the **Document Object Model (DOM)** of a webpage, transforming unstructured HTML into structured data formats like JSON or CSV. | [Code](Source%20Code/Web%20Scraper/WebScraper.py) &nbsp;·&nbsp; [Demo](Source%20Code/Web%20Scraper/Demo.png) |
+
+</details>
+
+---
 ---
 
 <!-- USAGE GUIDELINES -->
