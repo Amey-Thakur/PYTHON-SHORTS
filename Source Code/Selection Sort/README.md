@@ -52,20 +52,31 @@ $$
 
 ## 5. Visual Representation
 
+### Minimum Selection & Recursive Partitioning
+![Selection Sort Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A["Start: Unsorted List [L]"] --> B[Initialize i = 0]
-    B --> C{i < n-1?}
-    C -- Yes --> D["Assume min_index = i"]
-    D --> E[Search for Minimum in L[i+1...n]]
-    E --> F{New Min Found?}
-    F -- Yes --> G[Update min_index]
-    F -- No --> H[Keep current min_index]
-    G --> J{min_index != i?}
-    H --> J
-    J -- Yes --> K[Swap L[i] and L[min_index]]
-    J -- No --> L[Increment i]
-    K --> L
-    L --> C
-    C -- No --> M[Stop: Sorted List]
+flowchart TD
+    A["Start: Unsorted List L"] --> B["Iterate i from 0 to n-2"]
+    B --> C["Assume min_index = i"]
+    C --> D["Scan L[i+1...n-1] for Minimum"]
+    D --> E{"New Minimum Found?"}
+    E -- "Yes" --> F["Update min_index"]
+    E -- "No" --> G["Keep current min_index"]
+    F --> H{"min_index != i?"}
+    G --> H
+    H -- "Yes" --> I["Swap L[i] and L[min_index]"]
+    H -- "No" --> J["Increment i"]
+    I --> J
+    J --> B
+    B --> K["Stop: List Sorted"]
+```
+
+```mermaid
+graph LR
+    subgraph SpaceComplexity ["Spatial Efficiency"]
+        direction TB
+        aux["Auxiliary Space: O(1)"]
+        mem["In-Place: Verified"]
+    end
 ```
