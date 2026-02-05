@@ -67,8 +67,6 @@ sequenceDiagram
 ```
 
 ### Generated Scholarly Access Points
-| Entity | QR Representation |
-| :--- | :--- |
-| **Amey Thakur** | ![Amey GitHub QR](Output/Amey_GitHub_QR.png) |
-| **Mega Satish** | ![Mega GitHub QR](Output/Mega_GitHub_QR.png) |
-| **Repository** | ![Repository QR](Output/Repository_QR.png) |
+| Amey Thakur | Mega Satish | Repository |
+| :---: | :---: | :---: |
+| ![Amey GitHub QR](Output/Amey_GitHub_QR.png) | ![Mega Satish QR](Output/Mega_GitHub_QR.png) | ![Repository QR](Output/Repository_QR.png) |
