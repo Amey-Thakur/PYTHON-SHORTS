@@ -22,16 +22,19 @@ A **Bloom Filter** is a space-efficient probabilistic data structure, conceived 
 The efficiency of a Bloom filter is determined by the relationship between the number of inserted items ($n$), the size of the bit array ($m$), and the number of hash functions ($k$).
 
 The probability of a false positive ($p$) is approximated by:
+
 $$
 p \approx (1 - e^{-kn/m})^k
 $$
 
 To minimize $p$ for a given $m$ and $n$, the optimal number of hash functions is:
+
 $$
 k = \ln(2) \cdot \frac{m}{n}
 $$
 
 The required size $m$ for a desired $p$ and $n$ is:
+
 $$
 m = -\frac{n \ln(p)}{(\ln(2))^2}
 $$

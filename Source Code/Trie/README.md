@@ -22,14 +22,17 @@ A **Trie**, derived from the word "re**trie**val", is a specialized tree-based d
 Let $S$ be a set of strings. A Trie representing $S$ is a rooted tree where each edge is labeled with a character $c \in \Sigma$ (alphabet). For any node $u$, the path from the root to $u$ defines a prefix $P(u)$.
 
 The space complexity is bounded by:
+
 $$
 Space \approx O(\text{Total length of all strings})
 $$
 
 The time complexity for insertion and search is:
+
 $$
 T(L) = O(L)
 $$
+
 where $L$ is the length of the string, making it independent of the number of strings stored in the data structure.
 
 ## 3. Computer Science Theory
