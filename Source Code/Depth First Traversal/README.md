@@ -43,3 +43,23 @@ The traversal follows a **Last-In, First-Out (LIFO)** strategy, naturally modele
 
 ### Traversal Sequence & Logic Verification
 ![DFS Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Start at Root] --> B[Push to Stack]
+    B --> C{Stack Empty?}
+    C -->|No| D[Pop Node]
+    D --> E[Visit/Process Node]
+    E --> F[Push Unvisited Children]
+    F --> C
+    C -->|Yes| G[Traversal Complete]
+```
+
+```mermaid
+flowchart LR
+    subgraph Traversal Orders
+        A[Pre-order: Root→Left→Right]
+        B[In-order: Left→Root→Right]
+        C[Post-order: Left→Right→Root]
+    end
+```
