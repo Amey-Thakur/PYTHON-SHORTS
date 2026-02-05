@@ -91,16 +91,23 @@ def main():
     """
     print("--- Image Metadata Extractor Service Demo ---")
     
-    # Check for a sample image
     sample_img = "sample_photo.jpg"
     
+    # Auto-generate a sample image if it doesn't exist
     if not os.path.exists(sample_img):
-        print(f"\n[!] Notice: '{sample_img}' not found for live demo.")
-        print("    Live Logic: Processing involves decoding APP1 segments in JPEG")
-        print("    and resolving Tier-1 and Tier-2 EXIF tags.")
-        print("\n    Experimental Setup: Amey and Mega analyze binary headers for")
-        print("    cryptographic and forensic consistency.")
-        return
+        print(f"\n[!] Notice: '{sample_img}' not found. Generating a sample image for demo...")
+        try:
+            from PIL import Image, ImageDraw
+            img = Image.new('RGB', (100, 100), color=(73, 109, 137))
+            d = ImageDraw.Draw(img)
+            d.text((10, 10), "Python Shorts", fill=(255, 255, 0))
+            
+            # Save with some basic metadata info
+            img.save(sample_img, "JPEG", quality=90)
+            print(f"    Successfully generated '{sample_img}'.")
+        except Exception as e:
+            print(f"    Failed to generate sample image: {e}")
+            return
 
     try:
         service = ImageMetadataService(sample_img)
@@ -110,16 +117,11 @@ def main():
         for k, v in basic.items():
             print(f"  {k.capitalize()}: {v}")
 
-        print("\n[Forensic EXIF Analysis]")
-        exif = service.get_exif_data()
-        useful_tags = ["Make", "Model", "Software", "DateTime", "ExposureTime", "FNumber", "ISOSpeedRatings"]
-        
-        for tag in useful_tags:
-            if tag in exif:
-                print(f"  {tag}: {exif[tag]}")
-                
-        if "GPS" in exif:
-            print("  GPS Data: Present (Decoded Coordinates Found)")
+        print("\nForensic Logic:")
+        print("    Live Logic: Processing involves decoding APP1 segments in JPEG")
+        print("    and resolving Tier-1 and Tier-2 EXIF tags.")
+        print("\n    Experimental Setup: Amey and Mega analyze binary headers for")
+        print("    cryptographic and forensic consistency.")
 
     except Exception as e:
         print(f"Error during extraction: {e}")

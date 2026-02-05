@@ -83,19 +83,33 @@ class PDFParserService:
 def main():
     """
     Demonstrates the PDF Parser service.
-    NOTE: For demonstration, if no PDF is provided, it explains the logic.
     """
     print("--- PDF Parser Service Demo ---")
     
-    # Check if a sample PDF exists, if not, skip actual parsing
     sample_pdf = "sample_report.pdf"
     
+    # Auto-generate a sample PDF if it doesn't exist
     if not os.path.exists(sample_pdf):
-        print(f"\n[!] Notice: '{sample_pdf}' not found for live demo.")
-        print("    Scholarly Logic: PDF parsing involves reading the postscript-based")
-        print("    structure, handling FlateDecode compression, and mapping CMAPs.")
-        print("\n    To run with a real file, place a PDF named 'sample_report.pdf' here.")
-        return
+        print(f"\n[!] Notice: '{sample_pdf}' not found. Generating a sample PDF for demo...")
+        try:
+            from PyPDF2 import PdfWriter
+            writer = PdfWriter()
+            page = writer.add_blank_page(width=72 * 8.5, height=72 * 11) # Letter size
+            
+            # Simple metadata for testing
+            writer.add_metadata({
+                "/Title": "Standardizing Python Shorts",
+                "/Author": "Amey Thakur & Mega Filly",
+                "/Subject": "Structural Documentation and Forensic Data Analysis",
+                "/Creator": "PDFParser.py Service"
+            })
+            
+            with open(sample_pdf, "wb") as f:
+                writer.write(f)
+            print(f"    Successfully generated '{sample_pdf}'.")
+        except Exception as e:
+            print(f"    Failed to generate sample PDF: {e}")
+            return
 
     try:
         service = PDFParserService(sample_pdf)
@@ -104,9 +118,9 @@ def main():
         for key, value in metadata.items():
             print(f"  {key.capitalize()}: {value}")
 
-        print("\nExtracting Text (First Page Snippet):")
-        text = service.extract_text(max_pages=1)
-        print(f"  Snippet: {text[:200]}...")
+        print("\nForensic Notice:")
+        print("    Scholarly Logic: PDF parsing involves reading the postscript-based")
+        print("    structure, handling FlateDecode compression, and mapping CMAPs.")
         
     except Exception as e:
         print(f"Error during parsing: {e}")
