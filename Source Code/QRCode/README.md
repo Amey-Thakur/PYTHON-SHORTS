@@ -54,7 +54,7 @@ The encoder adds parity bits by dividing this polynomial by a generator polynomi
 | :---: | :---: | :---: |
 | ![Amey GitHub QR](Output/Amey_GitHub_QR.png) | ![Mega Satish QR](Output/Mega_GitHub_QR.png) | ![Repository QR](Output/Repository_QR.png) |
 
-### Matrix Synthesis & Structural Decoding
+### High-Fidelity Reed-Solomon Error Correction Infographic
 ![QRCode Demo](Demo.png)
 
 ### Data Encoding Workflow
