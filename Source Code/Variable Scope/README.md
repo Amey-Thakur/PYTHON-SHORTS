@@ -48,41 +48,38 @@ The function returns the first namespace containing the name.
 
 ## 5. Visual Representation
 
-### LEGB Hierarchy
+## 5. Visual Representation
+
+### LEGB Resolution & Scoping Hierarchy
+![Variable Scope Demo](Demo.png)
+
 ```mermaid
 graph TD
-    B[Built-in Scope] --> G[Global Scope]
-    G --> E[Enclosing Scope]
-    E --> L[Local Scope]
-    
-    L -->|Variable Lookup| E
-    E -->|Not Found| G
-    G -->|Not Found| B
+    subgraph LEGB ["Namespace Resolution Engine"]
+        direction TB
+        B["Built-in Scope (Python Internals)"] --> G["Global Scope (Module Level)"]
+        G --> E["Enclosing Scope (Nonlocal)"]
+        E --> L["Local Scope (Function Stack)"]
+        
+        L -.->|"Resolution Failover"| E
+        E -.->|"Resolution Failover"| G
+        G -.->|"Resolution Failover"| B
+    end
 ```
 
-### Namespace Resolution
 ```mermaid
 flowchart LR
-    A[Variable Name] --> B{In Local?}
-    B -->|Yes| C[Use Local]
-    B -->|No| D{In Enclosing?}
-    D -->|Yes| E[Use Enclosing]
-    D -->|No| F{In Global?}
-    F -->|Yes| G[Use Global]
-    F -->|No| H{In Built-in?}
-    H -->|Yes| I[Use Built-in]
-    H -->|No| J[NameError]
+    A["Identifier Reference"] --> B{"Exists in Local?"}
+    B -- "No" --> C{"Exists in Enclosing?"}
+    C -- "No" --> D{"Exists in Global?"}
+    D -- "No" --> E{"Exists in Built-in?"}
+    
+    B -- "Yes" --> F["Return Reference"]
+    C -- "Yes" --> F
+    D -- "Yes" --> F
+    E -- "Yes" --> F
+    E -- "No" --> G["Raise NameError"]
 ```
 
-### Scope Hierarchy Example
-```
-Built-in:  print, len, range, int, str...
-    │
-Global:    global_var = "Original"
-    │
-Enclosing: def outer():
-    │          enclosing_var = "Enclosing"
-    │
-Local:         def inner():
-                   local_var = "Local"
-```
+> [!IMPORTANT]
+> Python's identifier resolution strictly follows the LEGB priority. Shadowing (re-defining a name in a more specific scope) is a common practice but should be used cautiously to avoid ambiguity in complex architectures.
