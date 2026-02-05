@@ -50,3 +50,31 @@ Palindromes exhibit a central symmetry. For a string of length $n$, the number o
 - **Two-Pointer Iteration**: Employs a `while` loop with `left` and `right` indices to minimize memory allocation and maximize performance.
 
 ## 5. Visual Representation
+
+### Palindromic Symmetry & Two-Pointer Verification
+![Palindrome Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: is_palindrome(text)"] --> B{"Normalization required?"}
+    B -- "Yes" --> C["Strip symbols & Lowercase"]
+    B -- "No" --> D["Use raw text"]
+    C --> E["low = 0, high = n-1"]
+    D --> E
+    E --> F{"low < high?"}
+    F -- "No" --> G["Return True"]
+    F -- "Yes" --> H{"text[low] == text[high]?"}
+    H -- "No" --> I["Return False"]
+    H -- "Yes" --> J["low += 1, high -= 1"]
+    J --> F
+```
+
+```mermaid
+graph LR
+    subgraph Symmetry ["Bidirectional Symmetry Verification"]
+        direction LR
+        L["Left Pointer (i)"] -->|increments| M["Center"]
+        R["Right Pointer (n-1-i)"] -->|decrements| M
+        word["[ R | A | C | E | C | A | R ]"]
+    end
+```
