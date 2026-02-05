@@ -52,8 +52,14 @@ A sentence is classified as:
 
 ## 5. Visual Representation
 
-### Sentiment Flow & Heuristic Analysis
+### Forensic Sentiment Dashboard
+The analytic engine provides real-time polarity quantification across multiple linguistic dimensions.
+
 ![Sentiment Analysis Demo](Demo.png)
+
+> [!TIP]
+> **High-Fidelity Prompt for Gemini (Manual Update):**
+> *A high-fidelity, high-tech neon infographic for a Sentiment Analysis engine, titled 'SENTIMENT ANALYTICS & POLARITY' with 'Python Shorts' secondary title. The design should be in a sleek dark mode with vibrant neon sapphire blue, electric cyan, and silver accents. It should feature a large glowing 3D human brain or a neural network node in the center, pulsing with energy. From the core, show digital text streams 'BEAMING' out, containing snippets of text being analyzed with highlighted valences. Show a stream of text being 'DECONSTRUCTED' into polarity vectors. Include technical labels for 'VADER Heuristic Decoding', 'Valence Lexicon Mapping', and 'Compound Polarity Analysis'. Include the text 'By: Amey & Mega' and 'SentimentAnalysis.py' prominently. At the bottom, include a professional footer 'PYTHON SHORTS | AMEY & MEGA'. The overall look should be premium, technical, and visually stunning.*
 
 ```mermaid
 graph TD

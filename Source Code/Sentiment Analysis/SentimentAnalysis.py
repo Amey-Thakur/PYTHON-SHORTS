@@ -76,10 +76,10 @@ class SentimentAnalysisService:
 
 def main():
     """
-    Demonstrates the Sentiment Analysis service.
+    Demonstrates the Forensic Sentiment Analysis service.
     """
-    print("--- Sentiment Analysis Service Demo ---")
-    print(f"Authors: Amey Thakur & Mega Satish\n")
+    print("--- Polarity Quantification & Linguistic Forensics ---")
+    print(f"Service: SentimentAnalysis.py | Authors: Amey Thakur & Mega Satish\n")
 
     try:
         service = SentimentAnalysisService()
@@ -87,7 +87,7 @@ def main():
         samples = [
             "The algorithmic documentation by Mega and Amey is absolutely excellent! 🚀",
             "This project is quite boring and lacks depth.",
-            "The parser found three images in the document root.",
+            "The structural retrieval found three image objects in the document stream.",
             "I'm not sure if I like this new layout, but it's not bad.",
             "VADER analysis is extremely powerful for forensic text interrogation!"
         ]
