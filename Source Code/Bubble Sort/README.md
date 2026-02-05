@@ -44,3 +44,19 @@ After $k$ passes, the $k$ largest elements are guaranteed to be in their final s
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Set swapped = false]
+    B --> C[For each adjacent pair]
+    C --> D{Left > Right?}
+    D -->|Yes| E[Swap elements]
+    E --> F[swapped = true]
+    F --> G[Next pair]
+    D -->|No| G
+    G --> H{More pairs?}
+    H -->|Yes| C
+    H -->|No| I{swapped?}
+    I -->|Yes| B
+    I -->|No| J[Sorted!]
+```
