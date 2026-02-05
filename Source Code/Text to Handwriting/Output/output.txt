@@ -1,0 +1,19 @@
+--- Text to Handwriting Service Demo ---
+
+Available Ink Colors:
+  Dark Blue: RGB(0, 0, 138)
+  Black: RGB(0, 0, 0)
+  Navy: RGB(0, 0, 128)
+  Dark Green: RGB(0, 100, 0)
+  Dark Red: RGB(139, 0, 0)
+  Purple: RGB(128, 0, 128)
+
+--------------------------------------------------
+
+Input Text: Hello, this is a sample handwriting conversion!
+Handwriting image saved to: Output/handwriting_sample.png
+Success! Image saved to: Output/handwriting_sample.png
+
+--------------------------------------------------
+
+Conversion Complete.

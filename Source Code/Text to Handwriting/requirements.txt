@@ -1,0 +1,9 @@
+# Text to Handwriting - Dependencies
+
+# External Packages (install via pip):
+pywhatkit>=5.4
+
+# Standard Library (included with Python 3.x):
+# - typing
+# - warnings
+# - os
