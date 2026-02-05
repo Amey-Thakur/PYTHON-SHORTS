@@ -53,6 +53,8 @@ $$
 
 ## 5. Visual Representation
 
+![Polygonal Spiral Demo](Output/Demo.png)
+
 ```mermaid
 graph TD
     A["Start: Initialize Screen"] --> B["Set Background: Black"]
