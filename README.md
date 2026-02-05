@@ -121,9 +121,6 @@ PYTHON-SHORTS/
 │   └── ...                          # High-Fidelity Gallery
 │
 ├── Source Code/                     # Primary Engineering Layer
-│   ├── Algorithms/                  # Sorting, Searching, Pathfinding
-│   ├── Data Structures/             # Trees, Graphs, Lists
-│   ├── Utilities/                   # Scrapers, Parsers, Engines
 │   └── ...                          # 100+ Modular Workspaces
 │
 ├── SECURITY.md                      # Security Protocols
