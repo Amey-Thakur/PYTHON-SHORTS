@@ -1,0 +1,6 @@
+# 0/1 Knapsack Problem - Dependencies
+
+# No external packages required.
+
+# Standard Library (included with Python 3.x):
+# - typing
