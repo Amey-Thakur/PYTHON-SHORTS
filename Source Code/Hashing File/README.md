@@ -48,3 +48,30 @@ Where $f$ is a compression function and $h_0$ is an initial vector.
 
 ### Cryptographic Workflow & Digest Verification
 ![Hashing File Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: hashing process"] --> B["Open File in Binary Mode"]
+    B --> C["Read chunk (block_size)"]
+    C --> D{"Data read?"}
+    D -- "Yes" --> E["Update Hasher object"]
+    E --> C
+    D -- "No" --> F["Finalize Digest (hexdigest)"]
+    F --> G["Return hexadecimal string"]
+    G --> H["Close File"]
+```
+
+```mermaid
+graph LR
+    subgraph MerkleDamgard ["Merkle-Damgård Construction"]
+        IV["Initial Vector"] --> F1["f"]
+        B1["Block 1"] --> F1
+        F1 --> F2["f"]
+        B2["Block 2"] --> F2
+        F2 --> F3["..."]
+        FN["Block n"] --> FN_comp["f"]
+        F3 --> FN_comp
+        FN_comp --> Digest["Final Hash Digest"]
+    end
+```
+
