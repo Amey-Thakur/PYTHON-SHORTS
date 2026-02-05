@@ -192,11 +192,11 @@ pip install -r requirements.txt
 python Hangman.py
 ```
 
-**Example: Forensic Analyzer (Filly)**
+**Example: AI Chatbot (Filly)**
 ```bash
-cd "Source Code/Image Metadata Extractor"
+cd "Source Code/Chatbot"
 pip install -r requirements.txt
-python ImageMetadataExtractor.py
+python Chatbot.py
 ```
 
 ---
