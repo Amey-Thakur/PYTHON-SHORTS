@@ -49,6 +49,9 @@ The encoder adds parity bits by dividing this polynomial by a generator polynomi
 
 ## 5. Visual Representation
 
+### Matrix Synthesis & Structural Decoding
+![QRCode Demo](Demo.png)
+
 ### Data Encoding Workflow
 ```mermaid
 sequenceDiagram
