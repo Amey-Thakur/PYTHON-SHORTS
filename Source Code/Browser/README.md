@@ -38,3 +38,23 @@ The resolution of a relative URI $R$ against a base URI $B$ involves a transform
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[User Input URL] --> B[Parse URI]
+    B --> C[Send HTTP Request]
+    C --> D[Receive HTML/CSS/JS]
+    D --> E[Parse DOM]
+    E --> F[Render Page]
+    F --> G[Display to User]
+```
+
+```mermaid
+flowchart LR
+    subgraph Navigation
+        A[Back] --> B[History Stack]
+        C[Forward] --> B
+        D[Refresh] --> E[Reload Current]
+        F[Go] --> G[Load New URL]
+    end
+```
