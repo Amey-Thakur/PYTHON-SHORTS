@@ -48,3 +48,25 @@ $$ I = \{i \in \mathbb{Z} \mid 0 \le i < n \} $$
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+graph LR
+    subgraph Array Memory Layout
+        A0[Index 0] --> A1[Index 1]
+        A1 --> A2[Index 2]
+        A2 --> A3[...]
+        A3 --> An[Index n-1]
+    end
+```
+
+```mermaid
+flowchart TD
+    A[Array Operations] --> B[Access O-1]
+    A --> C[Search O-n]
+    A --> D[Insert O-n]
+    A --> E[Delete O-n]
+    B --> F[Direct Index Calculation]
+    C --> G[Linear Scan]
+    D --> H[Shift Elements Right]
+    E --> I[Shift Elements Left]
+```
