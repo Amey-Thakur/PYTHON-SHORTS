@@ -17,12 +17,20 @@ python SquareofSequence.py
 
 ## 1. Definition
 The **Square of Sequence** refers to a mathematical progression where each term $a_n$ is the square of its position $n$:
-$$ a_n = n^2 \quad \text{for } n \in \{0, 1, 2, \dots, N-1\} $$
+
+$$
+a_n = n^2 \quad \text{for } n \in \{0, 1, 2, \dots, N-1\}
+$$
+
 This implementation focuses on providing a memory-efficient way to generate these values using the **Generator** pattern.
 
 ## 2. Mathematical Explanation
 The structure is a simple quadratic progression where the $i$-th element is defined by the mapping:
-$$ f(i) = i^2 $$
+
+$$
+f(i) = i^2
+$$
+
 The sequence represents the area of squares with integer side lengths, forming a fundamental series in discrete mathematics and combinatorial geometry.
 
 ## 3. Computer Science Theory
