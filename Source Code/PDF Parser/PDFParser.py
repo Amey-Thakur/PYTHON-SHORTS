@@ -104,8 +104,9 @@ def main():
     """
     print("--- PDF Forensic Parser Service Demo ---")
     
-    # Use the sample_report.pdf created in the previous step
-    sample_pdf = "sample_report.pdf"
+    # Locate the sample_report.pdf relative to this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    sample_pdf = os.path.join(script_dir, "sample_report.pdf")
     
     if not os.path.exists(sample_pdf):
         print(f"[!] Error: '{sample_pdf}' not found. Please provide a PDF file for parsing.")
