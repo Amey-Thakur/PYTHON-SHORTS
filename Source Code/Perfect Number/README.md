@@ -55,17 +55,41 @@ where $2^p - 1$ is a Mersenne prime (and $p$ itself must be prime).
 
 ## 5. Visual Representation
 
+### Aliquot Summation & Perfect Symmetries
+![Perfect Number Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A[Start: Input n] --> B{n < 2?}
-    B -- Yes --> C[Return False]
-    B -- No --> D[Initialize Sum = 1]
-    D --> E[Iterate i from 2 to sqrt n]
-    E --> F{n % i == 0?}
-    F -- Yes --> G[Add i and n/i to Sum]
-    G --> H[Next i]
-    F -- No --> H
-    H --> I{Sum == n?}
-    I -- Yes --> J[Return True: Perfect]
-    I -- No --> K[Return False: Not Perfect]
+flowchart TD
+    A["Start: is_perfect(n)"] --> B{"n < 2?"}
+    B -- "Yes" --> C["Return False"]
+    B -- "No" --> D["aliquot_sum = 1"]
+    D --> E["Iterate i from 2 to floor(sqrt(n))"]
+    E --> F{"n % i == 0?"}
+    F -- "Yes" --> G["aliquot_sum += i"]
+    G --> H{"i*i != n?"}
+    H -- "Yes" --> I["aliquot_sum += n/i"]
+    H -- "No" --> J["Keep sum"]
+    I --> J
+    J --> K["Next i"]
+    F -- "No" --> K
+    K --> L{"Iteration complete?"}
+    L -- "No" --> E
+    L -- "Yes" --> M{"aliquot_sum == n?"}
+    M -- "Yes" --> N["Return True (Perfect)"]
+    M -- "No" --> O["Return False (Imperfect)"]
+```
+
+```mermaid
+graph LR
+    subgraph NumberClassification ["Perfect Number Visualization (n=28)"]
+        direction LR
+        num["28"] --- d1["1"]
+        num --- d2["2"]
+        num --- d3["4"]
+        num --- d4["7"]
+        num --- d5["14"]
+        d1 & d2 & d3 & d4 & d5 --> sum["Sum: 28"]
+        sum --> check{"Sum == 28?"}
+        check -->|Match| res["PERFECT"]
+    end
 ```
