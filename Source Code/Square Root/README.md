@@ -60,18 +60,24 @@ where $\epsilon$ is a small tolerance value (e.g., $10^{-10}$).
 
 ## 5. Visual Representation
 
+### Newton-Raphson Iterative Refinement
+![Square Root Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A["Start: Input n"] --> B["Initialize x = n/2"]
-    B --> C["Iteration k = 0"]
-    C --> D["Calculate x_new = (x + n/x) / 2"]
-    D --> E{"|x_new - x| < ε?"}
-    E -- Yes --> F["Return x_new"]
-    E -- No --> G["x = x_new"]
-    G --> H["k = k + 1"]
-    H --> I{"k < max_iter?"}
-    I -- Yes --> D
-    I -- No --> J["Return best approximation"]
-    F --> K["Stop: Square Root Found"]
-    J --> K
+flowchart TD
+    A["Start: Target n"] --> B["Initial Guess x = n / 2"]
+    B --> C{"|x_new - x| < ε?"}
+    C -- "No" --> D["Calculate x_new = (x + n/x) / 2"]
+    D --> E["Update x = x_new"]
+    E --> C
+    C -- "Yes" --> F["Return x: Root Found"]
+    F --> G["Stop: Result Certified"]
+```
+
+```mermaid
+graph LR
+    subgraph Convergence ["Quadratic Accuracy"]
+        direction LR
+        step1["Digit 1"] --> step2["Digit 2"] --> step4["Digit 4"] --> step8["Digit 8"]
+    end
 ```
