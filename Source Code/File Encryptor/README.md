@@ -23,11 +23,14 @@ The XOR operation ($\oplus$) is the mathematical foundation of this encryption. 
 
 For a plaintext bit $P$ and a key bit $K$:
 
-1.  **Encryption**: 
+1. **Encryption**:
+
 $$
 C = P \oplus K
 $$
-2.  **Decryption**: 
+
+2. **Decryption**:
+
 $$
 C \oplus K = (P \oplus K) \oplus K = P
 $$

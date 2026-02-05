@@ -29,6 +29,7 @@ H(B + n) < T
 $$
 
 where $T$ is a threshold value proportional to the difficulty. In our implementation, this is simplified to:
+
 $$
 \text{Hash}(B+n) \text{ starts with } '0' \times d
 $$
