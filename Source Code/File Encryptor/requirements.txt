@@ -1,0 +1,7 @@
+# File Encryptor - Dependencies
+
+# No external packages required.
+
+# Standard Library (included with Python 3.x):
+# - os
+# - typing
