@@ -82,52 +82,26 @@ The project is governed by strict **computational design patterns** ensuring fid
 <a name="features"></a>
 ## Features
 
-The repository is categorized into five primary engineering domains for systematic exploration:
+| Feature | Description |
+|---------|-------------|
+| **Algorithm Implementation** | Practical demonstrations of Sorting, Searching, and Graph traversal algorithms. |
+| **Data Structure Design** | Optimized implementations of Linked Lists, Trees, Stacks, and Queues. |
+| **Utility Automation** | Real-world engines for Web Scraping, PDF Parsing, and QRCode generation. |
+| **Computational Math** | Implementation of FFT, Monte Carlo, Knapsack, and Sudoku Solver logic. |
+| **Linguistic Processing** | High-fidelity Text Summarizers, Translators, and Sentiment Analysis pipelines. |
+| **Interactive Logic** | Classic Games (Tic Tac Toe, Hangman) and Visual Math (Game of Life). |
+| **Security & Forensics** | Image Metadata Extraction, File Encryption, and Hashing verification protocols. |
+| **Distributed Systems** | Fundamental Blockchain architecture and secure cryptographic hashing engines. |
+| **Probabilistic Research** | Monte Carlo simulations for statistical forecasting and data modeling. |
+| **Signal Processing** | Efficient Fast Fourier Transform (FFT) and Huffman Coding implementations. |
+| **Modular Architecture** | Clean, reusable code encapsulated within independent and functional modules. |
 
-### 1. Fundamental Algorithms
-| Project | Description | Source |
-|:---|:---|:---:|
-| **A-Star Pathfinding** | High-fidelity pathfinding and graph traversal logic. | [Source](Source%20Code/A-Star%20Pathfinding/) |
-| **Sorting Engines** | Bubble, Quick, Merge, Heap, Shell, and Bucket Sort implementations. | [Source](Source%20Code/Bubble%20Sort/) |
-| **Search Kernels** | Binary, Sequential, and N-ary search algorithms. | [Source](Source%20Code/Binary%20Search/) |
-| **Graph Theory** | Dijkstra, Bellman-Ford, and Topological Sort frameworks. | [Source](Source%20Code/Dijkstra%20Algorithm/) |
-| **Numeric Logic** | Prime Sieve, FFT, Knapsack, and Sudoku Solver. | [Source](Source%20Code/Prime%20Sieve/) |
+### Tech Stack
 
-### 2. Data Structure Architecture
-| Project | Description | Source |
-|:---|:---|:---:|
-| **Linear Systems** | Optimized Singly/Doubly Linked Lists, Stacks, and Queues. | [Source](Source%20Code/Singly%20Linked%20List/) |
-| **Tree Networks** | Binary Tree, Binary Search Tree, and Red-Black Tree logic. | [Source](Source%20Code/Binary%20Search%20Tree/) |
-| **Graph Rep** | Complex Graph structures with weighted and directed vector sets. | [Source](Source%20Code/Graph/) |
-| **Hashing & Filters** | High-performance Bloom Filters and Trie data structures. | [Source](Source%20Code/Bloom%20Filter/) |
-| **Logic Patterns** | Pascal Triangle and Variable Scope explorations. | [Source](Source%20Code/Pascal%20Triangle/) |
-
-### 3. Utility Synthesis & Automation
-| Project | Description | Source |
-|:---|:---|:---:|
-| **Web Engines** | High-fidelity Web Scrapers and URL Shortener services. | [Source](Source%20Code/Web%20Scraper/) |
-| **File Management** | PDF Parser, QRCode Generator, and File Encryptor engines. | [Source](Source%20Code/PDF%20Parser/) |
-| **Linguistic Logic** | Text Summarizer, Translator, and Sentiment Analysis pipelines. | [Source](Source%20Code/Text%20Summarizer/) |
-| **Productivity** | To-Do App, Countdown Timer, and Currency Converter utilities. | [Source](Source%20Code/To-Do%20App/) |
-| **Forensics** | Image Metadata Extractor and Hashing File verification. | [Source](Source%20Code/Image%20Metadata%20Extractor/) |
-
-### 4. Interactive Game Logic
-| Project | Description | Source |
-|:---|:---|:---:|
-| **Classic Games** | Tic Tac Toe, Hangman, and Rock Paper Scissors. | [Source](Source%20Code/Tic%20Tac%20Toe/) |
-| **Puzzle Solvers** | Sudoku Solver and Guess The Number logic. | [Source](Source%20Code/Sudoku%20Solver/) |
-| **Visual Math** | Game of Life and Mandelbrot Set visualizations. | [Source](Source%20Code/Game%20of%20Life/) |
-
-### 5. Advanced Computational Research
-| Project | Description | Source |
-|:---|:---|:---:|
-| **Distributed Logic** | Fundamental Blockchain architecture and hashing. | [Source](Source%20Code/Blockchain%20Basic/) |
-| **Probabilistic** | Monte Carlo Simulation for statistical forecasting. | [Source](Source%20Code/Monte%20Carlo%20Simulation/) |
-| **Signal/Data** | Fast Fourier Transform (FFT) and Huffman Coding. | [Source](Source%20Code/Fast%20Fourier%20Transform/) |
-
-> [!NOTE]
-> ### The 100+ Milestone
-> This repository features **over 100 functional programs**. For the full exhaustive list, please explore the [Source Code](Source%20Code/) directory. Each folder follows a standardized structure including its own `README.md` and requirements manifest.
+- **Language** → Python 3.8+
+- **Frameworks** → PyQt5 (GUI), NLTK (NLP), Pillow (Image Processing)
+- **Environment** → Cross-platform (Windows, macOS, Linux)
+- **Architecture** → Modular Service-Oriented Logic
 
 ---
 
