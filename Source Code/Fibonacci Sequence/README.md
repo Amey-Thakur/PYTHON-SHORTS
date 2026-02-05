@@ -49,3 +49,15 @@ Where $\phi = \frac{1 + \sqrt{5}}{2} \approx 1.618$ and $\psi = \frac{1 - \sqrt{
 
 ### Fibonacci Growth & Logic Verification
 ![Fibonacci Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: n"] --> B["Initialize a=0, b=1"]
+    B --> C["Yield a (F_0)"]
+    C --> D["For i from 1 to n-1"]
+    D --> E["tmp = a + b<br/>a = b<br/>b = tmp"]
+    E --> F["Yield a (F_i)"]
+    F --> G{"i < n-1?"}
+    G -- Yes --> D
+    G -- No --> H["End"]
+```
