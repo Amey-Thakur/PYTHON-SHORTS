@@ -87,12 +87,10 @@ def main():
     
     service = GameService()
     
-    # Simulated moves for the automated check (to avoid interactive blocks in logs)
+    # Simulated moves for the automated check
     simulated_player_move = 'R'
     computer_move = service.get_computer_move()
     
-    print("Repository: PYTHON-SHORTS")
-    print("Authors: Amey Thakur & Mega Satish")
     print(f"\nPlayer Choice: {service.options[simulated_player_move]}")
     print(f"Computer Choice: {service.options[computer_move]}")
     

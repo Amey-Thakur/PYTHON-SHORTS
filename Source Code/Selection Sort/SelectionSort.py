@@ -67,8 +67,6 @@ def main():
     Demonstrates the scholarly Selection Sort implementation.
     """
     print("--- Selection Sort Service Demo ---")
-    print("Repository: PYTHON-SHORTS")
-    print("Authors: Amey Thakur & Mega Satish")
     
     # Demonstration dataset
     target_list = [64, 25, 12, 22, 11, 90, 1]
