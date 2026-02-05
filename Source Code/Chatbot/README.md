@@ -58,3 +58,16 @@ where:
 | Identity and Author Authentication | Conversational Flow & Jokes |
 | :---: | :---: |
 | ![Identity Auth](Output/Chatbot_Identity_Auth.png) | ![Interaction Flow](Output/Chatbot_Interaction_Jokes.png) |
+
+```mermaid
+flowchart TD
+    A[User Input] --> B[Normalize Text]
+    B --> C[Search Keywords]
+    C --> D{Match Found?}
+    D -->|Yes| E[Return Mapped Response]
+    D -->|No| F[Return Default Response]
+    E --> G[Display in Chat]
+    F --> G
+    G --> H[Wait for Next Input]
+    H --> A
+```
