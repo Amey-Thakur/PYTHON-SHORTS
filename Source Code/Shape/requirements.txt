@@ -1,0 +1,4 @@
+# No external dependencies required.
+# Uses standard Python 3.x modules:
+# - turtle
+# - typing
