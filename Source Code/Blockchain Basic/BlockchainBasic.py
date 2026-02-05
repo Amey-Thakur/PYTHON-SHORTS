@@ -118,8 +118,8 @@ def main():
     
     transactions = [
         "Amey sends 10 BTC to Mega",
-        "Mega sends 5 BTC to Satish",
-        "Satish sends 2.5 BTC to Amey"
+        "Mega sends 5 BTC to Filly",
+        "Filly sends 2.5 BTC to Amey"
     ]
     
     for tx in transactions:
