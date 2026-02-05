@@ -92,10 +92,11 @@ def main():
     service = URLShortenerService()
     
     urls = [
+        "https://github.com/Amey-Thakur",
+        "https://github.com/msatmod",
         "https://github.com/Amey-Thakur/PYTHON-SHORTS",
-        "https://www.google.com/search?q=base62+encoding",
-        "https://en.wikipedia.org/wiki/Lossless_compression",
-        "https://github.com/Amey-Thakur/PYTHON-SHORTS" # Duplicate test
+        "https://orcid.org/0000-0001-5644-1575",
+        "https://orcid.org/0000-0002-1844-9557"
     ]
     
     mapping_log = []
