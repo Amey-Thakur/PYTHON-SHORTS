@@ -12,7 +12,7 @@
 ## Quick Start
 To execute this implementation, ensure you have Python 3.x installed and follow these steps:
 ```bash
-python SquareofSequence.py
+python SquareOfSequence.py
 ```
 
 ## 1. Definition
@@ -45,15 +45,26 @@ The sequence represents the area of squares with integer side lengths, forming a
 
 ## 5. Visual Representation
 
+### Lazy Evaluation & Generator Suspension
+![Square of Sequence Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A["Start: Initialize Generator(limit)"] --> B["i = 0"]
-    B --> C{"i < limit?"}
-    C -- Yes --> D["Calculate: val = i * i"]
-    D --> E["Yield val"]
-    E --> F["Wait for next() call"]
-    F --> G["Increment i"]
-    G --> C
-    C -- No --> H["Raise StopIteration"]
-    H --> I["Stop: Generator Exhausted"]
+flowchart TD
+    A["Start: Generator Initialized"] --> B["Iterate i from 0 to Limit"]
+    B --> C["Calculate: val = i * i"]
+    C --> D["Yield val: Suspend Execution"]
+    D --> E["Wait for next() call"]
+    E --> F["Resume: Increment i"]
+    F --> B
+    B -- "Limit Reached" --> G["Raise StopIteration"]
+    G --> H["Stop: Sequence Complete"]
+```
+
+```mermaid
+graph LR
+    subgraph MemoryEfficiency ["Spatial Optimization"]
+        direction TB
+        L["Lazy Evaluation: Active"]
+        M["Memory Footprint: O(1)"]
+    end
 ```

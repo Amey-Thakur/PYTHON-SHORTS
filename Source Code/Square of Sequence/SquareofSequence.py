@@ -1,5 +1,5 @@
 """
-File: SquareofSequence.py
+File: SquareOfSequence.py
 Authors: 
     - Amey Thakur (https://github.com/Amey-Thakur)
     - Mega Satish (https://github.com/msatmod)
