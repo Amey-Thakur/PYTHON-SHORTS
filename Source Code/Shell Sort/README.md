@@ -49,13 +49,28 @@ $$
 
 ## 5. Visual Representation
 
+### Diminishing Increments & Gap Synchronization
+![Shell Sort Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A["Start: Unsorted List [L]"] --> B[Initialize Gap = n/2]
-    B --> C{Gap > 0?}
-    C -- Yes --> D["For i from Gap to n-1"]
-    D --> E[Perform Gapped Insertion Sort]
-    E --> F[Reduce Gap: Gap = Gap // 2]
-    F --> C
-    C -- No --> G["Stop: Sorted List"]
+flowchart TD
+    A["Start: Unsorted List L"] --> B["Initialize Gap h = n/2"]
+    B --> C{"h > 0?"}
+    C -- "Yes" --> D["Iterate i from h to n-1"]
+    D --> E["Temp = L[i]"]
+    E --> F["Shift Elements with Δh until Temp Position Found"]
+    F --> G["L[j] = Temp"]
+    G --> H["Remaining Elements in h-Subsequence?"]
+    H -- "Yes" --> D
+    H -- "No" --> I["Diminish Gap: h = h // 2"]
+    I --> C
+    C -- "No" --> J["Stop: List h-Sorted for h=1"]
+```
+
+```mermaid
+graph LR
+    subgraph GapTheory ["Gap Sequence Progression"]
+        direction LR
+        g1["h = n/2"] --> g2["h = n/4"] --> g3["..."] --> g4["h = 1"]
+    end
 ```
