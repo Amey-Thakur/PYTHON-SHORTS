@@ -55,8 +55,11 @@ $$
 
 ## 5. Visual Representation
 
-### Sample Output
-![Handwriting Sample](sample.png)
+### Sample Outputs
+
+| Original Sample | Personalized Sample |
+|:---------------:|:-------------------:|
+| ![Original Sample](sample.png) | ![Personalized Sample](Output/sample.png) |
 
 ### Process Flow
 ```mermaid
