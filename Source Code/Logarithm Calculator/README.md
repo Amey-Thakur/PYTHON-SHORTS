@@ -49,3 +49,26 @@ Logarithms are defined only for positive values and positive bases unequal to on
 
 ### Logarithmic Identities & Inverse Exponentiation
 ![Logarithm Calculator Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: calculate(x, base)"] --> B{"x > 0?"}
+    B -- "No" --> C["Raise ValueError"]
+    B -- "Yes" --> D{"Base provided?"}
+    D -- "No" --> E["math.log(x) [ln]"]
+    D -- "Yes" --> F{"Base > 0 and base != 1?"}
+    F -- "No" --> G["Raise ValueError"]
+    F -- "Yes" --> H["math.log(x, base)"]
+    E --> I["Return Result"]
+    H --> I
+```
+
+```mermaid
+graph LR
+    subgraph Identity ["Inverse Relationship"]
+        direction LR
+        Exp["b^y = x"] --- Eq["<=>"]
+        Log["log_b(x) = y"] --- Eq
+    end
+```
+
