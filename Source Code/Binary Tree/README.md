@@ -47,3 +47,22 @@ $$ n_0 = n_2 + 1 $$
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+graph TD
+    A[Root: 1] --> B[Left: 2]
+    A --> C[Right: 3]
+    B --> D[Left: 4]
+    B --> E[Right: 5]
+    C --> F[Left: 6]
+    C --> G[Right: 7]
+```
+
+```mermaid
+flowchart LR
+    subgraph Traversals
+        A[In-order: Left→Root→Right]
+        B[Pre-order: Root→Left→Right]
+        C[Post-order: Left→Right→Root]
+    end
+```
