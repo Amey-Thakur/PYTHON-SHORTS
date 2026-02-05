@@ -50,16 +50,28 @@ Where $k$ is the length of the longest individual line in the file, ensuring the
 
 ## 5. Visual Representation
 
+### Buffer Management & Deterministic Resource Deallocation
+![Read File Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A[Start: File Path] --> B{File Exists?}
-    B -- No --> C[Raise FileNotFoundError]
-    B -- Yes --> D["Open Stream (with statement)"]
-    D --> E[Initialize Buffer]
-    E --> F{End of Stream?}
-    F -- No --> G[Yield Line to Generator]
-    G --> H[Process Next Line]
+flowchart TD
+    A["Start: File Path Input"] --> B{"File Exists?"}
+    B -- "No" --> C["Raise FileNotFoundError"]
+    B -- "Yes" --> D["Open Stream (with statement)"]
+    D --> E["Initialize Kernel Buffer"]
+    E --> F{"End of Stream?"}
+    F -- "No" --> G["Yield Line (Lazy Evaluation)"]
+    G --> H["Consume Next Data Row"]
     H --> F
-    F -- Yes --> I["Close Stream (Implicit __exit__)"]
-    I --> J[Stop]
+    F -- "Yes" --> I["Close Stream (Implicit __exit__)"]
+    I --> J["Stop: Resources Released"]
+```
+
+```mermaid
+graph LR
+    subgraph RAM ["Memory Consumption"]
+        direction TB
+        list["read().splitlines() - O(N) Space"]
+        gen["generator.stream() - O(k) Space"]
+    end
 ```
