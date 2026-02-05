@@ -52,3 +52,14 @@ Where:
 | Initial State (Idle) | Ticking State (Active) |
 | :---: | :---: |
 | ![Initial State](Output/UI_Initial_State.png) | ![Ticking State](Output/UI_Ticking_State.png) |
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Set Initial Time T₀]
+    B --> C[Display T]
+    C --> D{T > 0?}
+    D -->|Yes| E[Wait Δt = 1 second]
+    E --> F[T = T - 1]
+    F --> C
+    D -->|No| G[Timer Complete!]
+```
