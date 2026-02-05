@@ -49,3 +49,20 @@ $$
 
 ### Logic & Performance Output
 ![Cipher Demo](Demo.png)
+
+```mermaid
+flowchart LR
+    subgraph Encryption
+        A[Plaintext] --> B[For Each Char]
+        B --> C{Is Letter?}
+        C -->|Yes| D["E = (x + k) mod 26"]
+        C -->|No| E[Keep Original]
+        D --> F[Ciphertext]
+        E --> F
+    end
+    
+    subgraph Decryption
+        G[Ciphertext] --> H["D = (x - k) mod 26"]
+        H --> I[Plaintext]
+    end
+```
