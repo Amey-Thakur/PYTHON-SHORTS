@@ -48,3 +48,29 @@ $$
 
 ### Binary Heap Structure & Sorting Convergence
 ![Heap Sort Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    Start["Start: sort(dataset)"] --> Build["Phase 1: Build Max-Heap"]
+    Build --> Loop1["For i from n/2 - 1 down to 0"]
+    Loop1 --> Sift1["sift_down(dataset, n, i)"]
+    Sift1 --> Loop1
+    Loop1 -- "Heap Constructed" --> Extract["Phase 2: Extract Elements"]
+    Extract --> Loop2["For i from n-1 down to 1"]
+    Loop2 --> Swap["Swap dataset[0] and dataset[i]"]
+    Swap --> Sift2["sift_down(dataset, i, 0)"]
+    Sift2 --> Loop2
+    Loop2 -- "Empty Heap" --> End["Finish: Sorted Dataset"]
+```
+
+```mermaid
+graph TD
+    subgraph MaxHeap ["Max-Heap Logical Structure"]
+        N1["13 (index 0)"] --- N2["11 (index 1)"]
+        N1 --- N3["12 (index 2)"]
+        N2 --- N4["5 (index 3)"]
+        N2 --- N5["6 (index 4)"]
+        N3 --- N6["7 (index 5)"]
+    end
+```
+
