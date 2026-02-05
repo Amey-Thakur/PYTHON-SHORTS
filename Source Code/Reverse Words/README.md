@@ -54,12 +54,34 @@ The space complexity is $O(n)$ to store the intermediate token list and the resu
 
 ## 5. Visual Representation
 
+### Structural Tokenization & Linear Permutation
+![Reverse Words Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A["Start: Input String (S)"] --> B[Tokenization: Split by Whitespace]
-    B --> C["Token List: [W_1, W_2, ..., W_k]"]
-    C --> D["Permutation: Invert List Indexing"]
-    D --> E["Inverted List: [W_k, W_{k-1}, ..., W_1]"]
-    E --> F[Synthesis: Join with Spaces]
-    F --> G["Stop: Reversed String (S')"]
+flowchart LR
+    subgraph Input ["Source String"]
+        S["'The quick brown fox'"]
+    end
+
+    subgraph Logic ["Reversal Service"]
+        direction TB
+        T["Tokenization: .split()"]
+        P["Permutation: [::-1]"]
+    end
+
+    subgraph Output ["Target String"]
+        S1["'fox brown quick The'"]
+    end
+
+    S --> T
+    T --> P
+    P --> S1
+```
+
+```mermaid
+stateDiagram-v2
+    [*] --> Tokenized: split()
+    Tokenized --> Inverted: slicing[::-1]
+    Inverted --> Reconstructed: join()
+    Reconstructed --> [*]
 ```
