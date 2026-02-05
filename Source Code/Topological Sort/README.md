@@ -44,40 +44,35 @@ Properties:
 
 ## 5. Visual Representation
 
-### Sample Graph
+### Dependency Resolution & Poset Linearization
+![Topological Sort Demo](Demo.png)
+
 ```mermaid
-graph TD
-    5 --> 2
-    5 --> 0
-    4 --> 0
-    4 --> 1
-    2 --> 3
-    3 --> 1
+flowchart TD
+    subgraph DAG ["Input Directed Acyclic Graph"]
+        direction TB
+        5 --> 2
+        5 --> 0
+        4 --> 0
+        4 --> 1
+        2 --> 3
+        3 --> 1
+    end
 ```
 
-### DFS Traversal Process
 ```mermaid
 sequenceDiagram
-    participant DFS
-    participant Stack
+    autonumber
+    participant D as "DFS Traversal Engine"
+    participant S as "Post-Order LIFO Stack"
     
-    DFS->>DFS: Visit 5
-    DFS->>DFS: Visit 2
-    DFS->>DFS: Visit 3
-    DFS->>DFS: Visit 1
-    DFS->>Stack: Push 1
-    DFS->>Stack: Push 3
-    DFS->>Stack: Push 2
-    DFS->>DFS: Visit 0
-    DFS->>Stack: Push 0
-    DFS->>Stack: Push 5
-    DFS->>DFS: Visit 4
-    DFS->>Stack: Push 4
-    Note over Stack: Result: 4, 5, 0, 2, 3, 1
+    Note over D,S: Linearization via DFS Backtracking
+    D->>D: Visit Sink Nodes (Out-degree = 0)
+    D->>S: Push Node (Task Complete)
+    D->>D: Backtrack to Parent
+    D->>S: Push Parent
+    Note over S: Topological Order: [Stack Bottom -> Top]
 ```
 
-### Topological Order
-```
-5 -> 4 -> 2 -> 3 -> 1 -> 0
-```
-(One valid ordering; others may also be valid)
+> [!NOTE]
+> The resulting topological order ensures that for every directed edge $u \to v$, vertex $u$ is scheduled strictly before vertex $v$. Multiple valid linearizations may exist for the same DAG.
