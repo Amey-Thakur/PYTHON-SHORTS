@@ -50,45 +50,50 @@ Operations follow standard hash table complexity:
 
 ## 5. Visual Representation
 
-### Application Screenshots
+### Event-Driven GUI & Persistent State Management
 
-| Application Screen | Input Data |
-|:------------------:|:----------:|
-| ![Application Screen](Output/ToDoApp_Screen.png) | ![Input Data](Output/ToDoApp_Input.png) |
+#### Application Interface
+![Application Screen](Output/ToDoApp_Screen.png)
 
-| Update Confirmation | Fetch Record |
-|:-------------------:|:------------:|
-| ![Update Confirmation](Output/ToDoApp_Update.png) | ![Fetch Record](Output/ToDoApp_Fetch.png) |
+#### Input Vector Definition
+![Input Data](Output/ToDoApp_Input.png)
 
-### Process Flow Diagram
+#### Transactional Update Confirmation
+![Update Confirmation](Output/ToDoApp_Update.png)
+
+#### Record Retrieval (Fetch)
+![Fetch Record](Output/ToDoApp_Fetch.png)
+
 ```mermaid
-graph TD
-    A[User Action] --> B{Action Type}
-    B -->|Fetch| C[Load DB from Pickle]
-    C --> D[Lookup Key in Hash]
-    D --> E[Display in GUI Fields]
-    B -->|Update| F[Read GUI Fields]
-    F --> G[Save to Hash]
-    G --> H[Serialize to Pickle]
-    B -->|Delete| I[Remove from Hash]
+flowchart TD
+    A["User Trigger (Button Click)"] --> B{"Event Callback Dispatch"}
+    B -- "Fetch" --> C["Load: Binary Deserialization (Pickle)"]
+    C --> D["Search: Key-Hash Mapping"]
+    D --> E["Update: GUI StringVars/Buffer"]
+    
+    B -- "Update" --> F["Read: UI Widget State"]
+    F --> G["Map: Record Object Creation"]
+    G --> H["Serialize: Binary Sink (Pickle)"]
+    
+    B -- "Delete" --> I["Hash Invalidation: Key Removal"]
     I --> H
-    B -->|Quit| J[Close Application]
 ```
 
-### Class Diagram
 ```mermaid
 classDiagram
+    direction TB
     class ToDoService {
-        +db_file: str
-        +fields: tuple
-        +fetch(key) Record
-        +update(record) bool
-        +delete(key) bool
+        +db_file: String
+        +fields: Tuple
+        +fetch(key: String) Record
+        +update(record: Dict) Boolean
+        +delete(key: String) Boolean
     }
     class ToDoAppGUI {
-        +service: ToDoService
-        +entries: Dict
+        -service: ToDoService
+        -entries: Map
         +run() void
+        -dispatchAction(type: String)
     }
-    ToDoAppGUI --> ToDoService : uses
+    ToDoAppGUI "1" *-- "1" ToDoService : "Aggregates"
 ```
