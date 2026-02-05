@@ -16,7 +16,7 @@ python Power2Sequence.py
 ```
 
 ## 1. Definition
-The **Power2 Sequence** is a geometric progression where the first term is 1 ($2^0$) and the common ratio is 2. In computer science, powers of two are foundational due to the binary nature of modern digital architectures, representing word sizes, memory address spaces, and data capacities.
+The **Power2 Sequence** is a geometric progression where the first term is 1 ( $2^0$ ) and the common ratio is 2. In computer science, powers of two are foundational due to the binary nature of modern digital architectures, representing word sizes, memory address spaces, and data capacities.
 
 ## 2. Mathematical Explanation
 A power of two is an exponential expression of the form $2^n$.
@@ -42,7 +42,7 @@ In base-2 (binary), every power of two $2^n$ is represented as a single bit set 
 - $2^3 = (1000)_2$
 
 ## 3. Computer Science Theory
-- **Bitwise Shifts**: The most efficient way to calculate $2^n$ in a digital system is the **Bitwise Left-Shift** operation ($1 \ll n$). Shifting the binary digit '1' to the left by $n$ positions is equivalent to multiplying by $2^n$.
+- **Bitwise Shifts**: The most efficient way to calculate $2^n$ in a digital system is the **Bitwise Left-Shift** operation ( $1 \ll n$ ). Shifting the binary digit '1' to the left by $n$ positions is equivalent to multiplying by $2^n$.
 - **Complexity**:
     - **Time Complexity**: $O(k)$ to generate $k$ terms, with each shift operation being $O(1)$.
     - **Space Complexity**: $O(k)$ to store the sequence.

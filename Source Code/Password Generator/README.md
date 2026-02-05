@@ -28,7 +28,7 @@ $$
 H = \log_2(L^k) = k \cdot \log_2(L)
 $$
 
-For example, a 16-character password using the full ASCII set ($L \approx 94$) provides:
+For example, a 16-character password using the full ASCII set ( $L \approx 94$ ) provides:
 
 $$
 H = 16 \cdot \log_2(94) \approx 16 \cdot 6.55 \approx 104.8 \text{ bits of entropy}
