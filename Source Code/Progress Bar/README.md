@@ -1,4 +1,4 @@
-# Simple Progress Bar (Terminal I/O & Linear Interpolation)
+# Progress Bar (Terminal I/O & Linear Interpolation)
 
 **Authors:**
 - [Amey Thakur](https://github.com/Amey-Thakur) ([ORCID: 0000-0001-5644-1575](https://orcid.org/0000-0001-5644-1575))
@@ -12,7 +12,7 @@
 ## Quick Start
 To execute this implementation, ensure you have Python 3.x installed and follow these steps:
 ```bash
-python SimpleProgressBar.py
+python ProgressBar.py
 ```
 
 ## 1. Definition

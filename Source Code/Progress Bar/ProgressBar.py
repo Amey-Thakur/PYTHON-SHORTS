@@ -1,5 +1,5 @@
 """
-File: SimpleProgressBar.py
+File: ProgressBar.py
 Authors: 
     - Amey Thakur (https://github.com/Amey-Thakur)
     - Mega Satish (https://github.com/msatmod)
@@ -80,9 +80,9 @@ class ProgressBarService:
 
 def main():
     """
-    Demonstrates the scholarly Simple Progress Bar implementation.
+    Demonstrates the scholarly Progress Bar implementation.
     """
-    print("--- Simple Progress Bar Service Demo ---")
+    print("--- Progress Bar Service Demo ---")
     
     total_steps = 10
     service = ProgressBarService(total=total_steps)
