@@ -5,7 +5,7 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Finalized-success)
-  [![Technology](https://img.shields.io/badge/Technology-Python-blue.svg)](https://github.com/Amey-Thakur/PYTHON-SHORTS)
+  [![Technology](https://img.shields.io/badge/Technology-Python-blueviolet.svg)](https://github.com/Amey-Thakur/PYTHON-SHORTS)
   [![Developed by Amey Thakur and Mega Satish](https://img.shields.io/badge/Developed%20by-Amey%20Thakur%20%26%20Mega%20Satish-blue.svg)](https://github.com/Amey-Thakur/PYTHON-SHORTS)
 
   A comprehensive collection of 100+ modular Python programs, algorithms, and data structures engineered to demonstrate computational efficiency, functional logic, and high-fidelity utility synthesis.
