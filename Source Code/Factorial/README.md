@@ -52,3 +52,30 @@ $$
 
 ### Factorial Recursion & Logic Verification
 ![Factorial Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input: n] --> B{n is Integer?}
+    B -- No --> C[Raise TypeError]
+    B -- Yes --> D{n < 0?}
+    D -- Yes --> E[Raise ValueError]
+    D -- No --> F{n == 0 or 1?}
+    F -- Yes --> G[Return 1]
+    F -- No --> H[Initialize result = 1]
+    H --> I[For i from 2 to n]
+    I --> J[result = result * i]
+    J --> K{End of range?}
+    K -- No --> I
+    K -- Yes --> L[Return result]
+```
+
+```mermaid
+graph TD
+    subgraph RecursiveCall [Recursive State Logic]
+        R5["5!"] --> R4["5 * 4!"]
+        R4 --> R3["4 * 3!"]
+        R3 --> R2["3 * 2!"]
+        R2 --> R1["2 * 1!"]
+        R1 --> R0["1"]
+    end
+```
