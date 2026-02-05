@@ -1,0 +1,15 @@
+--- Timer Service Demo ---
+
+Demo: 5 second countdown
+
+Starting countdown: 00:05
+00:05
+00:04
+00:03
+00:02
+00:01
+Timer Complete!
+
+--- Demo Complete ---
+
+Usage: Enter time in seconds or MM:SS format
