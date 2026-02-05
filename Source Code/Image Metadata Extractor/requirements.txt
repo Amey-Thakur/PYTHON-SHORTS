@@ -1,0 +1,3 @@
+# Image Metadata Extractor - Dependencies
+
+Pillow>=10.0.0
