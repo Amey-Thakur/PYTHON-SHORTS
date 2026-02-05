@@ -19,14 +19,16 @@ python MonteCarloSimulation.py
 **Monte Carlo Simulation** is a broad class of computational algorithms that rely on repeated random sampling to obtain numerical results. It is used to model the probability of different outcomes in a process that cannot easily be predicted due to the intervention of random variables.
 
 ## 2. Mathematical Explanation
-To estimate the value of **$\pi$**, we consider a circle with radius $r = 1$ inscribed in a square with side length $s = 2$. The area of the circle is $\pi r^2 = \pi$, and the area of the square is $s^2 = 4$.
+To estimate the value of $\pi$, we consider a circle with radius $r = 1$ inscribed in a square with side length $s = 2$. The area of the circle is $\pi r^2 = \pi$, and the area of the square is $s^2 = 4$.
 
 The ratio of their areas is:
+
 $$
 \frac{Area_{Circle}}{Area_{Square}} = \frac{\pi}{4}
 $$
 
 By randomly generating points within the square and counting how many fall inside the circle, we can estimate $\pi$:
+
 $$
 \pi \approx 4 \times \frac{\text{Points Inside Circle}}{\text{Total Points}}
 $$
