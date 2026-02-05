@@ -1,0 +1,6 @@
+# Square Root - Dependencies
+# This module uses only Python standard library components.
+# No external packages are required.
+
+# Standard Library (included with Python 3.x):
+# - typing
