@@ -51,11 +51,13 @@ $$
 ### Forensic Evidence Stream: Mega Pictures Collection
 The analytical engine decomposes high-fidelity portrait streams into verified metadata segments.
 
-<p align="center">
-  <img src="sample_images/Filly.jpg" width="32%" />
-  <img src="sample_images/Mega.png" width="32%" />
-  <img src="sample_images/Mega_Chair.png" width="32%" />
-</p>
+<table width="100%">
+  <tr>
+    <td width="33.33%" align="center"><img src="sample_images/Filly.jpg" width="100%" /></td>
+    <td width="33.33%" align="center"><img src="sample_images/Mega.png" width="100%" /></td>
+    <td width="33.33%" align="center"><img src="sample_images/Mega_Chair.png" width="100%" /></td>
+  </tr>
+</table>
 
 ### Optical Forensics Dashboard
 The dashboard visualizes the deconstruction of image headers into hierarchical IFD tags.
