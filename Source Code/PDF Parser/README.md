@@ -27,6 +27,7 @@ A PDF file consists of four primary sections:
 4.  **Trailer**: Points to the root object and the XRef table.
 
 The extraction logic follows the **Object Hierarchy**:
+
 $$
 Catalog \rightarrow Pages \rightarrow Page \rightarrow Contents \rightarrow Stream
 $$
