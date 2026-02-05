@@ -170,18 +170,19 @@ cd PYTHON-SHORTS
 #### Step 2: Select a Module
 Navigate to the desired program in the `Source Code` directory:
 ```bash
-cd "Source Code/Weather Forecaster"
+cd "Source Code/<ModuleName>"
 ```
 
 #### Step 3: Calibrate Environment
 ```bash
+# Ensure you are within the specific module directory
 pip install -r requirements.txt
 ```
 
 ### 3. Execution
-Launch the primary script:
+Launch the primary script associated with the module:
 ```bash
-python WeatherForecaster.py
+python <ScriptName>.py
 ```
 
 ---
