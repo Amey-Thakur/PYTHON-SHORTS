@@ -57,9 +57,11 @@ $$
 
 ### Handwriting Synthesis & Typography Rasterization
 
-| Synthesized Result | Original Sample |
-| :---: | :---: |
-| ![Synthesized Handwriting](Output/sample.png) | ![Original Sample](sample.png) |
+#### Synthesized Result
+![Synthesized Handwriting](Output/sample.png)
+
+#### Original Sample
+![Original Sample](sample.png)
 
 ```mermaid
 flowchart TD
