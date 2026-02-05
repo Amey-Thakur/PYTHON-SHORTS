@@ -185,6 +185,13 @@ Launch the primary script associated with the module:
 python <ScriptName>.py
 ```
 
+**Example: Running Hangman**
+```bash
+cd "Source Code/Hangman"
+pip install -r requirements.txt
+python Hangman.py
+```
+
 ---
 
 <!-- USAGE GUIDELINES -->
