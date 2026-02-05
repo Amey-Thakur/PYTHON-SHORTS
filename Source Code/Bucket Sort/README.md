@@ -45,3 +45,19 @@ where $B_j$ represents the sorted elements in the $j$-th bucket.
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input Array] --> B[Create k Empty Buckets]
+    B --> C[Distribute Elements]
+    C --> D[Bucket 0]
+    C --> E[Bucket 1]
+    C --> F[...]
+    C --> G[Bucket k-1]
+    D --> H[Sort Each Bucket]
+    E --> H
+    F --> H
+    G --> H
+    H --> I[Concatenate Buckets]
+    I --> J[Sorted Array]
+```
