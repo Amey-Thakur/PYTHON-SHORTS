@@ -60,3 +60,35 @@ $$
 
 ### Set Intersection & Lexical Convergence
 ![Hangman Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start Game"] --> B["Select Secret Word (W)"]
+    B --> C["Initialize empty Guess Set (G)"]
+    C --> D["Awaiting User Guess (char)"]
+    D --> E{"char in G?"}
+    E -- Yes --> F["Warning: Already evaluated"]
+    F --> D
+    E -- No --> G["Add char to G"]
+    G --> H{"char in W?"}
+    H -- Yes --> I["Status: Intersection updated"]
+    H -- No --> J["Status: Chances depleted"]
+    I --> K{"W is subset of G?"}
+    J --> L{"Chances == 0?"}
+    K -- Yes --> M["Convergence achieved (Win)"]
+    K -- No --> D
+    L -- Yes --> N["Lexical termination (Loss)"]
+    L -- No --> D
+```
+
+```mermaid
+graph LR
+    subgraph Sets ["Set Operation Logic"]
+        direction LR
+        S1["Sigma (Alphabet)"]
+        W1["Word Set (W)"]
+        G1["Guess Set (G)"]
+        R1["Revealed (G ∩ W)"]
+        H1["Hidden (W \ G)"]
+    end
+```
