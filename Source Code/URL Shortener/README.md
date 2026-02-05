@@ -22,6 +22,7 @@ A **URL Shortener** is a service that translates long URLs into much shorter, mo
 **Base62** uses 62 distinct characters: `[0-9]`, `[a-z]`, and `[A-Z]`. By converting an auto-incrementing database ID into Base62, we can represent massive quantities of URLs with very few characters.
 
 The number of combinations $C$ for a short URL of length $L$ is:
+
 $$
 C = 62^L
 $$

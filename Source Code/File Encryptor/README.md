@@ -22,8 +22,15 @@ python FileEncryptor.py
 The XOR operation ($\oplus$) is the mathematical foundation of this encryption. It has a unique property where applying the same key twice restores the original value.
 
 For a plaintext bit $P$ and a key bit $K$:
-1.  **Encryption**: $C = P \oplus K$
-2.  **Decryption**: $C \oplus K = (P \oplus K) \oplus K = P$
+
+1.  **Encryption**: 
+$$
+C = P \oplus K
+$$
+2.  **Decryption**: 
+$$
+C \oplus K = (P \oplus K) \oplus K = P
+$$
 
 **XOR Truth Table:**
 | P | K | P ⊕ K (Ciphertext) |
