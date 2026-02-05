@@ -51,3 +51,14 @@ until $N = 0$.
 
 ### Logic & Performance Output
 ![Decimal to Binary Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input: Decimal N] --> B[Initialize Result = empty]
+    B --> C{N > 0?}
+    C -->|Yes| D[Get bit = N mod 2]
+    D --> E[Prepend bit to Result]
+    E --> F[N = N div 2]
+    F --> C
+    C -->|No| G[Return Binary Result]
+```
