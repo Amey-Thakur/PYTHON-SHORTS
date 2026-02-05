@@ -50,3 +50,29 @@ $$
 - **List Comprehension**: Provides a concise way to consume a specific slice of the generator into a finite list.
 
 ## 5. Visual Representation
+
+### Sequence Growth & Generator Logic
+![Odd Number Generator Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: generate_infinite()"] --> B["n = 1"]
+    B --> C["Yield n"]
+    C --> D["n = n + 2"]
+    D --> C
+```
+
+```mermaid
+graph LR
+    subgraph DataFlow ["Finite Sequence Generation (count=4)"]
+        direction LR
+        G["Generator"] -->|next| T1["1"]
+        G -->|next| T2["3"]
+        G -->|next| T3["5"]
+        G -->|next| T4["7"]
+        T1 --> L["List: [1, 3, 5, 7]"]
+        T2 --> L
+        T3 --> L
+        T4 --> L
+    end
+```
