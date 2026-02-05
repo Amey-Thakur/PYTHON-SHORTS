@@ -28,17 +28,17 @@ $$
 For time formatting:
 
 $$
-\text{minutes} = \lfloor \frac{\text{seconds}}{60} \rfloor
+minutes = \lfloor \frac{seconds}{60} \rfloor
 $$
 
 $$
-\text{remaining\_seconds} = \text{seconds} \mod 60
+remaining = seconds \mod 60
 $$
 
 For hours format:
 
 $$
-\text{hours} = \lfloor \frac{\text{seconds}}{3600} \rfloor
+hours = \lfloor \frac{seconds}{3600} \rfloor
 $$
 
 ## 3. Computer Science Theory
