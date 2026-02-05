@@ -49,3 +49,28 @@ While increasing $n$ reduces the depth of the recursion tree ($\log_n N$), it in
 - **Fallback Mechanism**: For intervals smaller than the partition count, the algorithm falls back to a linear scan to avoid unnecessary pivot calculations.
 
 ## 5. Visual Representation
+
+### Search Space Partitioning & Convergence
+![N-ary Search Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: search(key, n)"] --> B{"low > high?"}
+    B -- "Yes" --> C["Return None"]
+    B -- "No" --> D{"Size <= n?"}
+    D -- "Yes" --> E["Linear Fallback Search"]
+    D -- "No" --> F["Calculate n-1 Pivots"]
+    F --> G["Identify target interval"]
+    G --> H["Recursive Search in sub-interval"]
+    H --> A
+```
+
+```mermaid
+graph LR
+    subgraph DataPartitioning ["N-ary Search Space Partitioning (n=4)"]
+        direction LR
+        P1["[Low...Pivot1]"] --- P2["[Pivot1...Pivot2]"]
+        P2 --- P3["[Pivot2...Pivot3]"]
+        P3 --- P4["[Pivot3...High]"]
+    end
+```
