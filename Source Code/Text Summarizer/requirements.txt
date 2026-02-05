@@ -1,0 +1,11 @@
+# Text Summarizer - Dependencies
+
+# External Packages (install via pip):
+sumy>=0.11.0
+
+# Note: sumy requires nltk punkt tokenizer
+# Run: python -c "import nltk; nltk.download('punkt')"
+
+# Standard Library (included with Python 3.x):
+# - typing
+# - warnings
