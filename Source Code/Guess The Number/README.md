@@ -48,3 +48,19 @@ Each guess provides a certain amount of information (in bits). An optimal guess 
 
 ### Search Convergence & Logic Verification
 ![Guess The Number Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start Game"] --> B["Generate Target (random)"]
+    B --> C["Awaiting User Guess"]
+    C --> D{"Validate Input?"}
+    D -- Invalid --> E["Display Error"]
+    E --> C
+    D -- Valid --> F{"Guess vs Target"}
+    F -- "Too Small" --> G["Provide Feedback"]
+    G --> C
+    F -- "Too Large" --> G
+    F -- "Match" --> H["Display Success"]
+    H --> I["End Session"]
+```
+
