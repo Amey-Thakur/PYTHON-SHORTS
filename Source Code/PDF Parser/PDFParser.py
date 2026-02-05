@@ -102,6 +102,12 @@ def main():
                                 rightMargin=72, leftMargin=72,
                                 topMargin=72, bottomMargin=18)
         
+        # Set Metadata explicitly on the document object for Platypus to embed
+        doc.title = "Gallery: Mega Pictures Collection"
+        doc.author = "Amey Thakur & Mega Satish"
+        doc.subject = "Forensic Image Integration in PDF Streams"
+        doc.creator = "PDFParser.py Service"
+        
         styles = getSampleStyleSheet()
         
         # Custom styles for premium look
@@ -207,6 +213,10 @@ def main():
         metadata = service.get_metadata()
         for key, value in metadata.items():
             print(f"  {key.capitalize()}: {value}")
+
+        print("\nExtracting Raw Text Snippet:")
+        text_content = service.extract_text(max_pages=1)
+        print(f"  Content: {text_content[:300].replace('\\n', ' ')}...")
 
         print("\nForensic Notice:")
         print("    Extraction Logic: PDF parser successfully navigated the XRef table")
