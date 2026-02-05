@@ -53,18 +53,28 @@ $$
 
 ## 5. Visual Representation
 
+### Iterative Vector Transformation
 ![Polygonal Spiral Demo](Output/Demo.png)
 
 ```mermaid
-graph TD
-    A["Start: Initialize Screen"] --> B["Set Background: Black"]
-    B --> C["Initialize Target: i = 0"]
-    C --> D{"i < 200?"}
-    D -- Yes --> E["Update Color: i mod 5"]
-    E --> F["Update Pen Size: i/10 + 1"]
+flowchart TD
+    A["Start: Graphics Buffer Initialized"] --> B["Set Background: Black"]
+    B --> C["Initialize Iteration Index i = 0"]
+    C --> D{"i < Iterations (200)?"}
+    D -- "Yes" --> E["Color = Palette[i mod 5]"]
+    E --> F["Pen Size = (i / 10) + 1"]
     F --> G["Translate Forward: i units"]
     G --> H["Rotate Left: 59 degrees"]
     H --> I["Increment i"]
     I --> D
-    D -- No --> J["Stop: Rendering Complete"]
+    D -- "No" --> J["Stop: Resource Deallocation"]
+```
+
+```mermaid
+graph LR
+    subgraph Vectors ["Motion Parameters"]
+        direction LR
+        trans["Translation: f(i) = i"]
+        rot["Rotation: Δθ = 59°"]
+    end
 ```
