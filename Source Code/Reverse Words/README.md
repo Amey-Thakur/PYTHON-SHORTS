@@ -79,9 +79,9 @@ flowchart LR
 ```
 
 ```mermaid
-stateDiagram-v2
-    [*] --> Tokenized : "split()"
-    Tokenized --> Inverted : "slicing[::-1]"
-    Inverted --> Reconstructed : "join()"
-    Reconstructed --> [*]
+flowchart TD
+    S1["[*]"] --> S2["Tokenized"]
+    S2 -- "split()" --> S3["Inverted"]
+    S3 -- "slicing[::-1]" --> S4["Reconstructed"]
+    S4 --> S5["[*]"]
 ```
