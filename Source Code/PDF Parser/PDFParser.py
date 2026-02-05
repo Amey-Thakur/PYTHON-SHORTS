@@ -98,7 +98,7 @@ def main():
             
             # Simple metadata for testing
             writer.add_metadata({
-                "/Title": "Standardizing Python Shorts",
+                "/Title": "PDF Forensic Analysis and Structural Retrieval",
                 "/Author": "Amey Thakur & Mega Filly",
                 "/Subject": "Structural Documentation and Forensic Data Analysis",
                 "/Creator": "PDFParser.py Service"
