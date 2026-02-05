@@ -62,11 +62,14 @@ flowchart TD
 ```
 
 ```mermaid
-graph TD
-    subgraph MerkleDamgard ["Merkle-Damgård Iterative Construction"]
+flowchart TD
+    Title["<b>Merkle-Damgård Iterative Construction</b>"]
+    Title --- IV
+    
+    subgraph Process ["Hashing Execution"]
         direction TB
-        B1["Block 1"] --- F1["Compression f"]
-        IV["Initial Vector"] --- F1
+        IV["Initial Vector"] --- F1["Compression f"]
+        B1["Block 1"] --- F1
         F1 --- F2["Compression f"]
         B2["Block 2"] --- F2
         F2 --- F3["..."]
