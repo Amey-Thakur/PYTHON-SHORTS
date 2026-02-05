@@ -52,6 +52,9 @@ The expected number of attempts required to find the target is $S / 2$.
 
 ## 5. Visual Representation
 
+### Logic Convergence & Combinatorial Explosion
+![Password Guesser Demo](Demo.png)
+
 ```mermaid
 graph TD
     A[Start: Input Target Password] --> B[Initialize Attempts = 0]
