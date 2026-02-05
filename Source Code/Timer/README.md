@@ -55,31 +55,33 @@ $$
 
 ## 5. Visual Representation
 
+### Temporal Synchronization & Format Derivation
+![Timer Demo](Demo.png)
+
 ```mermaid
 sequenceDiagram
-    participant User
-    participant Timer
-    participant Display
+    autonumber
+    participant U as "User (Client)"
+    participant T as "TimerService"
+    participant D as "Terminal Buffer"
     
-    User->>Timer: countdown(seconds)
-    loop Every Second
-        Timer->>Display: Update time (\\r)
-        Timer->>Timer: sleep(1)
-        Timer->>Timer: remaining -= 1
+    U->>T: countdown(seconds)
+    loop Every Second (t > 0)
+        T->>T: divmod(remaining, 60)
+        T->>D: Write "\r[Formatted Time]"
+        T->>T: sleep(1.0s)
+        T->>T: remaining -= 1
     end
-    Timer->>Display: "Time Up!"
-    Timer->>User: callback() if set
+    T->>D: Write "\r[Final Message]"
+    T->>U: Execute callback()
 ```
 
 ```mermaid
-graph LR
-    A[Total Seconds] --> B[divmod by 3600]
-    B --> C[Hours]
-    B --> D[Remainder]
-    D --> E[divmod by 60]
-    E --> F[Minutes]
-    E --> G[Seconds]
-    C --> H[HH:MM:SS]
-    F --> H
-    G --> H
+flowchart LR
+    subgraph Conversion ["Euclidean Time Partitioning"]
+        direction LR
+        S["Total Seconds"] --> H["Hours (s // 3600)"]
+        H --> M["Minutes (rem // 60)"]
+        M --> SE["Seconds (rem % 60)"]
+    end
 ```
