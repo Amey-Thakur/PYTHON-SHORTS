@@ -60,7 +60,7 @@ def run_qr_demo():
     print("--- Python Shorts: QR Code Generation Service ---")
     
     # Ensure Output directory exists
-    output_dir = os.path.join("Source Code", "QRCode", "Output")
+    output_dir = "Output"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
