@@ -99,7 +99,7 @@ def main():
             # Simple metadata for testing
             writer.add_metadata({
                 "/Title": "PDF Forensic Analysis and Structural Retrieval",
-                "/Author": "Amey Thakur & Mega Filly",
+                "/Author": "Amey Thakur & Mega Satish",
                 "/Subject": "Structural Documentation and Forensic Data Analysis",
                 "/Creator": "PDFParser.py Service"
             })
