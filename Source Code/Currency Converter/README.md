@@ -21,8 +21,9 @@ A **Currency Converter** is a computational tool designed to determine the relat
 
 ## 2. Technical Explanation
 The core of currency conversion lies in the **Cross-Rate Calculation**. If a direct pair (e.g., EUR/JPY) is not available, the system must compute it through a base currency (usually USD):
+
 $$
-Rate_{EUR/JPY} = Rate_{EUR/USD} \times Rate_{USD/JPY}
+\text{Rate}_{\text{EUR/JPY}} = \text{Rate}_{\text{EUR/USD}} \times \text{Rate}_{\text{USD/JPY}}
 $$
 
 ### Data Integrity & Latency

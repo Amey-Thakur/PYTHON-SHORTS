@@ -27,8 +27,9 @@ Meteorological data retrieval relies on the **JSON-based REST API** architecture
 
 ### Coordinate Mapping
 The system uses **Reverse Geocoding** to map urban node names (e.g., Tokyo) to precise global coordinates:
+
 $$
-\text{Coordinate} = (\text{Latitude}_{\phi}, \text{Longitude}_{\lambda})
+\text{Coordinate} = (\text{Latitude}_\phi, \text{Longitude}_\lambda)
 $$
 
 ## 3. Computer Science Theory
