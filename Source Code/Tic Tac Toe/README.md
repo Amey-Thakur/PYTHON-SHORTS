@@ -50,47 +50,30 @@ Win conditions are checked across 8 lines:
 
 ## 5. Visual Representation
 
-### Game Board Layout
-```
-=============
-| 0 | 1 | 2 |
-=============
-| 3 | 4 | 5 |
-=============
-| 6 | 7 | 8 |
-=============
-```
+### Game Theory & State Verification
+![Tic Tac Toe Demo](Demo.png)
 
-### State Diagram
 ```mermaid
 stateDiagram-v2
-    [*] --> PlayerX_Turn
-    PlayerX_Turn --> PlayerO_Turn: Valid Move
-    PlayerO_Turn --> PlayerX_Turn: Valid Move
-    PlayerX_Turn --> X_Wins: Win Condition
-    PlayerO_Turn --> O_Wins: Win Condition
-    PlayerX_Turn --> Draw: Board Full
-    PlayerO_Turn --> Draw: Board Full
-    X_Wins --> [*]
-    O_Wins --> [*]
-    Draw --> [*]
+    direction TB
+    [*] --> X_Turn: "Initialize Board"
+    X_Turn --> O_Turn: "Valid Move (X)"
+    O_Turn --> X_Turn: "Valid Move (O)"
+    X_Turn --> Terminal_X: "Win Pattern (X)"
+    O_Turn --> Terminal_O: "Win Pattern (O)"
+    X_Turn --> Terminal_Draw: "Moves == 9"
+    O_Turn --> Terminal_Draw: "Moves == 9"
+    Terminal_X --> [*]
+    Terminal_O --> [*]
+    Terminal_Draw --> [*]
 ```
 
-### Win Patterns
 ```mermaid
-graph TB
-    subgraph Rows
-        R1[0-1-2]
-        R2[3-4-5]
-        R3[6-7-8]
-    end
-    subgraph Columns
-        C1[0-3-6]
-        C2[1-4-7]
-        C3[2-5-8]
-    end
-    subgraph Diagonals
-        D1[0-4-8]
-        D2[2-4-6]
+flowchart TD
+    subgraph Patterns ["Win Condition Matrices"]
+        direction LR
+        R["Rows: {0,1,2}, {3,4,5}, {6,7,8}"]
+        C["Columns: {0,3,6}, {1,4,7}, {2,5,8}"]
+        D["Diagonals: {0,4,8}, {2,4,6}"]
     end
 ```
