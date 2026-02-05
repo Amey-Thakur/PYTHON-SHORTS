@@ -49,7 +49,28 @@ Retrieval relies on a hash function $h(k)$ that maps the key to a specific bucke
 ### 5.1 Lexical Lookup Output
 ![Word Lookup Demo](Demo.png)
 
-### 5.2 Validation Scenarios
+```mermaid
+flowchart TD
+    A[Input Word] --> B{Sanitize & Normalize}
+    B --> C[Check Cache/Knowledge Base]
+    C --> D{Entry Exists?}
+    D -- True --> E[Process Metadata]
+    D -- False --> F[Raise WordDictionaryError]
+    E --> G[Return Payload]
+    G --> H[Render Output]
+```
+
+### 5.2 Internal Data Structure Model
+```mermaid
+graph LR
+    subgraph Dictionary [Internal Knowledge Base]
+        K1[("Success")] --- V1["{definitions: [...], synonyms: [...]}"]
+        K2[("Algorithm")] --- V2["{definitions: [...]}"]
+        K3[("Python")] --- V3["{definitions: [...], POS: [...]}"]
+    end
+```
+
+### 5.3 Validation Scenarios
 | Case ID | Word | Expected Result | Rationale |
 | :--- | :--- | :--- | :--- |
 | **TC-01** | `"Success"` | Definitions & Synonyms retrieved | Standard word lookup. |
