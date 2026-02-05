@@ -56,25 +56,29 @@ Attempting to push when $|S| = C$ results in **overflow**. Attempting to pop whe
 
 ## 5. Visual Representation
 
-### Stack Structure
+### LIFO Mechanics & Stack Frame Dynamics
+![Stack Demo](Demo.png)
+
 ```mermaid
-graph TD
-    subgraph Stack
-        T[Top] --> E3[Element 3]
-        E3 --> E2[Element 2]
-        E2 --> E1[Element 1]
-        E1 --> B[Bottom]
+flowchart TD
+    subgraph Operations ["Stack Protocol"]
+        direction TB
+        P1["Push(x)"] --> C1{"Is Full?"}
+        C1 -- "No" --> A1["Append x to Top"]
+        C1 -- "Yes" --> E1["Raise StackOverflow"]
+        
+        P2["Pop()"] --> C2{"Is Empty?"}
+        C2 -- "No" --> A2["Remove & Return Top"]
+        C2 -- "Yes" --> E2["Raise StackUnderflow"]
     end
 ```
 
-### Operation Flow
 ```mermaid
-graph LR
-    A[Push x] -->|Check| B{Is Full?}
-    B -->|No| C[Add to Top]
-    B -->|Yes| D[Overflow Error]
-    
-    E[Pop] -->|Check| F{Is Empty?}
-    F -->|No| G[Remove Top]
-    F -->|Yes| H[Underflow Error]
+graph BT
+    subgraph S ["Stack Memory Layout"]
+        direction BT
+        B["Bottom (Index 0)"] --- E1["Element 1"]
+        E1 --- E2["Element 2"]
+        E2 --- E3["Element 3 (Top)"]
+    end
 ```
