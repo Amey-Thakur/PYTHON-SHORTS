@@ -123,7 +123,7 @@ def main():
     """
     print("--- Huffman Coding Service Demo ---")
     
-    sample_text = "huffman coding is efficient"
+    sample_text = "Huffman Encoding generates optimal prefix codes for Python Shorts by Amey & Mega"
     print(f"\nOriginal Text: '{sample_text}'")
     
     service = HuffmanCodingService()
