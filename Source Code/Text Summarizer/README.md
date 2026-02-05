@@ -51,24 +51,28 @@ Where:
 
 ## 5. Visual Representation
 
+### TextRank Pipeline & Graph Centrality
+![Text Summarizer Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A[Input Text] --> B[Sentence Tokenization]
-    B --> C[Build Similarity Graph]
-    C --> D[Apply TextRank Algorithm]
-    D --> E[Rank Sentences by Score]
-    E --> F[Select Top-K Sentences]
-    F --> G[Reorder by Original Position]
-    G --> H[Output Summary]
+flowchart TD
+    A["Start: Raw Text Corpus"] --> B["Sentence Tokenization"]
+    B --> C["Pre-processing: Stemming & Stop-word Removal"]
+    C --> D["Vector Space Modeling (TF-IDF/Word2Vec)"]
+    D --> E["Build Weighted Similarity Graph"]
+    E --> F["Execute Graph-Ranking Algorithm (TextRank)"]
+    F --> G["Extract High-Score Vertices"]
+    G --> H["Reorder by Temporal/Linear Index"]
+    H --> I["Output: Extractive Summary"]
 ```
 
 ```mermaid
 graph LR
-    subgraph Sentence Graph
-        S1((S1)) --- S2((S2))
-        S1 --- S3((S3))
-        S2 --- S3
-        S2 --- S4((S4))
-        S3 --- S4
+    subgraph SimilarityGraph ["Sentence Inter-connectivity"]
+        direction LR
+        S1["S1"] --- S2["S2"]
+        S2 --- S3["S3"]
+        S1 --- S3
+        S3 --- S4["S4"]
     end
 ```
