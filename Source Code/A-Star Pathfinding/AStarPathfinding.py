@@ -4,7 +4,7 @@ Authors:
     - Amey Thakur (https://github.com/Amey-Thakur)
     - Mega Satish (https://github.com/msatmod)
 Repository: https://github.com/Amey-Thakur/PYTHON-SHORTS
-Release Date: February 5, 2026
+Release Date: January 9, 2022
 License: MIT License
 
 Description:
