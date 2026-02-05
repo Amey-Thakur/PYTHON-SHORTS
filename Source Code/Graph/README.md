@@ -49,3 +49,34 @@ In this implementation, edges can be **Directed** (one-way) or **Undirected** (t
 
 ### Topological Mapping & Logic Verification
 ![Graph Demo](Demo.png)
+
+```mermaid
+graph LR
+    subgraph AdjacencyList ["Adjacency List Representation"]
+        A["Vertex A"] --> B["B (w:5)"]
+        A --> C["C (w:3)"]
+        B --> C2["C (w:2)"]
+        C --> D["D (w:4)"]
+        D --> A2["A (w:1)"]
+    end
+```
+
+```mermaid
+flowchart TD
+    Start["Start Traversal"] --> Type{"Method?"}
+    Type -- BFS --> Queue["Use FIFO Queue"]
+    Queue --> B1["Visit Start Node"]
+    B1 --> B2["Enqueue Neighbors"]
+    B2 --> B3["Pop & Mark Visited"]
+    B3 --> B4{"Queue Empty?"}
+    B4 -- No --> B2
+    B4 -- Yes --> End["Finish"]
+
+    Type -- DFS --> Stack["Use LIFO Stack"]
+    Stack --> D1["Push Start Node"]
+    D1 --> D2["Pop & Visit"]
+    D2 --> D3["Push Neighbors"]
+    D3 --> D4{"Stack Empty?"}
+    D4 -- No --> D2
+    D4 -- Yes --> End
+```
