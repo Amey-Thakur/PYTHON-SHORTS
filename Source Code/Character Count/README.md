@@ -52,3 +52,16 @@ where $\Sigma(S)$ is the alphabet (set of unique characters) in string $S$.
 
 ### Execution Demo
 ![Character Count Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input String] --> B[Initialize Empty Map]
+    B --> C[For Each Character]
+    C --> D{In Map?}
+    D -->|Yes| E[Increment Count]
+    D -->|No| F[Add with Count 1]
+    E --> G{More Characters?}
+    F --> G
+    G -->|Yes| C
+    G -->|No| H[Return Frequency Map]
+```
