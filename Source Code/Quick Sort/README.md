@@ -45,17 +45,30 @@ Where $k$ is the number of elements smaller than the pivot.
 
 ## 5. Visual Representation
 
+### Hoare Partitioning & Recursive Decomposition
+![Quick Sort Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A[Start: Unsorted Array] --> B[Pick Pivot: Middle Element]
-    B --> C["Partition: Elements < Pivot | Pivot | Elements > Pivot"]
-    C --> D[Recursive Call: Left Sub-array]
-    C --> E[Recursive Call: Right Sub-array]
-    D --> F{Size <= 1?}
-    E --> G{Size <= 1?}
-    F -- Yes --> H[Base Case: Sorted]
-    G -- Yes --> H
-    F -- No --> B
-    G -- No --> B
-    H --> I[Combine: Final Sorted Array]
+flowchart TD
+    A["Start: Unsorted Array"] --> B["Pick Pivot: arr[(low + high) // 2]"]
+    B --> C["Partitioning Loop: Hoare Scheme"]
+    C --> D{"i >= j?"}
+    D -- "No" --> E["Swap arr[i] and arr[j]"]
+    E --> C
+    D -- "Yes" --> F["Return Split Point j"]
+    F --> G["Recurse: [low, pivot]"]
+    F --> H["Recurse: [pivot + 1, high]"]
+    G --> I{"Base Case: low < high?"}
+    H --> I
+    I -- "Yes" --> B
+    I -- "No" --> J["Array Segment Sorted"]
+```
+
+```mermaid
+graph LR
+    subgraph Complexity ["Computational Efficiency"]
+        direction TB
+        best["Best/Average: O(n log n)"]
+        worst["Worst: O(n^2)"]
+    end
 ```
