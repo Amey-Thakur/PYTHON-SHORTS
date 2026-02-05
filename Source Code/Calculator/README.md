@@ -49,4 +49,20 @@ The implementation also respects the order of operations, ensuring that binary e
 |:---:|:---:|:---:|
 | ![User Interface](Output/Calculator_UI.png) | ![Operation Input](Output/Calculator_Input.png) | ![Result Output](Output/Calculator_Output.png) |
 
-
+```mermaid
+flowchart TD
+    A[User Input] --> B[Get Operand A]
+    B --> C[Select Operator]
+    C --> D[Get Operand B]
+    D --> E{Which Operation?}
+    E -->|+| F[Addition]
+    E -->|-| G[Subtraction]
+    E -->|×| H[Multiplication]
+    E -->|÷| I{B ≠ 0?}
+    I -->|Yes| J[Division]
+    I -->|No| K[Error: Division by Zero]
+    F --> L[Display Result]
+    G --> L
+    H --> L
+    J --> L
+```
