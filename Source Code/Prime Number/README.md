@@ -44,19 +44,32 @@ All prime numbers greater than 3 can be expressed in the form $6k \pm 1$ for som
 
 ## 5. Visual Representation
 
+### Primality Distribution & Wheel Factorization
+![Prime Number Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A[Start: Input n] --> B{n <= 3?}
-    B -- Yes --> C{n > 1?}
-    C -- Yes --> D[Prime]
-    C -- No --> E[Composite/Invalid]
-    B -- No --> F{n % 2 == 0 or n % 3 == 0?}
-    F -- Yes --> E
-    F -- No --> G[Initialize i = 5]
-    G --> H{i * i <= n?}
-    H -- Yes --> I{n % i == 0 or n % i+2 == 0?}
-    I -- Yes --> E
-    I -- No --> J[i = i + 6]
+flowchart TD
+    A["Start: is_prime(n)"] --> B{"n <= 3?"}
+    B -- "Yes" --> C{"n > 1?"}
+    C -- "Yes" --> D["Return True (Prime)"]
+    C -- "No" --> E["Return False (Composite/Invalid)"]
+    B -- "No" --> F{"n % 2 == 0 or n % 3 == 0?"}
+    F -- "Yes" --> E
+    F -- "No" --> G["Initialize i = 5 (Step Size 6)"]
+    G --> H{"i * i <= n?"}
+    H -- "Yes" --> I{"n % i == 0 or n % (i+2) == 0?"}
+    I -- "Yes" --> E
+    I -- "No" --> J["i = i + 6"]
     J --> H
-    H -- No --> D
+    H -- "No" --> D
+```
+
+```mermaid
+graph LR
+    subgraph Optimization ["Wheel Factorization: 6k +/- 1"]
+        direction LR
+        K["k=1"] --> C1["5 (6-1)"] & C2["7 (6+1)"]
+        K2["k=2"] --> C3["11 (12-1)"] & C4["13 (12+1)"]
+        K3["k=3"] --> C5["17 (18-1)"] & C6["19 (18+1)"]
+    end
 ```
