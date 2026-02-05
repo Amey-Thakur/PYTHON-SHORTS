@@ -50,3 +50,26 @@ The table also demonstrates the **Commutative Property of Multiplication**, wher
 
 ### Arithmetic Product Matrix & Formatting
 ![Multiplication Table Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: generate(n, m)"] --> B["Initialize empty list / comprehension"]
+    B --> C["For i from 1 to m"]
+    C --> D["Calculate product = n * i"]
+    D --> E["Append product to list"]
+    E --> F["i < m?"]
+    F -- "Yes" --> C
+    F -- "No" --> G["Return List of Products"]
+```
+
+```mermaid
+graph LR
+    subgraph ArithmeticProgression ["Arithmetic Progression View (n=7)"]
+        direction LR
+        term1["7 (7x1)"] ---|"+7"| term2["14 (7x2)"]
+        term2 ---|"+7"| term3["21 (7x3)"]
+        term3 ---|"+7"| term4["28 (7x4)"]
+        term4 ---|"+7"| term5["..."]
+    end
+```
+
