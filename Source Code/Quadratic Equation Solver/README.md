@@ -30,9 +30,9 @@ $$
 
 ### Discriminant Theory
 The term $D = b^2 - 4ac$ is called the **Discriminant**. It determines the nature of the roots:
-1.  **$D > 0$**: The equation has two distinct real roots.
-2.  **$D = 0$**: The equation has exactly one real root (a repeated root).
-3.  **$D < 0$**: The equation has two complex conjugate roots.
+1. $D > 0$: The equation has two distinct real roots.
+2. $D = 0$: The equation has exactly one real root (a repeated root).
+3. $D < 0$: The equation has two complex conjugate roots.
 
 ## 3. Computer Science Theory
 - **Precision**: Calculations involve floating-point arithmetic. High-fidelity solvers must account for precision limitations, especially when $a$ is very small or $b^2 \approx 4ac$.

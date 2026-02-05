@@ -31,8 +31,8 @@ $$
 Where $k$ is the number of elements smaller than the pivot.
 
 ### Complexity Analysis
-1.  **Average Case ($O(n \log n)$)**: Occurs when the pivot consistently divides the array into reasonably balanced partitions.
-2.  **Worst Case ($O(n^2)$)**: Occurs when the pivot is always the smallest or largest element (e.g., in a pre-sorted array). This implementation uses a **middle-element pivot** to mitigate this risk.
+1. Average Case ($O(n \log n)$): Occurs when the pivot consistently divides the array into reasonably balanced partitions.
+2. Worst Case ($O(n^2)$): Occurs when the pivot is always the smallest or largest element (e.g., in a pre-sorted array). This implementation uses a **middle-element pivot** to mitigate this risk.
 
 ## 3. Computer Science Theory
 - **In-Place Sorting**: This implementation performs sorting within the original array's memory space, yielding a space complexity of $O(\log n)$ due to the recursive stack, which is significantly better than Merge Sort's $O(n)$.
@@ -48,7 +48,7 @@ Where $k$ is the number of elements smaller than the pivot.
 ```mermaid
 graph TD
     A[Start: Unsorted Array] --> B[Pick Pivot: Middle Element]
-    B --> C[Partition: Elements < Pivot | Pivot | Elements > Pivot]
+    B --> C["Partition: Elements < Pivot | Pivot | Elements > Pivot"]
     C --> D[Recursive Call: Left Sub-array]
     C --> E[Recursive Call: Right Sub-array]
     D --> F{Size <= 1?}
