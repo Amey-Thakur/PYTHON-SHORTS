@@ -79,7 +79,7 @@ def main():
     encrypted_file = "encrypted.dat"
     decrypted_file = "decrypted.txt"
     
-    content = "Confidential: Standardizing Python Shorts with Amey and Mega."
+    content = "Securing algorithmic research: Amey and Mega protect Python Shorts using bitwise XOR ciphers."
     print(f"\nOriginal Message: '{content}'")
     
     with open(sample_file, "w") as f:

@@ -1,1 +1,1 @@
-Confidential: Standardizing Python Shorts with Amey and Mega.
+Securing algorithmic research: Amey and Mega protect Python Shorts using bitwise XOR ciphers.
