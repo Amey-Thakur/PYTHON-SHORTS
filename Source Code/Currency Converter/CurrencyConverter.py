@@ -31,11 +31,12 @@ from typing import Dict, Any, Optional
 class CurrencyConverterService:
     """
     A service class for real-time currency conversion and financial analysis.
+    Uses ExchangeRate-API.com - a trusted API established since 2017.
     """
 
     def __init__(self):
-        # Using a public API for demo purposes without requiring a user key
-        self.api_url = "https://open.er-api.com/v6/latest/"
+        # Using ExchangeRate-API.com - highly reliable, trusted since 2017
+        self.api_url = "https://api.exchangerate-api.com/v4/latest/"
         self.headers = {
             "User-Agent": "PythonShorts-Financial-Engine/1.0"
         }
@@ -54,23 +55,20 @@ class CurrencyConverterService:
             response.raise_for_status()
             data = response.json()
 
-            if data["result"] == "success":
-                rate = data["rates"].get(to_curr)
-                if rate:
-                    converted_amount = amount * rate
-                    return {
-                        "success": True,
-                        "base": from_curr,
-                        "target": to_curr,
-                        "rate": rate,
-                        "original_amount": amount,
-                        "converted_amount": round(converted_amount, 2),
-                        "last_update": data.get("time_last_update_utc")
-                    }
-                else:
-                    return {"success": False, "error": f"Currency code '{to_curr}' not supported."}
+            rate = data["rates"].get(to_curr)
+            if rate:
+                converted_amount = amount * rate
+                return {
+                    "success": True,
+                    "base": from_curr,
+                    "target": to_curr,
+                    "rate": rate,
+                    "original_amount": amount,
+                    "converted_amount": round(converted_amount, 2),
+                    "last_update": data.get("date", "N/A")
+                }
             else:
-                return {"success": False, "error": data.get("error-type", "Unknown API error")}
+                return {"success": False, "error": f"Currency code '{to_curr}' not supported."}
 
         except Exception as e:
             return {"success": False, "error": str(e)}

@@ -31,12 +31,13 @@ from typing import Dict, Any, Optional
 class WeatherForecasterService:
     """
     A service class for atmospheric data retrieval and meteorological analysis.
+    Uses Open-Meteo.com - a trusted open-source weather API.
     """
 
-    def __init__(self, api_key: str = "demo"):
-        self.api_key = api_key
-        # Using a reliable public API endpoint for current weather
-        self.base_url = "https://api.openweathermap.org/data/2.5/weather"
+    def __init__(self):
+        # Using Open-Meteo.com - trusted open-source weather API, no API key needed
+        self.geocode_url = "https://geocoding-api.open-meteo.com/v1/search"
+        self.weather_url = "https://api.open-meteo.com/v1/forecast"
         self.headers = {
             "User-Agent": "PythonShorts-Weather-Forensics/1.0"
         }
@@ -46,38 +47,55 @@ class WeatherForecasterService:
         Retrieves the meteorological state for a specified urban node.
         """
         try:
-            # Note: OpenWeatherMap requires a key. For demo/scholarly logic, 
-            # we use a documented fallback or mock if the key is 'demo'.
-            if self.api_key == "demo":
-                # Scholarly Mock Observation
-                return {
-                    "success": True,
-                    "city": city.capitalize(),
-                    "temperature": 22.5,
-                    "condition": "Clear Sky",
-                    "humidity": 45,
-                    "pressure": 1013,
-                    "source": "Forensic Mock Station"
-                }
+            # Step 1: Geocode the city to get coordinates
+            geocode_params = {"name": city, "count": 1, "language": "en", "format": "json"}
+            geo_response = requests.get(self.geocode_url, params=geocode_params, headers=self.headers, timeout=10)
+            geo_response.raise_for_status()
+            geo_data = geo_response.json()
 
-            params = {
-                "q": city,
-                "appid": self.api_key,
-                "units": "metric"
+            if not geo_data.get("results"):
+                return {"success": False, "error": f"City '{city}' not found"}
+
+            location = geo_data["results"][0]
+            lat, lon = location["latitude"], location["longitude"]
+            city_name = location["name"]
+
+            # Step 2: Get current weather data
+            weather_params = {
+                "latitude": lat,
+                "longitude": lon,
+                "current": "temperature_2m,relative_humidity_2m,surface_pressure,weather_code,wind_speed_10m",
+                "timezone": "auto"
             }
-            response = requests.get(self.base_url, params=params, headers=self.headers, timeout=10)
-            response.raise_for_status()
-            data = response.json()
+            weather_response = requests.get(self.weather_url, params=weather_params, headers=self.headers, timeout=10)
+            weather_response.raise_for_status()
+            weather_data = weather_response.json()
+
+            current = weather_data["current"]
+
+            # Map WMO weather codes to descriptions
+            weather_codes = {
+                0: "Clear sky", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
+                45: "Foggy", 48: "Depositing rime fog",
+                51: "Light drizzle", 53: "Moderate drizzle", 55: "Dense drizzle",
+                61: "Slight rain", 63: "Moderate rain", 65: "Heavy rain",
+                71: "Slight snow", 73: "Moderate snow", 75: "Heavy snow",
+                80: "Slight rain showers", 81: "Moderate rain showers", 82: "Violent rain showers",
+                95: "Thunderstorm", 96: "Thunderstorm with slight hail", 99: "Thunderstorm with heavy hail"
+            }
+            
+            weather_code = current.get("weather_code", 0)
+            condition = weather_codes.get(weather_code, "Unknown")
 
             return {
                 "success": True,
-                "city": data.get("name"),
-                "temperature": data["main"].get("temp"),
-                "condition": data["weather"][0].get("description").capitalize(),
-                "humidity": data["main"].get("humidity"),
-                "pressure": data["main"].get("pressure"),
-                "wind_speed": data["wind"].get("speed"),
-                "source": "OpenWeatherMap API"
+                "city": city_name,
+                "temperature": current["temperature_2m"],
+                "condition": condition,
+                "humidity": current["relative_humidity_2m"],
+                "pressure": current["surface_pressure"],
+                "wind_speed": current["wind_speed_10m"] / 3.6,  # Convert km/h to m/s
+                "source": "Open-Meteo API"
             }
 
         except Exception as e:
@@ -92,7 +110,7 @@ def main():
     print(f"Service: WeatherForecaster.py | Authors: Amey Thakur & Mega Satish\n")
 
     try:
-        service = WeatherForecasterService(api_key="demo")
+        service = WeatherForecasterService()
         
         target_nodes = ["New York", "London", "Tokyo"]
 
