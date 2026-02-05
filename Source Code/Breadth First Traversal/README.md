@@ -40,3 +40,24 @@ BFS explores vertices in the order $V_0, V_1, V_2, \dots$ until all reachable ve
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+graph TD
+    A[1] --> B[2]
+    A --> C[3]
+    B --> D[4]
+    B --> E[5]
+    C --> F[6]
+    C --> G[7]
+```
+
+```mermaid
+flowchart LR
+    A[Start] --> B[Enqueue Root]
+    B --> C{Queue Empty?}
+    C -->|No| D[Dequeue Front]
+    D --> E[Process Node]
+    E --> F[Enqueue Children]
+    F --> C
+    C -->|Yes| G[Done]
+```
