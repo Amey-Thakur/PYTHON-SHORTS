@@ -56,12 +56,12 @@ $n! \approx \sqrt{2\pi n} \left(\frac{n}{e}\right)^n$.
 
 ```mermaid
 flowchart TD
-    A[Start: n] --> B[Initialize acc = 1]
-    B --> C[Yield acc (0!)]
-    C --> D[For i from 1 to n]
-    D --> E[acc = acc * i]
-    E --> F[Yield acc (i!)]
-    F --> G{i < n?}
+    A["Start: n"] --> B["Initialize acc = 1"]
+    B --> C["Yield acc (0!)"]
+    C --> D["For i from 1 to n"]
+    D --> E["acc = acc * i"]
+    E --> F["Yield acc (i!)"]
+    F --> G["i < n?"]
     G -- Yes --> D
-    G -- No --> H[End]
+    G -- No --> H["End"]
 ```
