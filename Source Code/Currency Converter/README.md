@@ -46,10 +46,6 @@ The analytic engine fetches live forex streams and performs sub-millisecond conv
 
 ![Currency Converter Demo](Demo.png)
 
-> [!TIP]
-> **High-Fidelity Prompt for Gemini:**
-> *A high-fidelity, high-tech neon infographic for a Currency Converter engine, titled 'FINANCIAL FOREX & EXCHANGE' with 'Python Shorts' secondary title. The design should be in a sleek dark mode with vibrant neon gold, emerald green, and silver accents. It should feature a large 3D glowing globe in the center surrounded by digital currency symbols ($ , € , £ , ¥) circling it like satellites. From the globe, show digital data streams 'BEAMING' out, containing real-time exchange rates. Show a currency bill being 'DECONSTRUCTED' into golden binary code and reassembled as a different currency. Include technical labels for 'Real-Time API Polling', 'Arbitrage Calculation', and 'Precision Floating Point Normalization'. Include the text 'By: Amey & Mega' and 'CurrencyConverter.py' prominently. At the bottom, include a professional footer 'PYTHON SHORTS | AMEY & MEGA'. The overall look should be premium, technical, and visually stunning.*
-
 ```mermaid
 graph TD
     Client["User Input (Amount/Pair)"] --> Service["Converter Service"]

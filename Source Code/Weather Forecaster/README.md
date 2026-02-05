@@ -48,10 +48,6 @@ The analytic engine retrieves and visualizes global weather parameters via high-
 
 ![Weather Forecaster Demo](Demo.png)
 
-> [!TIP]
-> **High-Fidelity Prompt for Gemini:**
-> *A high-fidelity, high-tech neon infographic for a Weather Forecaster engine, titled 'ATMOSPHERIC SCIENCE & FORECASTING' with 'Python Shorts' secondary title. The design should be in a sleek dark mode with vibrant neon sky blue, thunderstorm violet, and silver accents. It should feature a large 3D glowing holographic Earth in the center with pulsing weather icons (sun, storm clouds, snowflakes) floating around it. From the earth, show digital radar streams 'BEAMING' out, containing barometric and temperature data points. Show a storm system being 'DECONSTRUCTED' into atmospheric data vectors. Include technical labels for 'Satellite Telemetry Retrieval', 'Barometric Pressure Analysis', and 'Convective Modelling'. Include the text 'By: Amey & Mega' and 'WeatherForecaster.py' prominently. At the bottom, include a professional footer 'PYTHON SHORTS | AMEY & MEGA'. The overall look should be premium, technical, and visually stunning.*
-
 ```mermaid
 graph TD
     User["User Query (City)"] --> Geo["Geocoding Node"]
