@@ -80,8 +80,8 @@ flowchart LR
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Tokenized: split()
-    Tokenized --> Inverted: slicing[::-1]
-    Inverted --> Reconstructed: join()
+    [*] --> Tokenized : "split()"
+    Tokenized --> Inverted : "slicing[::-1]"
+    Inverted --> Reconstructed : "join()"
     Reconstructed --> [*]
 ```

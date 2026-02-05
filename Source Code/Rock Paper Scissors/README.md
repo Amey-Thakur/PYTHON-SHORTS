@@ -58,16 +58,28 @@ To achieve this theoretical fairness, the implementation utilizes a **Cryptograp
 
 ## 5. Visual Representation
 
+### Game Theory Loop & Decision Matrix
+![Rock Paper Scissors Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A[Start: Player Input] --> B{Validate Choice}
-    B -- Invalid --> C[Error: Invalid Move]
-    B -- Valid --> D[Computer Choice: CSPRNG]
-    D --> E{Compare Moves}
-    E -- Tie --> F[Result: Draw]
-    E -- Player beats Comp --> G[Result: Player Wins]
-    E -- Comp beats Player --> H[Result: Computer Wins]
-    F --> I[Stop]
+flowchart TD
+    A["Start: Player Input Selection"] --> B{"Input Valid?"}
+    B -- "No" --> C["Raise ValueError: Invalid Move"]
+    B -- "Yes" --> D["Computer Choice: CSPRNG (secrets)"]
+    D --> E{"Comparison (Player vs Comp)"}
+    E -- "player == computer" --> F["Outcome: Draw"]
+    E -- "win_matrix[player] == computer" --> G["Outcome: Player Wins"]
+    E -- "Else" --> H["Outcome: Computer Wins"]
+    F --> I["Stop: Result Displayed"]
     G --> I
     H --> I
+```
+
+```mermaid
+graph LR
+    subgraph Cyclic ["Rock-Paper-Scissors Cycle"]
+        R["Rock"] --> S["Scissors"]
+        S["Scissors"] --> P["Paper"]
+        P["Paper"] --> R
+    end
 ```
