@@ -56,3 +56,32 @@ $$
 
 ### Multiple Convergence & GCD Identity Verified
 ![LCM Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: calculate_lcm(a, b)"] --> B{"a == 0 or b == 0?"}
+    B -- "Yes" --> C["Return 0"]
+    B -- "No" --> D["Call calculate_gcd(a, b)"]
+    D --> E["Product = |a * b|"]
+    E --> F["Result = Product // GCD"]
+    F --> G["Return Result"]
+
+    subgraph EuclideanAlgorithm ["Euclidean Algorithm (GCD)"]
+        direction TB
+        G1["Start: calculate_gcd(a, b)"] --> G2{"b == 0?"}
+        G2 -- "No" --> G3["a = b, b = a % b"]
+        G3 --> G2
+        G2 -- "Yes" --> G4["Return abs(a)"]
+    end
+```
+
+```mermaid
+graph LR
+    subgraph Identity ["The Fundamental Identity"]
+        direction LR
+        num1["a"] --- OP1["LCM(a, b) = |a × b| / GCD(a, b)"]
+        num2["b"] --- OP1
+        OP1 --> result["LCM"]
+    end
+```
+
