@@ -36,7 +36,8 @@ except ImportError:
 
 class PDFParserService:
     """
-    A service class for forensic and structural analysis of PDF documents.
+    A professional service class for forensic and structural analysis of PDF documents.
+    It specializes in graph-traversal of the PDF object tree and content stream decoding.
     """
 
     def __init__(self, file_path: str):
@@ -47,185 +48,103 @@ class PDFParserService:
         if PyPDF2 is None:
             raise ImportError("PyPDF2 library is required. Install via 'pip install PyPDF2'.")
 
-    def get_metadata(self) -> Dict[str, Any]:
+    def get_structural_analysis(self) -> Dict[str, Any]:
         """
-        Extracts document metadata (Info dictionary).
+        Performs a deep structural scan of the PDF header and object tree.
         """
         with open(self.file_path, 'rb') as f:
             reader = PyPDF2.PdfReader(f)
-            meta = reader.metadata
             return {
-                "author": meta.author if meta else "Unknown",
-                "creator": meta.creator if meta else "Unknown",
-                "producer": meta.producer if meta else "Unknown",
-                "subject": meta.subject if meta else "Unknown",
-                "title": meta.title if meta else "Unknown",
-                "pages": len(reader.pages)
+                "metadata": {
+                    "author": reader.metadata.author if reader.metadata else "Unknown",
+                    "title": reader.metadata.title if reader.metadata else "Unknown",
+                    "subject": reader.metadata.subject if reader.metadata else "Unknown",
+                    "producer": reader.metadata.producer if reader.metadata else "Unknown",
+                    "creator": reader.metadata.creator if reader.metadata else "Unknown",
+                },
+                "structure": {
+                    "total_pages": len(reader.pages),
+                    "is_encrypted": reader.is_encrypted,
+                    "pdf_format_version": reader.stream.read(8).decode('utf-8', errors='ignore') if hasattr(reader, 'stream') else "Unknown"
+                }
             }
 
-    def extract_text(self, max_pages: Optional[int] = None) -> str:
+    def extract_full_text(self) -> str:
         """
-        Extracts raw text from the document up to max_pages.
+        Traverses all page objects and decompresses text streams using FlateDecode.
         """
         text_content = []
         with open(self.file_path, 'rb') as f:
             reader = PyPDF2.PdfReader(f)
-            num_pages = len(reader.pages)
-            limit = min(num_pages, max_pages) if max_pages else num_pages
-            
-            for i in range(limit):
-                page = reader.pages[i]
-                text_content.append(page.extract_text() or "")
-                
-        return "\n--- Page Break ---\n".join(text_content)
+            for page in reader.pages:
+                text = page.extract_text()
+                if text:
+                    text_content.append(text)
+        return "\n\n".join(text_content) if text_content else "[No Text Content Found]"
+
+    def scan_for_images(self) -> int:
+        """
+        Forensically identifies image objects (XObjects) hidden within page resources.
+        """
+        image_count = 0
+        with open(self.file_path, 'rb') as f:
+            reader = PyPDF2.PdfReader(f)
+            for page in reader.pages:
+                if "/Resources" in page and "/XObject" in page["/Resources"]:
+                    xobjects = page["/Resources"]["/XObject"]
+                    for obj in xobjects:
+                        if xobjects[obj]["/Subtype"] == "/Image":
+                            image_count += 1
+        return image_count
 
 
 def main():
     """
-    Demonstrates the PDF Parser service with a professional, visually pleasing 
-    high-fidelity document generation using Platypus.
+    Demonstrates the Pure PDF Forensic Parsing Service.
     """
-    print("--- PDF Parser Service Demo ---")
+    print("--- PDF Forensic Parser Service Demo ---")
     
+    # Use the sample_report.pdf created in the previous step
     sample_pdf = "sample_report.pdf"
     
-    print(f"\n[+] Generating professional high-fidelity sample PDF: '{sample_pdf}'...")
-    try:
-        from reportlab.lib.pagesizes import letter
-        from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-        from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle
-        from reportlab.lib.units import inch
-        from reportlab.lib import colors
-        
-        # Create a document template
-        doc = SimpleDocTemplate(sample_pdf, pagesize=letter,
-                                rightMargin=72, leftMargin=72,
-                                topMargin=72, bottomMargin=18)
-        
-        # Set Metadata explicitly on the document object for Platypus to embed
-        doc.title = "Gallery: Mega Pictures Collection"
-        doc.author = "Amey Thakur & Mega Satish"
-        doc.subject = "Forensic Image Integration in PDF Streams"
-        doc.creator = "PDFParser.py Service"
-        
-        styles = getSampleStyleSheet()
-        
-        # Custom styles for premium look
-        title_style = ParagraphStyle(
-            'TitleStyle',
-            parent=styles['Heading1'],
-            fontSize=24,
-            textColor=colors.HexColor("#2E3440"),
-            alignment=1, # Center
-            spaceAfter=20
-        )
-        
-        header_style = ParagraphStyle(
-            'HeaderStyle',
-            parent=styles['Normal'],
-            fontSize=10,
-            textColor=colors.grey,
-            alignment=2 # Right
-        )
-
-        body_style = styles['Normal']
-        body_style.fontSize = 11
-        body_style.leading = 14
-        
-        story = []
-        
-        # Header
-        story.append(Paragraph("PYTHON SHORTS | FORENSIC SERIES", header_style))
-        story.append(Spacer(1, 0.5 * inch))
-        
-        # Title
-        story.append(Paragraph("Gallery: Mega Pictures Collection", title_style))
-        story.append(Spacer(1, 0.2 * inch))
-        
-        # Meta Data Table
-        data = [
-            ["Authors:", "Amey Thakur & Mega Satish"],
-            ["Subject:", "Forensic Image Integration in PDF Streams"],
-            ["Date:", "January 9, 2022"],
-            ["Service:", "PDFParser.py Engine"]
-        ]
-        t = Table(data, colWidths=[1.5 * inch, 4 * inch])
-        t.setStyle(TableStyle([
-            ('TEXTCOLOR', (0, 0), (0, -1), colors.HexColor("#4C566A")),
-            ('FONTNAME', (0, 0), (0, -1), 'Helvetica-Bold'),
-            ('FONTSIZE', (0, 0), (-1, -1), 10),
-            ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
-            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-        ]))
-        story.append(t)
-        story.append(Spacer(1, 0.4 * inch))
-        
-        # Introductory Text
-        story.append(Paragraph("<b>Abstract:</b> This document serves as a high-fidelity test case for the PDFParser.py service. "
-                               "By integrating complex object streams, character mapping, and forensic metadata, we validate "
-                               "the structural retrieval capabilities of the Python Shorts ecosystem.", body_style))
-        story.append(Spacer(1, 0.2 * inch))
-        story.append(Paragraph("Securing algorithmic research: Amey and Mega protect Python Shorts using bitwise XOR ciphers. "
-                               "Below is the visualized collection of portraits integrated into the document stream for verification.", body_style))
-        story.append(Spacer(1, 0.4 * inch))
-        
-        # Images section
-        img_paths = [
-            r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Mega.png",
-            r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Filly.jpg",
-            r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Mega_Chair.png"
-        ]
-        
-        for img_path in img_paths:
-            if os.path.exists(img_path):
-                try:
-                    # Create a nice layout for each image
-                    img = Image(img_path, width=3*inch, height=3*inch, kind='proportional')
-                    img.hAlign = 'CENTER'
-                    story.append(img)
-                    story.append(Spacer(1, 0.1 * inch))
-                    story.append(Paragraph(f"<i>Fig: Forensic Identity Stream - {os.path.basename(img_path)}</i>", 
-                                           ParagraphStyle('Caption', parent=styles['Italic'], alignment=1, fontSize=8)))
-                    story.append(Spacer(1, 0.4 * inch))
-                except Exception as img_err:
-                    print(f"    Warning: Could not embed {os.path.basename(img_path)}: {img_err}")
-
-        # Acknowledgment
-        story.append(Spacer(1, 0.5 * inch))
-        ack_style = ParagraphStyle('AckStyle', parent=styles['Normal'], alignment=1, fontSize=12, textColor=colors.HexColor("#5E81AC"))
-        story.append(Paragraph("<b>Special Acknowledgment:</b> Thank you, Mega, for your invaluable contributions to the Python Shorts research series.", ack_style))
-        
-        # Build the document
-        doc.build(story)
-        print(f"    Successfully generated professional PDF: '{sample_pdf}'.")
-        
-    except ImportError:
-        print("    [!] Error: reportlab library not found. Run 'pip install reportlab'.")
+    if not os.path.exists(sample_pdf):
+        print(f"[!] Error: '{sample_pdf}' not found. Please provide a PDF file for parsing.")
         return
-    except Exception as e:
-        print(f"    Failed to generate sample PDF: {e}")
-        return
+
+    print(f"\n[+] Analyzing Source File: {sample_pdf}\n")
 
     try:
         service = PDFParserService(sample_pdf)
-        print("\n--- Parsing Result Verification ---")
-        print("\nAnalyzing Metadata:")
-        metadata = service.get_metadata()
-        for key, value in metadata.items():
-            print(f"  {key.capitalize()}: {value}")
+        
+        # 1. Structural Analysis
+        print("[1] Structural & Metadata Analysis:")
+        analysis = service.get_structural_analysis()
+        for key, val in analysis["metadata"].items():
+            print(f"    {key.capitalize()}: {val}")
+        
+        struct = analysis["structure"]
+        print(f"    Pages: {struct['total_pages']}")
+        print(f"    Encrypted: {struct['is_encrypted']}")
 
-        print("\nExtracting Raw Text Snippet:")
-        text_content = service.extract_text(max_pages=1)
-        print(f"  Content: {text_content[:300].replace('\\n', ' ')}...")
+        # 2. Image Forensic Scan
+        print("\n[2] Resource Stream Forensics:")
+        img_count = service.scan_for_images()
+        print(f"    Detected Image Objects (XObjects): {img_count}")
+
+        # 3. Content Retrieval
+        print("\n[3] Content Stream Extraction:")
+        content = service.extract_full_text()
+        print(f"    Extracted Text Preview (First 200 chars):")
+        print(f"    {content[:200].strip()}...")
 
         print("\nForensic Notice:")
-        print("    Extraction Logic: PDF parser successfully navigated the XRef table")
-        print("    and resolved the multi-object content streams for validation.")
+        print("    Scholarly Logic: The parser performs lazy-loading of the XRef table")
+        print("    and handles indirect object references to map the document graph.")
         
     except Exception as e:
-        print(f"Error during parsing: {e}")
+        print(f"Error during forensic parsing: {e}")
 
-    print("\n--- Demo Complete ---")
+    print("\n--- Parsing Complete ---")
 
 
 if __name__ == "__main__":
