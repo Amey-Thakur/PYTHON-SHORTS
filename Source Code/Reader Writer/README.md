@@ -51,19 +51,35 @@ This basic mutex implementation guarantees:
 
 ## 5. Visual Representation
 
+### Mutex Synchronization & Critical Section Access
+![Reader Writer Demo](Demo.png)
+
 ```mermaid
-graph TD
-    A["Start: Initialize Service"] --> B["Shared Data = 0, Lock Created"]
-    B --> C["Spawn Thread i (Random)"]
-    C --> D{Random > 50?}
-    D -- Yes --> E["Assign as Reader"]
-    D -- No --> F["Assign as Writer"]
-    E --> G["Acquire Lock"]
-    F --> G
-    G --> H["Execute Critical Section"]
-    H --> I["Release Lock"]
-    I --> J{More Iterations?}
-    J -- Yes --> C
-    J -- No --> K["Join All Threads"]
-    K --> L["Stop: Execution Complete"]
+flowchart TD
+    A["Start: Thread Spawned"] --> B{"Role Selection"}
+    B -- "Reader (Read-Only)" --> C["Acquire Mutex Lock"]
+    B -- "Writer (Read/Write)" --> C
+    C --> D["Critical Section Entry"]
+    D --> E["Perform Operation (read/write)"]
+    E --> F["Release Mutex Lock"]
+    F --> G["Stop: Thread Terminated"]
+```
+
+```mermaid
+sequenceDiagram
+    participant T1 as Thread 1 (Reader)
+    participant L as Mutex Lock
+    participant S as Shared Resource
+    participant T2 as Thread 2 (Writer)
+
+    Note over T1,T2: T1 arrives first
+    T1->>L: acquire()
+    L-->>T1: granted
+    Note over T2: T2 blocked while T1 holds lock
+    T2->>L: acquire() (WAITING...)
+    T1->>S: read data
+    T1->>L: release()
+    L-->>T2: granted
+    T2->>S: update data
+    T2->>L: release()
 ```
