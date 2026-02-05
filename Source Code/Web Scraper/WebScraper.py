@@ -99,8 +99,8 @@ def main():
     print("--- Web Scraping & DOM Traversal Service Demo ---")
     print(f"Service: WebScraper.py | Authors: Amey Thakur & Mega Satish\n")
 
-    # Target: A scholarly/safe site (e.g., Python documentation or a Wikipedia snippet)
-    target_url = "https://www.python.org"
+    # Target: High-fidelity forensic profile analysis
+    target_url = "https://linktr.ee/ameythakur"
     
     print(f"[+] Targeting Source: {target_url}\n")
 
