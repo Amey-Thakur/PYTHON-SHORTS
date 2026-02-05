@@ -47,3 +47,17 @@ The algorithm then compares $A_m$ with $T$:
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Start: L=0, R=n-1] --> B[Calculate mid = L+R / 2]
+    B --> C{A_mid == Target?}
+    C -->|Yes| D[Return mid]
+    C -->|No| E{A_mid < Target?}
+    E -->|Yes| F[L = mid + 1]
+    E -->|No| G[R = mid - 1]
+    F --> H{L <= R?}
+    G --> H
+    H -->|Yes| B
+    H -->|No| I[Return Not Found]
+```
