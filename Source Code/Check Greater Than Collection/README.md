@@ -42,3 +42,15 @@ In the case where $C = \emptyset$ (an empty collection), the predicate $P(C, \ta
 
 ### Performance & Validation Output
 ![Check Greater Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input: Collection C, Threshold τ] --> B{Is C Empty?}
+    B -->|Yes| C[Return True - Vacuous]
+    B -->|No| D[For Each x in C]
+    D --> E{x > τ?}
+    E -->|No| F[Return False - Short Circuit]
+    E -->|Yes| G{More Elements?}
+    G -->|Yes| D
+    G -->|No| H[Return True - All Pass]
+```
