@@ -51,6 +51,9 @@ The stability is guaranteed in the merging step. When two equal elements are com
 
 ## 5. Visual Representation
 
+### Logic Convergence & Performance Verification
+![Merge Sort Demo](Demo.png)
+
 ### Divide and Conquer Flow
 ```mermaid
 flowchart TD
