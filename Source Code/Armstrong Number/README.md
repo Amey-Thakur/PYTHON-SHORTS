@@ -44,3 +44,17 @@ Thus, $153$ is an Armstrong number.
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input: Number N] --> B[Count Digits k]
+    B --> C[Initialize sum = 0]
+    C --> D[Extract Last Digit]
+    D --> E[Add digit^k to sum]
+    E --> F[Remove Last Digit]
+    F --> G{More Digits?}
+    G -->|Yes| D
+    G -->|No| H{sum == N?}
+    H -->|Yes| I[Armstrong Number ✓]
+    H -->|No| J[Not Armstrong ✗]
+```
