@@ -53,10 +53,7 @@ This section provides a visual overview of the high-fidelity document used for f
 The parsing service was validated against a structured collection of portraits and metadata.
 - **Sample Document:** [sample_report.pdf](sample_report.pdf)
 
-<p align="center">
-  <img src="Gallery_Page_1.png" width="45%" />
-  <img src="Gallery_Page_2.png" width="45%" />
-</p>
+<img src="Gallery_Page_1.png" width="49.5%" /><img src="Gallery_Page_2.png" width="49.5%" />
 
 ### PDF Internal Topology & Extraction Flow
 ![PDF Parser Demo](Demo.png)
