@@ -55,11 +55,11 @@ $$
 
 ## 5. Visual Representation
 
-### Sample Outputs
+### Updated Sample
+![Updated Sample](Output/sample.png)
 
-| Original Sample | Personalized Sample |
-|:---------------:|:-------------------:|
-| ![Original Sample](sample.png) | ![Personalized Sample](Output/sample.png) |
+### Original Sample
+![Original Sample](sample.png)
 
 ### Process Flow
 ```mermaid
