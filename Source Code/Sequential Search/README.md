@@ -57,13 +57,13 @@ $$
 
 ```mermaid
 graph TD
-    A[Start: Collection & Target] --> B[Initialize Index i = 0]
-    B --> C{i < Length?}
-    C -- No --> D[Return -1: Not Found]
-    C -- Yes --> E{Collection[i] == Target?}
-    E -- Yes --> F[Return i: Found]
-    E -- No --> G[Increment i]
+    A["Start: Collection & Target"] --> B["Initialize Index i = 0"]
+    B --> C{"i < Length?"}
+    C -- No --> D["Return -1: Not Found"]
+    C -- Yes --> E{"Collection[i] == Target?"}
+    E -- Yes --> F["Return i: Found"]
+    E -- No --> G["Increment i"]
     G --> C
-    D --> H[Stop]
+    D --> H["Stop"]
     F --> H
 ```
