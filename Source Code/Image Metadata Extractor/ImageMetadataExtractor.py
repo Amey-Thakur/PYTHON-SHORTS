@@ -92,18 +92,22 @@ def main():
     print("--- Optical Forensics & EXIF Metadata Extraction ---")
     print(f"Service: ImageMetadataExtractor.py | Authors: Amey Thakur & Mega Satish\n")
     
-    # Forensic Evidence Stream: High-fidelity portrait collection
-    evidence_stream = [
-        r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Filly.jpg",
-        r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Mega.png",
-        r"D:\GitHub\PYTHON-CRASH-COURSE\Mega\Mega_Chair.png"
-    ]
+    # Locate the localized forensic evidence stream
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    sample_dir = os.path.join(script_dir, "sample_images")
+    
+    if not os.path.exists(sample_dir):
+        print(f"[!] Error: Localized forensic directory not found: {sample_dir}")
+        return
+
+    evidence_files = ["Filly.jpg", "Mega.png", "Mega_Chair.png"]
     
     target_found = False
-    for img_path in evidence_stream:
+    for filename in evidence_files:
+        img_path = os.path.join(sample_dir, filename)
         if os.path.exists(img_path):
             target_found = True
-            print(f"[+] Analyzing Forensic Stream: {os.path.basename(img_path)}")
+            print(f"[+] Analyzing Forensic Stream: {filename}")
             try:
                 service = ImageMetadataService(img_path)
                 
