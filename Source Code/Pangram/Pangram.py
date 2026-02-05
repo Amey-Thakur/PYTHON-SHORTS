@@ -1,4 +1,4 @@
-r"""
+"""
 File: Pangram.py
 Authors: 
     - Amey Thakur (https://github.com/Amey-Thakur)
@@ -15,7 +15,7 @@ Description:
 Mathematical Logic:
     Let A be the set of all unique alphabetic characters in a given string S. 
     Let L be the set of all letters in the English alphabet (a-z). 
-    S is a pangram if and only if L is a subset of A, which implies |A \cap L| = 26.
+    S is a pangram if and only if L is a subset of A, which implies |A \\cap L| = 26.
 """
 
 import string

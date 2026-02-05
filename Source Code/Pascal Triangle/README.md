@@ -55,3 +55,41 @@ This represents the number of ways to pick $k$ elements from a set of $n$ elemen
 - **Formatted Alignment**: Employs string centering and fixed-width spacing to preserve the triangular visual structure in the terminal output.
 
 ## 5. Visual Representation
+
+### Binomial Symmetry & Combinatorial Logic
+![Pascal Triangle Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: generate(rows)"] --> B{"rows <= 0?"}
+    B -- "Yes" --> C["Return []"]
+    B -- "No" --> D["Initialize triangle = [[1]]"]
+    D --> E["For i from 1 to rows-1"]
+    E --> F["row = [1]"]
+    F --> G["For j from 1 to prev_row_len - 1"]
+    G --> H["row.append(prev[j-1] + prev[j])"]
+    H --> G
+    G -- "Done" --> I["row.append(1)"]
+    I --> J["triangle.append(row)"]
+    J --> E
+    E -- "Done" --> K["Return Triangle"]
+```
+
+```mermaid
+graph TD
+    subgraph Construction ["Pascal's Identity: P(n,k) = P(n-1, k-1) + P(n-1, k)"]
+        direction TB
+        L1["1"] --- L2a["1"]
+        L1 --- L2b["1"]
+        L2a --- L3a["1"]
+        L2a --- L3b["2"]
+        L2b --- L3b
+        L2b --- L3c["1"]
+        L3a --- L4a["1"]
+        L3a --- L4b["3"]
+        L3b --- L4b
+        L3b --- L4c["3"]
+        L3c --- L4c
+        L3c --- L4d["1"]
+    end
+```
