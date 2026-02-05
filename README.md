@@ -191,6 +191,80 @@ python Chatbot.py
 
 ---
 
+<!-- PROGRAM DETAILS -->
+<a name="program-details"></a>
+## Program Details
+
+> [!IMPORTANT]
+> Click on each section below to expand and view the curated programs with direct links to source code.
+
+<details>
+<summary><strong>1. Fundamental Algorithms</strong></summary>
+
+| Project | Description | Source |
+|:---|:---|:---:|
+| **A-Star Pathfinding** | High-fidelity pathfinding and graph traversal logic. | [Source](Source%20Code/A-Star%20Pathfinding/) |
+| **Sorting Engines** | Bubble, Quick, Merge, Heap, Shell, and Bucket Sort implementations. | [Source](Source%20Code/Bubble%20Sort/) |
+| **Search Kernels** | Binary, Sequential, and N-ary search algorithms. | [Source](Source%20Code/Binary%20Search/) |
+| **Graph Theory** | Dijkstra, Bellman-Ford, and Topological Sort frameworks. | [Source](Source%20Code/Dijkstra%20Algorithm/) |
+| **Numeric Logic** | Prime Sieve, FFT, Knapsack, and Sudoku Solver. | [Source](Source%20Code/Prime%20Sieve/) |
+
+</details>
+
+<details>
+<summary><strong>2. Data Structure Architecture</strong></summary>
+
+| Project | Description | Source |
+|:---|:---|:---:|
+| **Linear Systems** | Optimized Singly/Doubly Linked Lists, Stacks, and Queues. | [Source](Source%20Code/Singly%20Linked%20List/) |
+| **Tree Networks** | Binary Tree, Binary Search Tree, and Red-Black Tree logic. | [Source](Source%20Code/Binary%20Search%20Tree/) |
+| **Graph Rep** | Complex Graph structures with weighted and directed vector sets. | [Source](Source%20Code/Graph/) |
+| **Hashing & Filters** | High-performance Bloom Filters and Trie data structures. | [Source](Source%20Code/Bloom%20Filter/) |
+| **Logic Patterns** | Pascal Triangle and Variable Scope explorations. | [Source](Source%20Code/Pascal%20Triangle/) |
+
+</details>
+
+<details>
+<summary><strong>3. Utility Synthesis & Automation</strong></summary>
+
+| Project | Description | Source |
+|:---|:---|:---:|
+| **Web Engines** | High-fidelity Web Scrapers and URL Shortener services. | [Source](Source%20Code/Web%20Scraper/) |
+| **File Management** | PDF Parser, QRCode Generator, and File Encryptor engines. | [Source](Source%20Code/PDF%20Parser/) |
+| **Linguistic Logic** | Text Summarizer, Translator, and Sentiment Analysis pipelines. | [Source](Source%20Code/Text%20Summarizer/) |
+| **Productivity** | To-Do App, Countdown Timer, and Currency Converter utilities. | [Source](Source%20Code/To-Do%20App/) |
+| **Forensics** | Image Metadata Extractor and Hashing File verification. | [Source](Source%20Code/Image%20Metadata%20Extractor/) |
+
+</details>
+
+<details>
+<summary><strong>4. Interactive Game Logic</strong></summary>
+
+| Project | Description | Source |
+|:---|:---|:---:|
+| **Classic Games** | Tic Tac Toe, Hangman, and Rock Paper Scissors. | [Source](Source%20Code/Tic%20Tac%20Toe/) |
+| **Puzzle Solvers** | Sudoku Solver and Guess The Number logic. | [Source](Source%20Code/Sudoku%20Solver/) |
+| **Visual Math** | Game of Life and Mandelbrot Set visualizations. | [Source](Source%20Code/Game%20of%20Life/) |
+
+</details>
+
+<details>
+<summary><strong>5. Advanced Computational Research</strong></summary>
+
+| Project | Description | Source |
+|:---|:---|:---:|
+| **Distributed Logic** | Fundamental Blockchain architecture and hashing. | [Source](Source%20Code/Blockchain%20Basic/) |
+| **Probabilistic** | Monte Carlo Simulation for statistical forecasting. | [Source](Source%20Code/Monte%20Carlo%20Simulation/) |
+| **Signal/Data** | Fast Fourier Transform (FFT) and Huffman Coding. | [Source](Source%20Code/Fast%20Fourier%20Transform/) |
+
+</details>
+
+> [!NOTE]
+> ### The 100+ Milestone
+> This repository features **over 100 functional programs**. For the full exhaustive list, please explore the [Source Code](Source%20Code/) directory. Each folder follows a standardized structure including its own `README.md` and requirements manifest.
+
+---
+
 <!-- USAGE GUIDELINES -->
 <a name="usage-guidelines"></a>
 ## Usage Guidelines
@@ -217,7 +291,7 @@ This repository and all its creative and technical assets are made available und
 > [!NOTE]
 > **Summary**: You are free to share and adapt this content for any purpose, even commercially, as long as you provide appropriate attribution to the original authors.
 
-Copyright © 2021 Amey Thakur & Mega Satish
+Copyright © 2022 Amey Thakur & Mega Satish
 
 ---
 
