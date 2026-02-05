@@ -73,30 +73,20 @@ def main():
     # Define paths for standardized output
     script_dir = os.path.dirname(__file__)
     output_dir = os.path.join(script_dir, "Output")
-    demo_input_file = os.path.join(output_dir, "sample_input.txt")
     
     # Ensure the Output directory exists
     os.makedirs(output_dir, exist_ok=True)
     
-    # Create the demonstration input file with scholarly metadata
-    with open(demo_input_file, "w", encoding="utf-8") as f:
-        f.write("Repository: PYTHON-SHORTS\n")
-        f.write("Authors: Amey Thakur & Mega Satish\n")
-        f.write("Theoretical Foundation: String Symmetry and Linear Permutations\n")
-        f.write("Message: This implementation preserves linguistic tokens while inverting structural sequence.")
-
-    print(f"Reading demonstration input from: {os.path.basename(demo_input_file)}")
-    
     try:
         service = WordReversalService()
         
-        # In a real-world scenario, this might read from the file. 
-        # For the demo, we read the content to show the transformation.
-        with open(demo_input_file, "r", encoding="utf-8") as f:
-            input_text = f.read()
+        # Metadata and input string for the demonstration
+        repo_info = "Repository: PYTHON-SHORTS | Authors: Amey Thakur & Mega Satish"
+        input_text = "Standardization of Algorithmic Documentation and Code"
             
         transformed_text = service.reverse_word_sequence(input_text)
         
+        print(repo_info)
         print("\nOriginal Content:")
         print(f"[{input_text}]")
         

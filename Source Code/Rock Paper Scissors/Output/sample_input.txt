@@ -1,4 +1,0 @@
-Repository: PYTHON-SHORTS
-Authors: Amey Thakur & Mega Satish
-Theoretical Foundation: Zero-Sum Game Theory and CSPRNG
-Message: This implementation ensures fairness via secure randomization.

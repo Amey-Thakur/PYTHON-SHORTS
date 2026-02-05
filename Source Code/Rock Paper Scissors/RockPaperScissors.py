@@ -81,26 +81,18 @@ def main():
     # Define paths for standardized output
     script_dir = os.path.dirname(__file__)
     output_dir = os.path.join(script_dir, "Output")
-    demo_config_file = os.path.join(output_dir, "sample_input.txt")
     
     # Ensure the Output directory exists
     os.makedirs(output_dir, exist_ok=True)
     
-    # Create the demonstration metadata file
-    with open(demo_config_file, "w", encoding="utf-8") as f:
-        f.write("Repository: PYTHON-SHORTS\n")
-        f.write("Authors: Amey Thakur & Mega Satish\n")
-        f.write("Theoretical Foundation: Zero-Sum Game Theory and CSPRNG\n")
-        f.write("Message: This implementation ensures fairness via secure randomization.")
-
     service = GameService()
     
     # Simulated moves for the automated check (to avoid interactive blocks in logs)
-    # In interactive use, this would be input()
     simulated_player_move = 'R'
     computer_move = service.get_computer_move()
     
-    print(f"Reading configuration from: {os.path.basename(demo_config_file)}")
+    print("Repository: PYTHON-SHORTS")
+    print("Authors: Amey Thakur & Mega Satish")
     print(f"\nPlayer Choice: {service.options[simulated_player_move]}")
     print(f"Computer Choice: {service.options[computer_move]}")
     
