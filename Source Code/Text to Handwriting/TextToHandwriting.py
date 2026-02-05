@@ -147,7 +147,7 @@ def main():
     
     service = TextToHandwritingService(rgb_color=(0, 0, 138))
     
-    sample_text = "Hello, this is a sample handwriting conversion!"
+    sample_text = "Amey Thakur & Mega Satish - Python Shorts: Crafting Code with Passion!"
     print(f"\nInput Text: {sample_text}")
     
     output_file = "Output/handwriting_sample.png"

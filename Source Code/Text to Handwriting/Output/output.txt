@@ -10,7 +10,7 @@ Available Ink Colors:
 
 --------------------------------------------------
 
-Input Text: Hello, this is a sample handwriting conversion!
+Input Text: Amey Thakur & Mega Satish - Python Shorts: Crafting Code with Passion!
 Handwriting image saved to: Output/handwriting_sample.png
 Success! Image saved to: Output/handwriting_sample.png
 
