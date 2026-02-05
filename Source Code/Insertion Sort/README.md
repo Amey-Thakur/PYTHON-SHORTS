@@ -47,3 +47,28 @@ $$
 
 ### Incremental Partitioning & Sorting Convergence
 ![Insertion Sort Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A["Start: sort(dataset)"] --> B["For i from 1 to n-1"]
+    B --> C["key = dataset[i]"]
+    C --> D["j = i - 1"]
+    D --> E{"j >= 0 and dataset[j] > key?"}
+    E -- "Yes" --> F["dataset[j + 1] = dataset[j]"]
+    F --> G["j = j - 1"]
+    G --> E
+    E -- "No" --> H["dataset[j + 1] = key"]
+    H --> I{"i == n - 1?"}
+    I -- "No" --> B
+    I -- "Yes" --> J["End: Dataset Sorted"]
+```
+
+```mermaid
+graph LR
+    subgraph State ["Partitioning State (i=4)"]
+        direction LR
+        S1["Sorted Partition [0...3]"] --- U1["Unsorted Partition [4...n-1]"]
+        K1["Key: dataset[4]"]
+    end
+```
+
