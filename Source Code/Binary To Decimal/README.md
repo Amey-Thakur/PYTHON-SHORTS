@@ -41,3 +41,16 @@ $$ (1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) = 8 + 4 + 0
 
 ## 5. Visual Representation
 ![Implementation Demo](Demo.png)
+
+```mermaid
+flowchart LR
+    A[Binary: 1101] --> B[Position 3: 1×2³=8]
+    A --> C[Position 2: 1×2²=4]
+    A --> D[Position 1: 0×2¹=0]
+    A --> E[Position 0: 1×2⁰=1]
+    B --> F[Sum = 8+4+0+1]
+    C --> F
+    D --> F
+    E --> F
+    F --> G[Decimal: 13]
+```
