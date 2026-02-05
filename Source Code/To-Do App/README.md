@@ -50,6 +50,17 @@ Operations follow standard hash table complexity:
 
 ## 5. Visual Representation
 
+### Application Screenshots
+
+| Application Screen | Input Data |
+|:------------------:|:----------:|
+| ![Application Screen](Output/ToDoApp_Screen.png) | ![Input Data](Output/ToDoApp_Input.png) |
+
+| Update Confirmation | Fetch Record |
+|:-------------------:|:------------:|
+| ![Update Confirmation](Output/ToDoApp_Update.png) | ![Fetch Record](Output/ToDoApp_Fetch.png) |
+
+### Process Flow Diagram
 ```mermaid
 graph TD
     A[User Action] --> B{Action Type}
@@ -64,6 +75,7 @@ graph TD
     B -->|Quit| J[Close Application]
 ```
 
+### Class Diagram
 ```mermaid
 classDiagram
     class ToDoService {
@@ -80,17 +92,3 @@ classDiagram
     }
     ToDoAppGUI --> ToDoService : uses
 ```
-
-## 6. Screenshots
-
-### Application Screen
-![To-Do App Main Screen](Output/ToDoApp_Screen.png)
-
-### Input Data
-![Entering Task Data](Output/ToDoApp_Input.png)
-
-### Update Confirmation
-![Update Success Message](Output/ToDoApp_Update.png)
-
-### Fetch Record
-![Fetching Saved Record](Output/ToDoApp_Fetch.png)
