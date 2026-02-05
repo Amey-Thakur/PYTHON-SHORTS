@@ -52,17 +52,13 @@ Operations follow standard hash table complexity:
 
 ### Event-Driven GUI & Persistent State Management
 
-#### Application Interface
-![Application Screen](Output/ToDoApp_Screen.png)
+| Application Screen | Input Data |
+|:------------------:|:----------:|
+| ![Application Screen](Output/ToDoApp_Screen.png) | ![Input Data](Output/ToDoApp_Input.png) |
 
-#### Input Vector Definition
-![Input Data](Output/ToDoApp_Input.png)
-
-#### Transactional Update Confirmation
-![Update Confirmation](Output/ToDoApp_Update.png)
-
-#### Record Retrieval (Fetch)
-![Fetch Record](Output/ToDoApp_Fetch.png)
+| Update Confirmation | Fetch Record |
+|:-------------------:|:------------:|
+| ![Update Confirmation](Output/ToDoApp_Update.png) | ![Fetch Record](Output/ToDoApp_Fetch.png) |
 
 ```mermaid
 flowchart TD
