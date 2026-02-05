@@ -44,3 +44,18 @@ The value of $r$ defines the **Parity Class** of $n$ in the ring of integers mod
 
 ### Parity Partitioning & Logic Verification
 ![Even Odd Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Input Collection] --> B[Initialize even, odd lists]
+    B --> C[For Each n in nums]
+    C --> D{n is Integer?}
+    D -- No --> E[Raise CollectionError]
+    D -- Yes --> F{n % 2 == 0?}
+    F -- Yes --> G[Add to even list]
+    F -- No --> H[Add to odd list]
+    G --> I{More elements?}
+    H --> I
+    I -- Yes --> C
+    I -- No --> J[Return partitioned dict]
+```
