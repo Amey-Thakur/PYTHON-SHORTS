@@ -54,15 +54,17 @@ class URLShortenerService:
 
     def shorten(self, long_url: str) -> str:
         """
-        Creates a short identifier for a long URL. 
-        Returns same short URL if long URL was already shortened.
+        Creates a short identifier for a long URL with basic normalization.
         """
-        if long_url in self.url_to_id:
-            id_val = self.url_to_id[long_url]
+        # Basic normalization: strip trailing slash
+        normalized_url = long_url.rstrip('/')
+        
+        if normalized_url in self.url_to_id:
+            id_val = self.url_to_id[normalized_url]
         else:
             id_val = self.counter
-            self.url_to_id[long_url] = id_val
-            self.id_to_url[id_val] = long_url
+            self.url_to_id[normalized_url] = id_val
+            self.id_to_url[id_val] = normalized_url
             self.counter += 1
             
         short_id = self._encode_base62(id_val)
@@ -77,8 +79,11 @@ class URLShortenerService:
         # Determine the original ID from base62 string
         id_val = 0
         base = len(self.base62_alphabet)
-        for char in short_id:
-            id_val = id_val * base + self.base62_alphabet.index(char)
+        try:
+            for char in short_id:
+                id_val = id_val * base + self.base62_alphabet.index(char)
+        except ValueError:
+            return None
             
         return self.id_to_url.get(id_val)
 
@@ -96,7 +101,9 @@ def main():
         "https://github.com/msatmod",
         "https://github.com/Amey-Thakur/PYTHON-SHORTS",
         "https://orcid.org/0000-0001-5644-1575",
-        "https://orcid.org/0000-0002-1844-9557"
+        "https://orcid.org/0000-0002-1844-9557",
+        "https://github.com/Amey-Thakur/", # Duplicate (test normalization)
+        "https://github.com/Amey-Thakur"   # Duplicate (test exact match)
     ]
     
     mapping_log = []
@@ -105,10 +112,12 @@ def main():
         short = service.shorten(url)
         print(f"  Long:  {url}")
         print(f"  Short: {short}")
-        mapping_log.append((short, url))
+        mapping_log.append((short, url.rstrip('/')))
         
     print("\nExpanding (Resolving) URLs:")
-    for short, original in mapping_log[:3]:
+    # Remove duplicates from expansion test
+    unique_mappings = list(dict.fromkeys(mapping_log))
+    for short, original in unique_mappings[:5]:
         resolved = service.expand(short)
         print(f"  Short:    {short}")
         print(f"  Resolved: {resolved}")
