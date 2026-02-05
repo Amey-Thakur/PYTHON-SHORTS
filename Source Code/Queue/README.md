@@ -42,13 +42,34 @@ $Q = (e_1, e_2, \dots, e_n)$
 
 ## 5. Visual Representation
 
+### FIFO Buffer & State Transitions
+![Queue Demo](Demo.png)
+
 ```mermaid
-graph LR
-    subgraph Input Buffer
-        A[New Element]
+flowchart LR
+    subgraph DataFlow ["Inbound Stream"]
+        I["New Item"]
     end
-    A -- "Enqueue" --> B["[ Rear | ... | ... | Front ]"]
-    B -- "Dequeue" --> C[Processed Element]
-    
-    style B fill:#f9f,stroke:#333,stroke-width:2px
+
+    subgraph Container ["Queue Service (deque)"]
+        direction LR
+        R["[ Rear ]"] --- B1["..."] --- B2["..."] --- F["[ Front ]"]
+    end
+
+    subgraph OutputFlow ["Outbound Stream"]
+        O["Processed Item"]
+    end
+
+    I -- "Enqueue (FIFO)" --> R
+    F -- "Dequeue" --> O
+```
+
+```mermaid
+stateDiagram-v2
+    [*] --> Empty
+    Empty --> PartiallyFilled: enqueue()
+    PartiallyFilled --> PartiallyFilled: enqueue() / dequeue()
+    PartiallyFilled --> Full: enqueue() [if maxlen reached]
+    Full --> PartiallyFilled: dequeue()
+    PartiallyFilled --> Empty: dequeue() [if count=1]
 ```
