@@ -48,23 +48,26 @@ Where:
 
 ## 5. Visual Representation
 
-### Linked List Structure
+### Dynamic Sequential Memory & Pointer Traversal
+![Singly Linked List Demo](Demo.png)
+
 ```mermaid
 graph LR
-    Head((Head)) --> N1[Node 1]
-    N1 --> N2[Node 2]
-    N2 --> N3[Node 3]
-    N3 --> NULL[/NULL/]
+    subgraph Structure ["Logical Sequence"]
+        Head((Head)) -- "Pointer" --> N1["Node 1 (Data)"]
+        N1 -- "next" --> N2["Node 2 (Data)"]
+        N2 -- "next" --> N3["Node 3 (Data)"]
+        N3 -- "next" --> NULL[/NULL/]
+    end
 ```
 
-### Operation Flow (Search)
 ```mermaid
-graph TD
-    A[Start Search] --> B[Current = Head]
-    B --> C{Current is NULL?}
-    C -- Yes --> D[Result: Not Found]
-    C -- No --> E{Data == Target?}
-    E -- Yes --> F[Result: Found]
-    E -- No --> G[Current = Current.Next]
+flowchart TD
+    A["Start: Target ID"] --> B["Current = Head"]
+    B --> C{"Current is None?"}
+    C -- "Yes" --> D["Return False: Not Found"]
+    C -- "No" --> E{"Current.Data == Target?"}
+    E -- "Yes" --> F["Return True: Found"]
+    E -- "No" --> G["Current = Current.Next"]
     G --> C
 ```
