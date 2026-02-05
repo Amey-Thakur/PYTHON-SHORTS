@@ -80,13 +80,11 @@ def main():
     try:
         service = WordReversalService()
         
-        # Metadata and input string for the demonstration
-        repo_info = "Repository: PYTHON-SHORTS | Authors: Amey Thakur & Mega Satish"
-        input_text = "Standardization of Algorithmic Documentation and Code"
+        # Demonstration input string containing repository metadata
+        input_text = "Repository: PYTHON-SHORTS | Authors: Amey Thakur & Mega Satish"
             
         transformed_text = service.reverse_word_sequence(input_text)
         
-        print(repo_info)
         print("\nOriginal Content:")
         print(f"[{input_text}]")
         
