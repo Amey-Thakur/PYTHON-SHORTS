@@ -56,16 +56,27 @@ class QRGeneratorService:
         print(f" -> Saved to: {filename}")
 
 def run_qr_demo():
-    """Execution demo showcasing QR matrix synthesis."""
+    """Execution demo showcasing QR matrix synthesis for profiles and repository."""
     print("--- Python Shorts: QR Code Generation Service ---")
     
-    # Target payload
-    repository_url = "https://github.com/Amey-Thakur/PYTHON-SHORTS"
-    output_path = "QRCode_Demo.png"
-    
-    # Generate QR Code
+    # Ensure Output directory exists
+    output_dir = os.path.join("Source Code", "QRCode", "Output")
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
     service = QRGeneratorService()
-    service.generate_qr(repository_url, output_path)
+    
+    # 1. Amey Thakur's Profile
+    amey_url = "https://github.com/Amey-Thakur"
+    service.generate_qr(amey_url, os.path.join(output_dir, "Amey_GitHub_QR.png"))
+
+    # 2. Mega Satish's Profile
+    mega_url = "https://github.com/msatmod"
+    service.generate_qr(mega_url, os.path.join(output_dir, "Mega_GitHub_QR.png"))
+
+    # 3. Repository URL
+    repo_url = "https://github.com/Amey-Thakur/PYTHON-SHORTS"
+    service.generate_qr(repo_url, os.path.join(output_dir, "Repository_QR.png"))
 
 if __name__ == "__main__":
     run_qr_demo()
