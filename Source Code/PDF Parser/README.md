@@ -46,7 +46,15 @@ Text within a stream is often compressed using the **FlateDecode** algorithm (ba
 - **Text Extraction**: Iterates through the `PdfReader.pages` collection, invoking character-mapping logic to reconstruct human-readable paragraphs.
 - **Error Resilience**: Implements guards against missing files or missing library dependencies.
 
-## 5. Visual Representation
+## 5. Visual Representation & Forensic Data
+This section provides a visual overview of the high-fidelity document used for forensic validation.
+
+### Forensic Data Collection: Mega Pictures
+The parsing service was validated against a structured collection of portraits and metadata.
+- **Sample Document:** [sample_report.pdf](sample_report.pdf)
+
+![Forensic Gallery Page 1](Gallery_Page_1.png)
+![Forensic Gallery Page 2](Gallery_Page_2.png)
 
 ### PDF Internal Topology & Extraction Flow
 ![PDF Parser Demo](Demo.png)
