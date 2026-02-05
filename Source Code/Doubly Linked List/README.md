@@ -50,6 +50,36 @@ Where:
 ### 5.1 Bidirectional Logic Check
 ![Doubly Linked List Demo](Demo.png)
 
+```mermaid
+graph LR
+    subgraph Nodes
+        NHead["Head (Node 0)"]
+        N1["Node 1"]
+        NTail["Tail (Node n)"]
+    end
+
+    NHead -- next --> N1
+    N1 -- next --> NTail
+    NTail -- prev --> N1
+    N1 -- prev --> NHead
+```
+
+```mermaid
+flowchart TD
+    A[Start Operation] --> B{Operation Type}
+    B -- Append --> C[Create New Node]
+    C --> D[Update Tail pointers]
+    B -- Prepend --> E[Create New Node]
+    E --> F[Update Head pointers]
+    B -- Delete --> G[Traverse & Find]
+    G --> H[Update Neighbor pointers]
+    B -- Reverse --> I[Swap next/prev for each node]
+    D --> J[Done]
+    F --> J
+    H --> J
+    I --> J
+```
+
 ### 5.2 Validation Scenarios
 | Case ID | Operation | Input | Expected Output | Rationale |
 | :--- | :--- | :--- | :--- | :--- |

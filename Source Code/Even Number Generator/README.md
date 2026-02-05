@@ -49,3 +49,16 @@ Where $a_0$ is the initial even seed derived from the starting input value.
 
 ### Sequence Generation & Logic Verification
 ![Sequence Demo](Demo.png)
+
+```mermaid
+flowchart TD
+    A[Start Generator] --> B[Initialize current = start]
+    B --> C{current is Even?}
+    C -- No --> D[current = current + 1]
+    C -- Yes --> E{Limit reached?}
+    D --> E
+    E -- No --> F[Yield current]
+    F --> G[current = current + 2]
+    G --> E
+    E -- Yes --> H[Stop Iteration]
+```
