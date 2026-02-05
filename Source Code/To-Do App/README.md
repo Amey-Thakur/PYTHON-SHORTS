@@ -80,3 +80,17 @@ classDiagram
     }
     ToDoAppGUI --> ToDoService : uses
 ```
+
+## 6. Screenshots
+
+### Application Screen
+![To-Do App Main Screen](Output/ToDoApp_Screen.png)
+
+### Input Data
+![Entering Task Data](Output/ToDoApp_Input.png)
+
+### Update Confirmation
+![Update Success Message](Output/ToDoApp_Update.png)
+
+### Fetch Record
+![Fetching Saved Record](Output/ToDoApp_Fetch.png)
