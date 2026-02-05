@@ -222,13 +222,13 @@ Copyright © 2021 Amey Thakur & Mega Satish
 
 **Created & Maintained by**: [Amey Thakur](https://github.com/Amey-Thakur) & [Mega Satish](https://github.com/msatmod)
 
-This project features **Python Shorts**, a curated study into the Python programming ecosystem. It represents a systematic exploration of algorithmic efficiency and high-fidelity software engineering.
+This collection features **Python Shorts**, a curated study into the Python programming ecosystem born from our learning journey to learn Python. It represents a systematic exploration of algorithmic efficiency and high-fidelity software engineering.
 
 **Connect:** [GitHub](https://github.com/Amey-Thakur) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/amey-thakur) &nbsp;·&nbsp; [ORCID](https://orcid.org/0000-0001-5644-1575)
 
 ### Acknowledgments
 
-Grateful acknowledgment to [**Mega Satish**](https://github.com/msatmod) for her exceptional collaboration and scholarly partnership during the development of this Python Shorts project. Her constant support, technical clarity, and dedication to software quality were instrumental in achieving the repository's modular objectives. Learning alongside her was a transformative experience; her thoughtful approach to problem-solving and steady encouragement turned complex requirements into meaningful learning moments. This work reflects the growth and insights gained from our side-by-side journey. Thank you, Mega, for everything you shared and taught along the way.
+Grateful acknowledgment to [**Mega Satish**](https://github.com/msatmod) for her exceptional collaboration and scholarly partnership during this learning journey where we built this collection of short Python codes to learn Python. Her constant support, technical clarity, and dedication to software quality were instrumental in achieving the repository's modular objectives. Learning alongside her was a transformative experience; her thoughtful approach to problem-solving and steady encouragement turned complex requirements into meaningful learning moments. This work reflects the growth and insights gained from our side-by-side journey. Thank you, Mega, for everything you shared and taught along the way.
 
 Special thanks to the **mentors and peers** whose encouragement, discussions, and support contributed meaningfully to this engineering experience.
 
