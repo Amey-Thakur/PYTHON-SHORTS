@@ -1,7 +1,7 @@
 <div align="center">
 
   <a name="readme-top"></a>
-  # <img src="https://raw.githubusercontent.com/python/peps/master/pep-0000/python-logo.png" width="30" height="30" valign="middle"> Python Shorts
+  # Python Shorts
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Finalized-success)
@@ -1250,7 +1250,7 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   <br>
 
-  ✅ **[Python Shorts](https://github.com/Amey-Thakur/PYTHON-SHORTS)**
+  <img src="https://raw.githubusercontent.com/python/peps/master/pep-0000/python-logo.png" width="18" height="18" valign="middle"> **[Python Shorts](https://github.com/Amey-Thakur/PYTHON-SHORTS)**
 
   ---
 
