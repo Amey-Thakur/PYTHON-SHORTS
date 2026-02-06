@@ -1126,7 +1126,7 @@ Suggested progression for mastering modular Python logic and algorithmic design 
 <!-- BEST PRACTICES -->
 
 ## Engineering Principles & Pythonic Best Practices
-A synthesized guide for mastering modular engineering and algorithmic clarity within the Python ecosystem:
+A core philosophical framework curated by **Amey & Mega** to ensure modularity and algorithmic integrity across 100+ programs:
 
 | Principle | Execution Strategy | Architectural Rationale |
 |:---|:---|:---|
