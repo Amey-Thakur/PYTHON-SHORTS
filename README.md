@@ -1205,7 +1205,7 @@ This repository maintains a rigorous fork-and-pull collaboration model. Contribu
 <a name="usage-guidelines"></a>
 ## Usage Guidelines
 
-This repository is maintained as a finalized record for academic and engineering excellence.
+This repository is openly shared to support learning and knowledge exchange across the academic community.
 
 **For Students**  
 Utilize this collection as reference material for mastering **Pythonic logic**, **Data Structures**, and **Algorithm Design**. The modular nature facilitates self-paced study and comparative analysis of different implementations.
