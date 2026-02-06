@@ -1125,8 +1125,8 @@ Suggested progression for mastering modular Python logic and algorithmic design 
 
 <!-- BEST PRACTICES -->
 
-## Amey & Mega's Principles for Pythonic Engineering
-A definitive guide to writing clean, modular, and efficient Python code:
+## Engineering Principles & Pythonic Best Practices
+A core philosophical framework formulated by **[Amey Thakur](https://github.com/Amey-Thakur)** and **[Mega Satish](https://github.com/msatmod)** to ensure modularity and algorithmic integrity across 100+ programs:
 
 | Principle | Execution Strategy | Architectural Rationale |
 |:---|:---|:---|
