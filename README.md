@@ -1136,6 +1136,19 @@ A core philosophical framework formulated by **[Amey Thakur](https://github.com/
 | **Defensive Logic** | **Type Integrity**: Leverage Python's `typing` module to enforce structural contracts and catch edge cases early. | Type hints act as a documentation layer that prevents state corruption and reduces the cognitive load for collaborators. |
 | **Visual Schematics** | **Architectural Mapping**: Document every major logic flow using Mermaid diagrams and formal mathematical definitions. | A deep technical understanding requires more than just code. Visualizing the 'how' ensures the 'why' is never lost. |
 
+---
+
+<!-- TROUBLESHOOTING -->
+
+## Technical Calibration & Troubleshooting
+To ensure the integrity of the 100+ modular environments, please adhere to the following execution protocols:
+
+| Category | Potential Pitfall | Scholarly Resolution |
+|:---|:---|:---|
+| **Workspace Locality** | Attempting to execute scripts from the repository root rather than the specific program folder. | **Change Directory**: Always `cd` into the individual workspace (e.g., `Source Code/Web Scraper/`) before execution to ensure local path resolution. |
+| **Runtime Calibration** | Version mismatch (e.g., using Python 2.7 or < 3.8) due to OS-level command aliases. | **Explicit Invocation**: Utilize `python3` or `py -m` to guarantee the interpreter matches the repository's **Python 3.8+** specification. |
+| **Environment Isolation** | Dependency drift or version collisions across multiple independent modules. | **Virtual Environments**: It is highly recommended to deploy a `venv` for each workspace to maintain crystalline isolation of third-party dependencies. |
+
 
 ---
 
