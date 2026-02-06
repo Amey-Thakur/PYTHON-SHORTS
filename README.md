@@ -193,7 +193,11 @@ python Chatbot.py
 ## Program Details
 
 > [!TIP]
-> **Technical Documentation**: Each program workspace listed below includes a dedicated `README.md` providing deep-dive technical analysis, implementation logic, and specific dependency requirements.
+> **Comprehensive Technical Documentation**: Each program workspace listed below includes a dedicated `README.md` that serves as a complete scholarly record, featuring:
+> - **Theoretical Foundations**: Formal definitions and rigorous mathematical explanations of the underlying concepts.
+> - **Algorithmic Analysis**: In-depth Computer Science theory, including time/space complexity and state-space logic.
+> - **Implementation Logic**: Detailed deconstruction of the Python modular architecture and service design patterns.
+> - **Visual Analytics**: High-fidelity Mermaid flowcharts, architectural diagrams, and verified execution screenshots.
 
 > [!IMPORTANT]
 > Click on each section below to expand and view the curated programs with direct access to technical documentation, workspaces, and source code.
@@ -1098,6 +1102,7 @@ python Chatbot.py
 
 </details>
 
+---
 ---
 ---
 ---
