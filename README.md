@@ -203,12 +203,12 @@ python Chatbot.py
 > - **Implementation Logic**: Detailed deconstruction of the Python modular architecture and service design patterns.
 > - **Visual Analytics**: High-fidelity Mermaid flowcharts, architectural diagrams, and verified execution screenshots.
 
-> [!IMPORTANT]
+> [!TIP]
+> **Technical Verification & Visual Diagnostics**
+>
+> *This repository adheres to a dual-tier authentication standard. Graphical applications feature functional demos, while algorithmic and CLI modules include definitive execution traces archived in `output/output.txt` within each workspace. To enhance pedagogical clarity, AI-generated prototypes are used for non-graphical logic to transform abstract computational mechanics into accessible visual narratives.*
+>
 > Click on each section below to expand and view the curated programs with direct access to technical documentation, workspaces, and source code.
->
-> *Technical Verification & Visual Diagnostics*
->
-> *This collection employs a dual-tier standard for execution authentication. Graphical User Interface (GUI) applications are paired with high-fidelity behavioral demonstrations. For strictly algorithmic or Command Line Interface (CLI) modules, definitive execution traces are systematically archived within each respective workspace's `output/` directory (e.g., `output.txt`). Furthermore, for non-graphical logic, generative AI has been meticulously utilized to synthesize visual conceptualizations. These pedagogical prototypes serve to transform abstract computational mechanics into intuitive visual narratives, ensuring maximum academic clarity and functional transparency.*
 
 <details>
 <summary><strong>A-Star Pathfinding</strong></summary>
