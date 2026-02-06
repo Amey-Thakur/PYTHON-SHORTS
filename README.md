@@ -990,7 +990,7 @@ python Chatbot.py
 
 | Domain | Technical Overview | Workspace | Source | Demo |
 |:---|:---|:---:|:---:|:---:|
-| Interactive Logic | **Sudoku Solver** is an algorithm designed to solve 9x9 grids such that each row, column, and 3x3 subgrid contains all digits from 1 to 9. This implementation utilizes a **Backtracking Algorithm**, a depth-first search strategy for solving constraint satisfaction problems. | [Open](Source%20Code/Sudoku%20Solver/) | [View](Source%20Code/Sudoku%20Solver/SudokuSolver.py) | n/a |
+| Interactive Logic | **Sudoku Solver** is an algorithm designed to solve 9x9 grids such that each row, column, and 3x3 subgrid contains all digits from 1 to 9. This implementation utilizes a **Backtracking Algorithm**, a depth-first search strategy for solving constraint satisfaction problems. | [Open](Source%20Code/Sudoku%20Solver/) | [View](Source%20Code/Sudoku%20Solver/SudokuSolver.py) | [View](Source%20Code/Sudoku%20Solver/Demo.png) |
 
 </details>
 
@@ -1102,6 +1102,7 @@ python Chatbot.py
 
 </details>
 
+---
 ---
 ---
 ---
