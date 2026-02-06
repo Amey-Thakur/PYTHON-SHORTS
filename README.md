@@ -1140,10 +1140,10 @@ A core philosophical framework formulated by **[Amey Thakur](https://github.com/
 
 <!-- TROUBLESHOOTING -->
 
-## Technical Calibration & Troubleshooting
-To ensure the integrity of the 100+ modular environments, please adhere to the following execution protocols:
+## Debugging & Error Analysis
+A structured guide to diagnosing and resolving runtime anomalies and execution errors:
 
-| Category | Potential Pitfall | Scholarly Resolution |
+| Error Condition | Root Cause Analysis | Resolution Strategy |
 |:---|:---|:---|
 | **Workspace Locality** | Attempting to execute scripts from the repository root rather than the specific program folder. | **Change Directory**: Always `cd` into the individual workspace (e.g., `Source Code/Chatbot/`) before execution to ensure local path resolution. |
 | **Runtime Calibration** | Version mismatch (e.g., using Python 2.7 or < 3.8) due to OS-level command aliases. | **Explicit Invocation**: Utilize `python3` or `py -m` to guarantee the interpreter matches the repository's **Python 3.8+** specification. |
@@ -1151,19 +1151,45 @@ To ensure the integrity of the 100+ modular environments, please adhere to the f
 
 ---
 
+<!-- RESOURCES -->
+
+## Useful Resources
+Essential tools and documentation for mastering the Python ecosystem:
+
+*   **Official Documentation**: [Python 3.x Docs](https://docs.python.org/3/)
+*   **Style Guide**: [PEP 8 - Style Guide for Python Code](https://peps.python.org/pep-0008/)
+*   **Package Index**: [PyPI - The Python Package Index](https://pypi.org/)
+*   **Interactive Learning**: [Python.org Interactive Shell](https://www.python.org/shell/)
+
+---
+
 <!-- CONTRIBUTING -->
 
 ## Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+This repository maintains a rigorous fork-and-pull collaboration model. Contributions that enhance the codebase's educational value and technical precision are highly appreciated.
 
-### Contribution Protocol
-1. **Fork the Project**: Create your own independent copy of the repository.
-2. **Create a Feature Branch**: `git checkout -b feature/NewPythonShort`
-3. **Implement Logic**: Develop your algorithm or utility adhering to the **PEP 8** standard and modular service architecture.
-4. **Document Artistry**: Create a high-fidelity `README.md` for your module, including mathematical foundations and Mermaid visualizations.
-5. **Commit Changes**: Use scholarly commit messages (e.g., `feat: integrate advanced A-Star logic`).
-6. **Push to Branch**: `git push origin feature/NewPythonShort`
-7. **Open a Pull Request**: Submit your work for technical review and integration.
+1.  **Fork the Repository**
+    Replicate the repository to your personal remote namespace.
+
+2.  **Initialize Feature Branch**
+    ```bash
+    git checkout -b feature/Optimization
+    ```
+
+3.  **Snapshot Changes**
+    Stage and record changes with semantic messaging:
+    ```bash
+    git commit -m 'Refactor: Optimize algorithmic logic'
+    ```
+
+4.  **Push to Origin**
+    Upload the branch to your remote origin:
+    ```bash
+    git push origin feature/Optimization
+    ```
+
+5.  **Submit Pull Request**
+    Initiate a formal code review process for integration.
 
 
 ---
