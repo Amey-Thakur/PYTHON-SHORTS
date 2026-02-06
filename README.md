@@ -1044,7 +1044,7 @@ python Chatbot.py
 
 | Domain | Technical Overview | Workspace | Source | Demo |
 |:---|:---|:---:|:---:|:---:|
-| Systems Utility | A **To-Do Application** is a task management utility that allows users to create, read, update, and delete (CRUD) records. This implementation uses **Tkinter** for the graphical user interface and **Pickle** for binary serialization and data persistence. | [Open](Source%20Code/To-Do%20App/) | [View](Source%20Code/To-Do%20App/ToDoApp.py) | n/a |
+| Systems Utility | A **To-Do Application** is a task management utility that allows users to create, read, update, and delete (CRUD) records. This implementation uses **Tkinter** for the graphical user interface and **Pickle** for binary serialization and data persistence. | [Open](Source%20Code/To-Do%20App/) | [View](Source%20Code/To-Do%20App/ToDoApp.py) | [View](Source%20Code/To-Do%20App/Demo.png) |
 
 </details>
 
@@ -1102,6 +1102,7 @@ python Chatbot.py
 
 </details>
 
+---
 ---
 ---
 ---
