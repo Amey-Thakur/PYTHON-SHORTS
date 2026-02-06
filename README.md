@@ -1250,11 +1250,7 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   <br>
 
-<<<<<<< HEAD
-  <img src="docs/pythonlogo.png" width="18" height="18" valign="middle"> **[Python Shorts](https://github.com/Amey-Thakur/PYTHON-SHORTS)**
-=======
   <img src="docs/Python%20Logo.png" width="18" height="18" valign="middle"> **[Python Shorts](https://github.com/Amey-Thakur/PYTHON-SHORTS)**
->>>>>>> 42e7aec (Python Shorts)
 
   ---
 
