@@ -1149,6 +1149,22 @@ To ensure the integrity of the 100+ modular environments, please adhere to the f
 | **Runtime Calibration** | Version mismatch (e.g., using Python 2.7 or < 3.8) due to OS-level command aliases. | **Explicit Invocation**: Utilize `python3` or `py -m` to guarantee the interpreter matches the repository's **Python 3.8+** specification. |
 | **Environment Isolation** | Dependency drift or version collisions across multiple independent modules. | **Virtual Environments**: It is highly recommended to deploy a `venv` for each workspace to maintain crystalline isolation of third-party dependencies. |
 
+---
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+### Contribution Protocol
+1. **Fork the Project**: Create your own independent copy of the repository.
+2. **Create a Feature Branch**: `git checkout -b feature/NewPythonShort`
+3. **Implement Logic**: Develop your algorithm or utility adhering to the **PEP 8** standard and modular service architecture.
+4. **Document Artistry**: Create a high-fidelity `README.md` for your module, including mathematical foundations and Mermaid visualizations.
+5. **Commit Changes**: Use scholarly commit messages (e.g., `feat: integrate advanced A-Star logic`).
+6. **Push to Branch**: `git push origin feature/NewPythonShort`
+7. **Open a Pull Request**: Submit your work for technical review and integration.
+
 
 ---
 
