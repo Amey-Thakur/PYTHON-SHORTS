@@ -21,6 +21,9 @@ This directory serves as a **unified visual archive** for all program demonstrat
 >
 > All demo images are **copies** of the originals located within each program's technical workspace (e.g., `Source Code/Anagram/Demo.png`). This gallery was created to provide a single point of access for browsing the entire collection without navigating through 100+ individual folders.
 
+> [!IMPORTANT]
+> For complete technical documentation including source code, theoretical foundations, and execution logs, navigate to the individual program workspaces in the [Source Code](../../Source%20Code/) directory.
+
 ---
 
 ## Technical Verification Standards
