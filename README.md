@@ -18,7 +18,7 @@
 
 <div align="center">
 
-  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Program Details](#program-details) &nbsp;·&nbsp; [Roadmap](#learning-roadmap) &nbsp;·&nbsp; [Best Practices](#best-practices) &nbsp;·&nbsp; [Debugging](#debugging) &nbsp;·&nbsp; [Resources](#resources) &nbsp;·&nbsp; [Contributing](#contributing) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
 </div>
 
@@ -1112,6 +1112,7 @@ python Chatbot.py
 
 <!-- LEARNING ROADMAP -->
 
+<a name="learning-roadmap"></a>
 ## Learning Roadmap
 Suggested progression for mastering modular Python logic and algorithmic design using this repository:
 
@@ -1127,6 +1128,7 @@ Suggested progression for mastering modular Python logic and algorithmic design 
 
 <!-- BEST PRACTICES -->
 
+<a name="best-practices"></a>
 ## Engineering Principles & Pythonic Best Practices
 A core philosophical framework formulated by **[Amey Thakur](https://github.com/Amey-Thakur)** and **[Mega Satish](https://github.com/msatmod)** to ensure modularity and algorithmic integrity across 100+ programs:
 
@@ -1142,6 +1144,7 @@ A core philosophical framework formulated by **[Amey Thakur](https://github.com/
 
 <!-- TROUBLESHOOTING -->
 
+<a name="debugging"></a>
 ## Debugging & Error Analysis
 A structured guide to diagnosing and resolving runtime anomalies and execution errors:
 
@@ -1155,6 +1158,7 @@ A structured guide to diagnosing and resolving runtime anomalies and execution e
 
 <!-- RESOURCES -->
 
+<a name="resources"></a>
 ## Useful Resources
 Essential tools and documentation for mastering the Python ecosystem:
 
@@ -1167,6 +1171,7 @@ Essential tools and documentation for mastering the Python ecosystem:
 
 <!-- CONTRIBUTING -->
 
+<a name="contributing"></a>
 ## Contributing
 This repository maintains a rigorous fork-and-pull collaboration model. Contributions that enhance the codebase's educational value and technical precision are highly appreciated.
 
@@ -1248,7 +1253,7 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   [↑ Back to Top](#readme-top)
 
-  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Program Details](#program-details) &nbsp;·&nbsp; [Roadmap](#learning-roadmap) &nbsp;·&nbsp; [Best Practices](#best-practices) &nbsp;·&nbsp; [Debugging](#debugging) &nbsp;·&nbsp; [Resources](#resources) &nbsp;·&nbsp; [Contributing](#contributing) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
   <br>
 
