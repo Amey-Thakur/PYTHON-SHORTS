@@ -373,7 +373,7 @@ python Chatbot.py
 
 | Domain | Technical Overview | Workspace | Source | Demo |
 |:---|:---|:---:|:---:|:---:|
-| Scripting Module | A **Chatbot** is a software application designed to simulate human conversation through text or voice interactions. This implementation is a rule-based system that utilizes pattern matching and keyword recognition to provide relevant responses in a controlled conversational environment. | [Open](Source%20Code/Chatbot/) | [View](Source%20Code/Chatbot/Chatbot.py) | [View](Source%20Code/Chatbot/Demo.png) |
+| Interactive Logic | A **Chatbot** is a software application designed to simulate human conversation through text or voice interactions. This implementation is a rule-based system that utilizes pattern matching and keyword recognition to provide relevant responses in a controlled conversational environment. | [Open](Source%20Code/Chatbot/) | [View](Source%20Code/Chatbot/Chatbot.py) | [View](Source%20Code/Chatbot/Demo.png) |
 
 </details>
 
@@ -1145,7 +1145,7 @@ To ensure the integrity of the 100+ modular environments, please adhere to the f
 
 | Category | Potential Pitfall | Scholarly Resolution |
 |:---|:---|:---|
-| **Workspace Locality** | Attempting to execute scripts from the repository root rather than the specific program folder. | **Change Directory**: Always `cd` into the individual workspace (e.g., `Source Code/Web Scraper/`) before execution to ensure local path resolution. |
+| **Workspace Locality** | Attempting to execute scripts from the repository root rather than the specific program folder. | **Change Directory**: Always `cd` into the individual workspace (e.g., `Source Code/Chatbot/`) before execution to ensure local path resolution. |
 | **Runtime Calibration** | Version mismatch (e.g., using Python 2.7 or < 3.8) due to OS-level command aliases. | **Explicit Invocation**: Utilize `python3` or `py -m` to guarantee the interpreter matches the repository's **Python 3.8+** specification. |
 | **Environment Isolation** | Dependency drift or version collisions across multiple independent modules. | **Virtual Environments**: It is highly recommended to deploy a `venv` for each workspace to maintain crystalline isolation of third-party dependencies. |
 
