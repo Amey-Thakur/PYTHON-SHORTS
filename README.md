@@ -1,7 +1,7 @@
 <div align="center">
 
   <a name="readme-top"></a>
-  # Python Shorts
+  # <img src="https://raw.githubusercontent.com/python/peps/master/pep-0000/python-logo.png" width="30" height="30" valign="middle"> Python Shorts
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Finalized-success)
