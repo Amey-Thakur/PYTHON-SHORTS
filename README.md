@@ -1,7 +1,7 @@
 <div align="center">
 
   <a name="readme-top"></a>
-  # Python Shorts
+  # <img src="docs/Python%20Logo.png" width="30" height="30" valign="middle"> Python Shorts
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Finalized-success)
