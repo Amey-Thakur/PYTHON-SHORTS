@@ -933,7 +933,7 @@ python Chatbot.py
 
 | Domain | Technical Overview | Workspace | Source | Demo |
 |:---|:---|:---:|:---:|:---:|
-| Scripting Module | **Geometric Shape Visualization** in this implementation focuses on the generation of **Polygonal Spirals**. These are complex figures created by the iterative application of translation and rotation vectors. By slightly offsetting the rotation angle from a factor of 360, the algorithm produces a "precession" effect, resulting in a dense, multi-colored spiral structure. | [Open](Source%20Code/Shape/) | [View](Source%20Code/Shape/Shape.py) | n/a |
+| Scripting Module | **Geometric Shape Visualization** in this implementation focuses on the generation of **Polygonal Spirals**. These are complex figures created by the iterative application of translation and rotation vectors. By slightly offsetting the rotation angle from a factor of 360, the algorithm produces a "precession" effect, resulting in a dense, multi-colored spiral structure. | [Open](Source%20Code/Shape/) | [View](Source%20Code/Shape/Shape.py) | [View](Source%20Code/Shape/Demo.png) |
 
 </details>
 
