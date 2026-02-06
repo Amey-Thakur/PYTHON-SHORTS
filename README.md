@@ -10,7 +10,7 @@
 
   A comprehensive collection of 100+ modular Python programs, algorithms, and data structures engineered to demonstrate computational efficiency, functional logic, and high-fidelity utility synthesis.
 
-  **[Source Code](Source%20Code/)** &nbsp;·&nbsp; **[Technical Specification](docs/SPECIFICATION.md)** &nbsp;·&nbsp; **[Security Policy](SECURITY.md)**
+  **[Source Code](Source%20Code/)** &nbsp;·&nbsp; **[Technical Specification](docs/SPECIFICATION.md)** &nbsp;·&nbsp; **[Demo Gallery](docs/Demo/)**
 
 </div>
 
