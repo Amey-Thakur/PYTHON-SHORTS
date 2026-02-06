@@ -1173,7 +1173,7 @@ This repository maintains a rigorous fork-and-pull collaboration model. Contribu
 
 2.  **Initialize Feature Branch**
     ```bash
-    git checkout -b feature/Optimization
+    git checkout -b feature/ChatbotIntegration
     ```
 
 3.  **Snapshot Changes**
@@ -1185,7 +1185,7 @@ This repository maintains a rigorous fork-and-pull collaboration model. Contribu
 4.  **Push to Origin**
     Upload the branch to your remote origin:
     ```bash
-    git push origin feature/Optimization
+    git push origin feature/ChatbotIntegration
     ```
 
 5.  **Submit Pull Request**
