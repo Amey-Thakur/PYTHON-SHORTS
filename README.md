@@ -1179,7 +1179,7 @@ This repository maintains a rigorous fork-and-pull collaboration model. Contribu
 3.  **Snapshot Changes**
     Stage and record changes with semantic messaging:
     ```bash
-    git commit -m 'Refactor: Optimize algorithmic logic'
+    git commit -m 'feat: integrate optimized A-Star pathfinding logic'
     ```
 
 4.  **Push to Origin**
