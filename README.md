@@ -1103,6 +1103,8 @@ python Chatbot.py
 </details>
 
 
+---
+
 <!-- USAGE GUIDELINES -->
 <a name="usage-guidelines"></a>
 ## Usage Guidelines
