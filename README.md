@@ -1017,7 +1017,7 @@ python Chatbot.py
 
 | Domain | Technical Overview | Workspace | Source | Demo |
 |:---|:---|:---:|:---:|:---:|
-| Systems Utility | **Text to Handwriting** conversion transforms digital text into images that simulate handwritten content. This technique uses specialized fonts and rendering algorithms to create visually authentic handwritten representations of typed text. | [Open](Source%20Code/Text%20to%20Handwriting/) | [View](Source%20Code/Text%20to%20Handwriting/TextToHandwriting.py) | n/a |
+| Systems Utility | **Text to Handwriting** conversion transforms digital text into images that simulate handwritten content. This technique uses specialized fonts and rendering algorithms to create visually authentic handwritten representations of typed text. | [Open](Source%20Code/Text%20to%20Handwriting/) | [View](Source%20Code/Text%20to%20Handwriting/TextToHandwriting.py) | [View](Source%20Code/Text%20to%20Handwriting/Demo.png) |
 
 </details>
 
@@ -1102,6 +1102,7 @@ python Chatbot.py
 
 </details>
 
+---
 ---
 ---
 ---
