@@ -192,6 +192,9 @@ python Chatbot.py
 <a name="program-details"></a>
 ## Program Details
 
+> [!TIP]
+> **Technical Documentation**: Each program workspace listed below includes a dedicated `README.md` providing deep-dive technical analysis, implementation logic, and specific dependency requirements.
+
 > [!IMPORTANT]
 > Click on each section below to expand and view the curated programs with direct access to technical documentation, workspaces, and source code.
 
@@ -1095,6 +1098,7 @@ python Chatbot.py
 
 </details>
 
+---
 ---
 ---
 ---
