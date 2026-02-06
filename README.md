@@ -1112,7 +1112,7 @@ Suggested progression for mastering modular Python logic and algorithmic design 
 | Level | Phase | Domains to Explore | Core Competencies |
 |:---:|:---|:---|:---|
 | **1** | **Foundations** | `Scripting Module` • `Systems Utility` | Parity Evaluation, Lexical Analysis, Control Flow, and Native Type Orchestration. |
-| **2** | **Algorithms** | `Algorithmic Logic` • `Computational Research` | Complexity Analysis ($O(n)$), Divide & Conquer, Heuristic Optimization, and Sieve Mechanics. |
+| **2** | **Algorithms** | `Algorithmic Logic` • `Computational Research` | Complexity Analysis $\mathcal{O}(n)$, Divide & Conquer, Heuristic Optimization, and Sieve Mechanics. |
 | **3** | **Data Structures** | `Data Orchestration` | Linear Adjacency (Stacks/Queues), Hierarchical Binary Trees, and Topological Graph Traversal. |
 | **4** | **System Design** | `Systems Utility` • `Interactive Logic` | Modular Service Patterns, RESTful Integration, DOM Traversal, and Event-Driven Simulation. |
 | **5** | **Advanced Theory** | `Computational Research` | Probabilistic Monte Carlo Modeling, Cryptographic Verification, and Distributed Ledger Architecture. |
