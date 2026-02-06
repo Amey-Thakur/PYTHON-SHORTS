@@ -203,7 +203,7 @@ python Chatbot.py
 > - **Implementation Logic**: Detailed deconstruction of the Python modular architecture and service design patterns.
 > - **Visual Analytics**: High-fidelity Mermaid flowcharts, architectural diagrams, and verified execution screenshots.
 >
-> *Technical Verification & Visual Diagnostics*: This repository adheres to a dual-tier authentication standard. Graphical applications feature functional demos, while CLI modules include definitive execution traces in `output/output.txt`. To enhance pedagogical clarity, AI-generated prototypes are utilized for non-graphical logic.
+> *Technical Verification & Visual Diagnostics*: Graphical modules feature functional demos; CLI logic is verified via execution traces in `output/output.txt`. For non-graphical logic, synthetic prototypes are utilized to provide intuitive visual narratives.
 
 > [!IMPORTANT]
 > Click on each section below to expand and view the curated programs with direct access to technical documentation, workspaces, and source code.
