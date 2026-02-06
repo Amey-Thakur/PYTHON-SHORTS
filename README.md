@@ -192,6 +192,10 @@ python Chatbot.py
 <a name="program-details"></a>
 ## Program Details
 
+> [!NOTE]
+> ### The 100+ Milestone
+> This repository features **over 100 functional programs**. Each folder follows a standardized structure including its own `README.md` and requirements manifest. For the full exhaustive list, please explore the [Source Code](Source%20Code/) directory.
+
 > [!TIP]
 > **Comprehensive Technical Documentation**: Each program workspace listed below includes a dedicated `README.md` that serves as a complete scholarly record, featuring:
 > - **Theoretical Foundations**: Formal definitions and rigorous mathematical explanations of the underlying concepts.
