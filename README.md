@@ -1125,14 +1125,14 @@ Suggested progression for mastering modular Python logic and algorithmic design 
 
 <!-- BEST PRACTICES -->
 
-## Amey & Mega’s Principles for Pythonic Excellence
-A synthesized guide for fellow developers on mastering modular engineering and algorithmic clarity in Python:
+## Engineering Principles & Pythonic Best Practices
+A synthesized guide for mastering modular engineering and algorithmic clarity within the Python ecosystem:
 
 | Principle | Execution Strategy | Architectural Rationale |
 |:---|:---|:---|
 | **Pythonic Clarity** | **The Zen of Code**: Prioritize readable logic over clever one-liners. Use descriptive naming and PEP 8 standards as a non-negotiable floor. | Code is read far more often than it is written. High-fidelity naming transforms logic into self-documented prose. |
 | **Service Decoupling** | **Modular Orchestration**: Encapsulate complex logic within dedicated `Service` classes, separate from CLI or I/O handling. | Ensures business logic remains portable, testable, and independent of the surrounding execution environment. |
-| **Algorithmic Selection** | **Data Structure Rigor**: Choose structures (e.g., `set` vs `list`) based on time complexity requirements ($O(1)$ vs $O(n)$). | Optimal engineering starts with the right foundation. Efficiency is a choice made at the design phase, not a post-fix. |
+| **Algorithmic Selection** | **Data Structure Rigor**: Choose structures (e.g., `set` vs `list`) based on time complexity requirements ($\mathcal{O}(1)$ vs $\mathcal{O}(n)$). | Optimal engineering starts with the right foundation. Efficiency is a choice made at the design phase, not a post-fix. |
 | **Defensive Logic** | **Type Integrity**: Leverage Python’s `typing` module to enforce structural contracts and catch edge cases early. | Type hints act as a documentation layer that prevents state corruption and reduces the cognitive load for collaborators. |
 | **Visual Schematics** | **Architectural Mapping**: Document every major logic flow using Mermaid diagrams and formal mathematical definitions. | A deep technical understanding requires more than just code. Visualizing the 'how' ensures the 'why' is never lost. |
 
