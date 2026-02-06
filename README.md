@@ -205,6 +205,10 @@ python Chatbot.py
 
 > [!IMPORTANT]
 > Click on each section below to expand and view the curated programs with direct access to technical documentation, workspaces, and source code.
+>
+> *Technical Verification & Visual Diagnostics*
+>
+> *This collection employs a dual-tier standard for execution authentication. Graphical User Interface (GUI) applications are paired with high-fidelity behavioral demonstrations. For strictly algorithmic or Command Line Interface (CLI) modules, definitive execution traces are systematically archived within each respective workspace's `output/` directory (e.g., `output.txt`). Furthermore, for non-graphical logic, generative AI has been meticulously utilized to synthesize visual conceptualizations. These pedagogical prototypes serve to transform abstract computational mechanics into intuitive visual narratives, ensuring maximum academic clarity and functional transparency.*
 
 <details>
 <summary><strong>A-Star Pathfinding</strong></summary>
