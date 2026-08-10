@@ -11,10 +11,6 @@
 
   **[Source Code](Source%20Code/)** &nbsp;·&nbsp; **[Technical Specification](docs/SPECIFICATION.md)** &nbsp;·&nbsp; **[Demo Gallery](docs/Demo/)**
 
-  <br>
-
-  <img src=".github/social-preview.png" alt="Python Shorts" width="90%">
-
 </div>
 
 ---
